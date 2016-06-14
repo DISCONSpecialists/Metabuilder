@@ -1,0 +1,50 @@
+<Remapped>
+	<Class Old="Software" New="PhysicalSoftwareComponent">
+	</Class>
+	<Class Old="SystemComponent" New="ComputingComponent">
+	</Class>
+	<Class Old="Peripheral" New="PeripheralComponent">
+	</Class>
+	<Class Old="ConnectionSpeed" New="Network">
+	</Class>
+	<Class Old="ConnectionType" New="Network">
+	</Class>
+	<Class Old="ConnectionSize" New="Network">
+	</Class>
+	<Class Old="ProbOfRealization" New="ProbabilityOfRealization">
+	</Class>
+	<Class Old="CategoryFactor" New="Driver">
+	</Class>
+	<Class Old="CSF" New="StrategicStatement">
+	</Class>
+	<Class Old="DataSchema" New="DataSubjectArea">
+	</Class>
+	<Class Old="Entity" New="DataEntity">
+	</Class>
+	<Class Old="Attribute" New="DataAttribute">
+	</Class>
+	<Class Old="DataColumn" New="DataField">
+	</Class>
+	<Class Old="MutuallyExclusiveIndicator" New="SubsetIndicator">
+	</Class>
+	<Class Old="JobPosition" New="Position">
+	</Class>
+	<Class Old="Employee" New="Person">
+	</Class>
+	<Class Old="Competency" New="JobCompetency">
+	</Class>
+	<Class Old="Condition" New="FlowDescription">
+	</Class>
+	<Class Old="Conditional" New="Gateway">
+	</Class>
+	<Class Old="ConditionalDescription" New="FlowDescription">
+	</Class>
+	<Class Old="GatewayDescription" New="FlowDescription">
+	</Class>
+	<Class Old="DataView" New="PhysicalInformationArtefact">
+	</Class>
+	<Class Old="DataViewLog" New="LogicalInformationArtefact">
+	</Class>
+	<Class Old="Locality" New="Location">
+	</Class>
+</Remapped>

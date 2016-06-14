@@ -1,0 +1,376 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{71200AD5-44C5-4ABB-A8AB-014A60C923BF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MetaBuilder.Graphing</RootNamespace>
+    <AssemblyName>MetaBuilder.Graphing</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'QuickBuild|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\QuickBuild\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'ControlsOnly|AnyCPU' ">
+    <OutputPath>bin\ControlsOnly\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'UnitTestsOnly|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\UnitTestsOnly\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'ShapeBuilding Only|AnyCPU' ">
+    <OutputPath>bin\ShapeBuilding Only\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'ServicePack|AnyCPU' ">
+    <OutputPath>bin\ServicePack\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'UnitTests|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\UnitTests\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Install|AnyCPU' ">
+    <OutputPath>bin\Install\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Logging, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="NetSpell.SpellChecker, Version=2.1.7.41329, Culture=neutral, PublicKeyToken=318b389f0db66e46">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\AppFolder\References\NetSpell.SpellChecker.dll</HintPath>
+    </Reference>
+    <Reference Include="Northwoods.Go, Version=2.6.2.2, Culture=neutral, PublicKeyToken=a4e3b7b70161cfe8, processorArchitecture=MSIL" />
+    <Reference Include="Northwoods.Go.Draw, Version=2.6.2.2, Culture=neutral, PublicKeyToken=a4e3b7b70161cfe8, processorArchitecture=MSIL" />
+    <Reference Include="Northwoods.Go.Layout, Version=2.6.2.2, Culture=neutral, PublicKeyToken=a4e3b7b70161cfe8, processorArchitecture=MSIL" />
+    <Reference Include="Northwoods.Go.Svg, Version=2.6.2.2, Culture=neutral, PublicKeyToken=a4e3b7b70161cfe8, processorArchitecture=MSIL" />
+    <Reference Include="Northwoods.Go.Xml, Version=2.6.2.2, Culture=neutral, PublicKeyToken=a4e3b7b70161cfe8, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TraceTool, Version=9.0.0.0, Culture=neutral, PublicKeyToken=81da3f4827b33fbd, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Tracetool\VS2005\Windows\Framework 2\Vs8_Windows_F2_Lib\bin\Debug\TraceTool.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Containers\BaseDocument.cs" />
+    <Compile Include="Containers\FrameLayerRect.cs" />
+    <Compile Include="Containers\GraphOverview.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Containers\NormalDiagram.cs" />
+    <Compile Include="Containers\PaletteShapeComparer.cs" />
+    <Compile Include="Containers\Stencil.cs" />
+    <Compile Include="Containers\Symbol.cs" />
+    <Compile Include="Containers\TreeSubGraph.cs" />
+    <Compile Include="Controllers\ContextMenuController.cs" />
+    <Compile Include="Controllers\FixSelfPorts.cs" />
+    <Compile Include="Controllers\HumanInterfaceController.cs" />
+    <Compile Include="Controllers\ObjectContextArgs.cs" />
+    <Compile Include="Controllers\SerializationTester.cs" />
+    <Compile Include="Controllers\VisualIndicatorController.cs" />
+    <Compile Include="Formatting\DiagramPrintSettings.cs" />
+    <Compile Include="Helpers\Delegates.cs" />
+    <Compile Include="Containers\Versioning\DocumentVersion.cs" />
+    <Compile Include="Containers\Versioning\DocumentVersionManager.cs" />
+    <Compile Include="Containers\FrameLayerGroup.cs" />
+    <Compile Include="Containers\GraphPalette.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Containers\GraphView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\GraphViewController.cs" />
+    <Compile Include="Helpers\LinkEndPointComparisonResult.cs" />
+    <Compile Include="Helpers\PluginProgressEventArgs.cs" />
+    <Compile Include="Layout\Combine.cs" />
+    <Compile Include="Layout\FSDLayout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layout\FSDNode.cs" />
+    <Compile Include="Shapes\Binding\CustomTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Shapes\Binding\Intellisense\CustomComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Shapes\Binding\Intellisense\IntellisenseBox.cs" />
+    <Compile Include="Shapes\Binding\Intellisense\IntellisenseMatch.cs" />
+    <Compile Include="Shapes\Binding\Intellisense\SpellChecker.cs" />
+    <Compile Include="Shapes\Binding\Intellisense\TextBoxEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Shapes\General\ArrowBuilder.cs" />
+    <Compile Include="Shapes\General\LinkController.cs" />
+    <Compile Include="Shapes\General\NonPrintingQuickPort.cs" />
+    <Compile Include="Shapes\General\QLink.cs" />
+    <Compile Include="Shapes\General\QRealLink.cs" />
+    <Compile Include="Shapes\General\QuickPortHelper.cs" />
+    <Compile Include="Shapes\General\VisualLink.cs" />
+    <Compile Include="Shapes\General\VisualPort.cs" />
+    <Compile Include="Shapes\Nodes\AllocationHandle.cs" />
+    <Compile Include="Shapes\Nodes\BaseGraphNode.cs" />
+    <Compile Include="Shapes\Nodes\Containers\MappingCell.cs" />
+    <Compile Include="Formatting\FormatSettings.cs" />
+    <Compile Include="Formatting\FormattingManipulator.cs" />
+    <Compile Include="Formatting\Gradient.cs" />
+    <Compile Include="Formatting\ShapeGradientBrush.cs" />
+    <Compile Include="Containers\IMapContainer.cs" />
+    <Compile Include="Helpers\SerializableDictionary.cs" />
+    <Compile Include="Layout\CircularLayout.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Layout\GoGraphDocLayoutNetwork.cs" />
+    <Compile Include="Layout\LayerDigraphLayoutDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layout\LayerDigraphLayoutDialog.Designer.cs">
+      <DependentUpon>LayerDigraphLayoutDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\SimpleLDAL.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Helpers\MessageDispatch.cs" />
+    <Compile Include="Shapes\Binding\RichTextLabel.cs" />
+    <Compile Include="Shapes\Binding\RotatedText.cs" />
+    <Compile Include="Shapes\General\SerializableAttachment.cs" />
+    <Compile Include="Shapes\Nodes\ArtifactNode.cs">
+    </Compile>
+    <Compile Include="Shapes\Behaviours\BehaviourManager.cs" />
+    <Compile Include="Shapes\Behaviours\IBehaviour.cs" />
+    <Compile Include="Shapes\Behaviours\IBehaviourShape.cs" />
+    <Compile Include="Shapes\Behaviours\IIdentifiable.cs" />
+    <Compile Include="Shapes\Behaviours\Internal\BaseInternalBehaviour.cs" />
+    <Compile Include="Shapes\Behaviours\Internal\GradientBehaviour.cs" />
+    <Compile Include="Shapes\Behaviours\Observers\AnchorPositionBehaviour.cs" />
+    <Compile Include="Shapes\Behaviours\Observers\AutosizeBehaviour.cs" />
+    <Compile Include="Shapes\Behaviours\Observers\BaseObserverBehaviour.cs" />
+    <Compile Include="Shapes\Behaviours\Observers\ContainerPaddingBehaviour.cs" />
+    <Compile Include="Shapes\Behaviours\Observers\Enumerations.cs" />
+    <Compile Include="Shapes\Nodes\CollapsibleLabel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Shapes\Nodes\CollapsibleNode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Shapes\Nodes\CollapsingRecordNodeItem.cs" />
+    <Compile Include="Shapes\Nodes\CollapsingRecordNodeItemList.cs" />
+    <Compile Include="Shapes\Nodes\Containers\ValueChain.cs" />
+    <Compile Include="Shapes\Nodes\ContextNode.cs" />
+    <Compile Include="Shapes\Binding\BindingInfo.cs" />
+    <Compile Include="Shapes\Binding\BoundLabel.cs">
+    </Compile>
+    <Compile Include="Shapes\General\Hyperlink.cs" />
+    <Compile Include="Shapes\General\QuickImage.cs" />
+    <Compile Include="Shapes\General\QuickPort.cs" />
+    <Compile Include="Shapes\Nodes\ExpandableLabel.cs" />
+    <Compile Include="Shapes\Nodes\ExpandableLabelList.cs" />
+    <Compile Include="Shapes\Nodes\GraphNode.cs" />
+    <Compile Include="Shapes\Nodes\Containers\ILinkedContainer.cs" />
+    <Compile Include="Shapes\Nodes\ImageNode.cs" />
+    <Compile Include="Shapes\Nodes\IShallowCopyable.cs" />
+    <Compile Include="Shapes\Nodes\LegendNode.cs" />
+    <Compile Include="Shapes\Nodes\MindmapNode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Shapes\Nodes\PropertyNode.cs" />
+    <Compile Include="Shapes\Nodes\Rationale.cs" />
+    <Compile Include="Shapes\Nodes\ResizableComment.cs" />
+    <Compile Include="Shapes\Nodes\ShapeCollapsibleHandle.cs" />
+    <Compile Include="Shapes\Nodes\Containers\SubgraphNode.cs" />
+    <Compile Include="Shapes\Nodes\VerticalNode.cs" />
+    <Compile Include="Shapes\Nodes\VisualNode.cs" />
+    <Compile Include="Shapes\Primitives\GradientArrow.cs" />
+    <Compile Include="Shapes\Primitives\GradientValueChain.cs" />
+    <Compile Include="Shapes\Primitives\HighlightIndicator.cs" />
+    <Compile Include="Shapes\Primitives\HouseShape.cs" />
+    <Compile Include="Shapes\Binding\ILinkObject.cs" />
+    <Compile Include="Shapes\Nodes\IMetaNode.cs" />
+    <Compile Include="Shapes\IRotatable.cs" />
+    <Compile Include="Shapes\General\ISnappableShape.cs" />
+    <Compile Include="Shapes\General\NodeBalloon.cs" />
+    <Compile Include="Shapes\Primitives\QuickStroke.cs" />
+    <Compile Include="Shapes\Primitives\GradientCube.cs" />
+    <Compile Include="Shapes\Primitives\GradientCylinder.cs" />
+    <Compile Include="Shapes\Primitives\GradientDiamond.cs" />
+    <Compile Include="Shapes\Primitives\GradientEllipse.cs" />
+    <Compile Include="Shapes\Primitives\GradientHexagon.cs" />
+    <Compile Include="Shapes\Primitives\GradientOctagon.cs" />
+    <Compile Include="Shapes\Primitives\GradientParallelogram.cs" />
+    <Compile Include="Shapes\Primitives\GradientPie.cs" />
+    <Compile Include="Shapes\Primitives\GradientPolygon.cs" />
+    <Compile Include="Shapes\Primitives\GradientRoundedRectangle.cs" />
+    <Compile Include="Shapes\Primitives\GradientTrapezoid.cs" />
+    <Compile Include="Shapes\Primitives\GradientTriangle.cs" />
+    <Compile Include="Tools\ClassAssociationComparer.cs" />
+    <Compile Include="Tools\CustomLayerComparer.cs" />
+    <Compile Include="Tools\DocumentController.cs" />
+    <Compile Include="Tools\CustomDraggingTool.cs" />
+    <Compile Include="Tools\GraphViewResizeTool.cs">
+    </Compile>
+    <Compile Include="Tools\MetaConvertTool.cs" />
+    <Compile Include="Tools\QuickPanel.cs" />
+    <Compile Include="Tools\QuickPanelButton.cs" />
+    <Compile Include="Tools\SubGraphDraggingTool.cs" />
+    <Compile Include="Shapes\Nodes\RepeaterSection.cs" />
+    <Compile Include="Shapes\RichText.cs">
+    </Compile>
+    <Compile Include="Shapes\Nodes\GraphNodeGrid.cs" />
+    <Compile Include="Shapes\Primitives\SnapSettings.cs" />
+    <Compile Include="Shapes\ShapeGroup.cs" />
+    <Compile Include="Controllers\AlignmentControl.cs" />
+    <Compile Include="Tools\AutoRelinkTool.cs" />
+    <Compile Include="Tools\ContextViewer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Tools\GraphViewLinkingTool.cs" />
+    <Compile Include="Tools\GraphViewRubberbandingTool.cs" />
+    <Compile Include="Controllers\GroupingControl.cs" />
+    <Compile Include="Tools\PolygonDrawingTool.cs" />
+    <Compile Include="Tools\PortMovingTool.cs" />
+    <Compile Include="Tools\RoutingLinkTool.cs" />
+    <Compile Include="Controllers\ShapeOrderingControl.cs" />
+    <Compile Include="Controllers\ShapeDesignController.cs" />
+    <Compile Include="Tools\StrokeDrawingTool.cs" />
+    <Compile Include="Controllers\ZoomController.cs" />
+    <Compile Include="Utilities\DistributionManager.cs" />
+    <Compile Include="Utilities\NodeManipulator.cs" />
+    <Compile Include="Helpers\Debuggers\ShapeHelper.cs" />
+    <Compile Include="Utilities\StorageManipulator.cs" />
+    <Compile Include="VersionInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Containers\GraphPalette.resx">
+      <DependentUpon>GraphPalette.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Containers\GraphView.resx">
+      <DependentUpon>GraphView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Misc\Common\MetaBuilder.ResourceManager\MetaBuilder.ResourceManagement.csproj">
+      <Project>{8F7E3611-6B54-4C3E-8795-90453172D628}</Project>
+      <Name>MetaBuilder.ResourceManagement</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Misc\External\NetTiers\MetaBuilder.BusinessLogic\MetaBuilder.BusinessLogic.csproj">
+      <Project>{B72D3674-44C0-49FE-A4F1-64910F292641}</Project>
+      <Name>MetaBuilder.BusinessLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Misc\External\NetTiers\MetaBuilder.DataAccessLayer\MetaBuilder.DataAccessLayer.csproj">
+      <Project>{02252C54-158A-4DD2-928C-75A3906CCFA9}</Project>
+      <Name>MetaBuilder.DataAccessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MetaBuilder.BusinessFacade\MetaBuilder.BusinessFacade.csproj">
+      <Project>{AB8F12D8-2969-49EC-9361-2641FAF5F422}</Project>
+      <Name>MetaBuilder.BusinessFacade</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MetaBuilder.Core\MetaBuilder.Core.csproj">
+      <Project>{AC8718BA-4640-4CB6-8611-5D8717849DAA}</Project>
+      <Name>MetaBuilder.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MetaBuilder.Meta\MetaBuilder.Meta.csproj">
+      <Project>{A6A472F1-D4A5-44C4-9689-36BD0EE52036}</Project>
+      <Name>MetaBuilder.Meta</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+    <Folder Include="Shapes\Connectors\" />
+    <Folder Include="Unused\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

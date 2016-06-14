@@ -1,0 +1,29 @@
+<settings>
+  <Paths_ArrowHeads>c:\Program Files\Discon Specialists\MetaBuilder\MetaData\ArrowHeads\</Paths_ArrowHeads>
+  <Paths_Debug>c:\Program Files\Discon Specialists\MetaBuilder\MetaData\DebugReports\</Paths_Debug>
+  <Paths_Arrowheads>c:\Program Files\Discon Specialists\MetaBuilder\MetaData\ArrowHeads\</Paths_Arrowheads>
+  <Paths_Diagrams>c:\Program Files\Discon Specialists\MetaBuilder\MetaData\Diagrams\</Paths_Diagrams>
+  <Paths_Export>c:\Program Files\Discon Specialists\MetaBuilder\MetaData\Export\</Paths_Export>
+  <Paths_SourceFiles>c:\Program Files\Discon Specialists\MetaBuilder\MetaData\SourceFiles</Paths_SourceFiles>
+  <Paths_SymbolStores>c:\Program Files\Discon Specialists\MetaBuilder\MetaData\SymbolStores\</Paths_SymbolStores>
+  <Paths_Symbols>c:\Program Files\Discon Specialists\MetaBuilder\MetaData\Symbols\</Paths_Symbols>
+  <Paths_Thumbnails>c:\Program Files\Discon Specialists\MetaBuilder\MetaData\Thumbnails\</Paths_Thumbnails>
+  <Database_LocalInstanceConnectionString>server=.\sqlexpress;Integrated Security=true;database=MetaBuilder;Connection Reset=FALSE</Database_LocalInstanceConnectionString>
+  <Database_SyncServerConnectionString>server=.\sqlexpress;Integrated Security=true;database=MetaBuilder;Connection Reset=FALSE</Database_SyncServerConnectionString>
+  <General_Company>DISCON Specialists</General_Company>
+  <General_UndoLevels>20</General_UndoLevels>
+  <General_UserFullName>Deon Fourie</General_UserFullName>
+  <General_UserInitials>DF</General_UserInitials>
+  <Save_AutosaveInterval>20</Save_AutosaveInterval>
+  <Save_EnableAutosave>True</Save_EnableAutosave>
+  <Save_PromptForDocumentPropertiesOnFirstSave>True</Save_PromptForDocumentPropertiesOnFirstSave>
+  <Versioning_AutoCheckoutAllShapes>True</Versioning_AutoCheckoutAllShapes>
+  <Versioning_PurgeMinorVersions>True</Versioning_PurgeMinorVersions>
+  <Versioning_PurgeMinorVersionsInterval>20</Versioning_PurgeMinorVersionsInterval>
+  <View_CanvasHeight>1000</View_CanvasHeight>
+  <View_CanvasWidth>1000</View_CanvasWidth>
+  <View_GridCellSize>20</View_GridCellSize>
+  <View_ShowGrid>True</View_ShowGrid>
+  <View_SnapToGrid>True</View_SnapToGrid>
+  <View_SmoothingMode>Default</View_SmoothingMode>
+</settings>

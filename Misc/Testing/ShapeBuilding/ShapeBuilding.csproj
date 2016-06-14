@@ -1,0 +1,387 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{876BD4A0-0663-4F72-8089-501C8BA527D8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ShapeBuilding</RootNamespace>
+    <AssemblyName>ShapeBuilding</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'ShapeBuilding Only|AnyCPU' ">
+    <OutputPath>bin\ShapeBuilding Only\</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'UnitTests|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\UnitTests\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Install|AnyCPU' ">
+    <OutputPath>bin\Install\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ascend, Version=1.0.0.6, Culture=neutral, PublicKeyToken=25c7a393ba3f37cd" />
+    <Reference Include="Ascend.Resources, Version=1.0.0.6, Culture=neutral, PublicKeyToken=9c9aecb37b1e03b6" />
+    <Reference Include="Ascend.Windows.Forms, Version=1.0.0.6, Culture=neutral, PublicKeyToken=ecd86ece2d3eb46d" />
+    <Reference Include="FastColoredTextBox, Version=2.6.7.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\97. Downloads\FastColoredTextBox\FastColoredTextBox\FastColoredTextBox\bin\Debug\FastColoredTextBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.Excel, Version=1.4.0.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Other\References\Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=10.0.4504.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Other\References\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.AppSettings.Configuration.Design, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Caching, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography.Configuration.Design, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Caching.Database, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Caching.Database.Configuration.Design, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Configuration.Design, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Configuration.Design.HostAdapter, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data.SqlCe, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.Configuration.Design, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.Design, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Logging, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Logging.Database, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.Design, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.PolicyInjection, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Configuration.Design, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Security, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Security.AzMan, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Security.AzMan.Configuration.Design, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Security.Cache.Configuration.Design, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Security.Cryptography, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Validation, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Validation.Integration.AspNet, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Validation.Integration.WCF, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Validation.Integration.WinForms, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Practices.ObjectBuilder, Version=1.0.51206.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Northwoods.Go, Version=2.6.2.2, Culture=neutral, PublicKeyToken=a4e3b7b70161cfe8, processorArchitecture=MSIL" />
+    <Reference Include="Northwoods.Go.Draw, Version=2.5.1.2, Culture=neutral, PublicKeyToken=a4e3b7b70161cfe8, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Northwoods Software\GoDiagram Win 2.5.1 for .NET 2.0\lib\Northwoods.Go.Draw.dll</HintPath>
+    </Reference>
+    <Reference Include="Northwoods.Go.Layout, Version=2.6.2.2, Culture=neutral, PublicKeyToken=a4e3b7b70161cfe8, processorArchitecture=MSIL" />
+    <Reference Include="Northwoods.Go.Xml, Version=2.5.1.2, Culture=neutral, PublicKeyToken=a4e3b7b70161cfe8, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\Program Files\Northwoods Software\GoDiagram Win 2.5.1 for .NET 2.0\lib\Northwoods.Go.Xml.DLL</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=2.4.0.2, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\NUnit 2.4\bin\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Archives\AnyClassNode.cs" />
+    <Compile Include="Archives\AutoLinkContextNode.cs" />
+    <Compile Include="Archives\CustomPrinting\ChoosePrinter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Archives\CustomPrinting\ChoosePrinter.Designer.cs">
+      <DependentUpon>ChoosePrinter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Archives\CustomPrinting\MyPrintDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Archives\CustomPrinting\MyPrintDialog.Designer.cs">
+      <DependentUpon>MyPrintDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Archives\CustomPrinting\PrintableView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Archives\DataEntityBuilder.cs" />
+    <Compile Include="Archives\DataTableShapeBuilder.cs" />
+    <Compile Include="Archives\DataViewShapeBuilder.cs" />
+    <Compile Include="Archives\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Archives\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Archives\NewDataTableBuilder.cs" />
+    <Compile Include="Archives\NodeDropper.cs" />
+    <Compile Include="Archives\ReportShapeBuilder.cs" />
+    <Compile Include="Design\Entity.cs" />
+    <Compile Include="Example.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Example.Designer.cs">
+      <DependentUpon>Example.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FSDLayout\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSDLayout\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Links\ArrowBuilder.cs" />
+    <Compile Include="Links\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Links\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Links\LinkController.cs" />
+    <Compile Include="Links\QLink.cs" />
+    <Compile Include="Links\QLinkMidPort.cs" />
+    <Compile Include="Links\QPort.cs" />
+    <Compile Include="Links\QRealLink.cs" />
+    <Compile Include="Links\QNode.cs" />
+    <Compile Include="MARS\Tester.cs" />
+    <Compile Include="Oman.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Oman.Designer.cs">
+      <DependentUpon>Oman.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Archives\CustomPrinting\ChoosePrinter.resx">
+      <DependentUpon>ChoosePrinter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Archives\CustomPrinting\MyPrintDialog.resx">
+      <DependentUpon>MyPrintDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Archives\Form1.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Example.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Example.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSDLayout\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Links\Form1.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Oman.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Oman.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Archives\ShapeProperties.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ShapeProperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShapesToXML.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ShapesToXML.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TextToHierarchy\DiagramChooser.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DiagramChooser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TextToHierarchy\VisualHierarchyBuilder.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>VisualHierarchyBuilder.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Archives\ShapeProperties.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Archives\ShapeProperties.Designer.cs">
+      <DependentUpon>ShapeProperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Archives\SubGraphDraggingTool.cs" />
+    <Compile Include="Archives\SubGrapher.cs" />
+    <Compile Include="ShapesToXML.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShapesToXML.Designer.cs">
+      <DependentUpon>ShapesToXML.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StickyNode.cs" />
+    <Compile Include="TextToHierarchy\DiagramChooser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TextToHierarchy\DiagramChooser.Designer.cs">
+      <DependentUpon>DiagramChooser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TextToHierarchy\StickyNode.cs" />
+    <Compile Include="TextToHierarchy\VisualHierarchyBuilder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TextToHierarchy\VisualHierarchyBuilder.Designer.cs">
+      <DependentUpon>VisualHierarchyBuilder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VCS.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Main\MetaBuilder.Graphing\MetaBuilder.Graphing.csproj">
+      <Project>{71200AD5-44C5-4ABB-A8AB-014A60C923BF}</Project>
+      <Name>MetaBuilder.Graphing</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Main\MetaBuilder.MetaControls\MetaBuilder.MetaControls.csproj">
+      <Project>{F455C73B-87A6-4815-A3FB-F19B286AE406}</Project>
+      <Name>MetaBuilder.MetaControls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Main\MetaBuilder.UIControls\MetaBuilder.UIControls.csproj">
+      <Project>{6B40D926-F92F-4B7E-BA1C-3CC04D46A6AD}</Project>
+      <Name>MetaBuilder.UIControls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Main\MetaBuilder.Graphing.Persistence\MetaBuilder.Graphing.Persistence.csproj">
+      <Project>{FA0415E3-5C92-4224-814D-E06B3EF0AC6D}</Project>
+      <Name>MetaBuilder.Graphing.Persistence</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\DisconPlugins\DisconPlugins.csproj">
+      <Project>{3CE77700-4248-4E3A-B264-4D6A95F17B7C}</Project>
+      <Name>DisconPlugins</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Main\MetaBuilder.BusinessFacade\MetaBuilder.BusinessFacade.csproj">
+      <Project>{AB8F12D8-2969-49EC-9361-2641FAF5F422}</Project>
+      <Name>MetaBuilder.BusinessFacade</Name>
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Main\MetaBuilder.Core\MetaBuilder.Core.csproj">
+      <Project>{AC8718BA-4640-4CB6-8611-5D8717849DAA}</Project>
+      <Name>MetaBuilder.Core</Name>
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Main\MetaBuilder.Meta\MetaBuilder.Meta.csproj">
+      <Project>{A6A472F1-D4A5-44C4-9689-36BD0EE52036}</Project>
+      <Name>MetaBuilder.Meta</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\MetaBuilder.Dock\MetaBuilder.Docking.csproj">
+      <Project>{C75532C4-765B-418E-B09B-46D36B2ABDB1}</Project>
+      <Name>MetaBuilder.Docking</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\MetaBuilder.ResourceManager\MetaBuilder.ResourceManagement.csproj">
+      <Project>{8F7E3611-6B54-4C3E-8795-90453172D628}</Project>
+      <Name>MetaBuilder.ResourceManagement</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Main\MetaBuilder.WinUI\MetaBuilder.WinUI.csproj">
+      <Project>{F865CFF0-25AE-4C20-89D8-B78916D7E91B}</Project>
+      <Name>MetaBuilder.WinUI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\External\NetTiers\MetaBuilder.BusinessLogic\MetaBuilder.BusinessLogic.csproj">
+      <Project>{B72D3674-44C0-49FE-A4F1-64910F292641}</Project>
+      <Name>MetaBuilder.BusinessLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\External\NetTiers\MetaBuilder.DataAccessLayer.SqlClient\MetaBuilder.DataAccessLayer.SqlClient.csproj">
+      <Project>{57769669-DE6B-4520-ADA4-6DA59740C258}</Project>
+      <Name>MetaBuilder.DataAccessLayer.SqlClient</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\External\NetTiers\MetaBuilder.DataAccessLayer\MetaBuilder.DataAccessLayer.csproj">
+      <Project>{02252C54-158A-4DD2-928C-75A3906CCFA9}</Project>
+      <Name>MetaBuilder.DataAccessLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="ActiveDs">
+      <Guid>{97D25DB0-0363-11CF-ABC4-02608C9E7553}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MetaBuilder.DataAccessLayer.SqlClient.Procedures.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\" />
+    <Folder Include="Repository\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

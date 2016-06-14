@@ -1,0 +1,28 @@
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+  <SignedInfo>
+    <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" />
+    <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" />
+    <Reference URI="#LicenseInfoId">
+      <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <DigestValue>E/ZdWCFJQW7C5bQ3bt94HUdtS+o=</DigestValue>
+    </Reference>
+  </SignedInfo>
+  <SignatureValue>SzBD4qaxvxP/cbEMha2WDVxWVBXKjNELcW+FkXJU7C+UGqIP0JCqbNyGKf4HlTO3sYnkRLv4fk/QQRs5r6uOxFfafJ8t6Xqz/FWWkl936kEdRMal799/oaKeZ+q2V/EPu6gFgJwc2Bb4HAuSgYqTON5+ADnpDo+BNk8b2O6CsXo=</SignatureValue>
+  <Object Id="LicenseInfoId">
+    <Application xmlns="">
+      <Name>MetaBuilder</Name>
+    </Application>
+    <SystemIdentifiers xmlns="">
+      <Identifier Name="MachineName">vO6nLtJq2KGORpwvWcQ3BnTAht9Zi02fJ4zKbBrk7Ho=</Identifier>
+      <Identifier Name="NICMAC">1yr5drE2CAX3WNaG5KeTIdIKa1pNRcC1EI00efzEr2E=</Identifier>
+      <Identifier Name="RootVolumeID">0170P/zF9hzGguCM1HHiM0b4nA+Aot1BUlWBUWvXQW8=</Identifier>
+    </SystemIdentifiers>
+    <InstallationDate xmlns="">NH0Zk4SyclOBwn91UJBa3p2uu+FOTeDYNRAVvL4mPAYc8/MqUL3Sa8TaceaaOc/Ko84fD8o2B3b7PtcDW/RqPv262xz7sF5R1LOpC/Q7I+k=</InstallationDate>
+    <InstallationDateS xmlns="">VjuHWSRrpcx0UdDJmtn2bohZ3BbQFAKN3hNBu5AfxOeyoFZHmyWB7S0NP0EcCYeJi79TMpHNkbWhq7K+ssqHzDEoKDX93h3yRRIMHVB2FU0=</InstallationDateS>
+    <InstallKey xmlns="">166903cb-6d35-4700-8476-46517a182f00</InstallKey>
+    <UniqueInstallation xmlns="">
+      <GUID>13e488c8-8b93-4a7c-9057-b9e8d4188851</GUID>
+      <RuntimeKey>Z4mU8DTeLOm6MzWXGBrmFC8mm8VRqbZNRj4bfWdZ/1QFnaOzCiRkVtiHL2imO/JJsFK4rXJ2HHydu3zkQsWfy/W0/zVPv3jddoQtUnPKtV6yPOg16lB2h1aV4iLe60Fu20aX11xizpWoCWLdQvdB2c/McxpCYGuhd9L3f1WZaO8=</RuntimeKey>
+    </UniqueInstallation>
+  </Object>
+</Signature>

@@ -1,0 +1,7 @@
+Janus.Windows.EditControls.UIButton, Janus.Windows.UI.v2, Version=2.0.1000.0, Culture=neutral, PublicKeyToken=21d5517571b185bf
+Janus.Windows.GridEX.GridEX, Janus.Windows.GridEX.v2, Version=2.0.1000.0, Culture=neutral, PublicKeyToken=21d5517571b185bf
+Janus.Windows.EditControls.UIComboBox, Janus.Windows.UI.v2, Version=2.0.1000.0, Culture=neutral, PublicKeyToken=21d5517571b185bf
+Janus.Windows.EditControls.UIColorButton, Janus.Windows.UI.v2, Version=2.0.1000.0, Culture=neutral, PublicKeyToken=21d5517571b185bf
+Northwoods.Go.Layout.GoLayoutLayeredDigraph, Northwoods.Go.Layout, Version=2.6.2.2, Culture=neutral, PublicKeyToken=a4e3b7b70161cfe8
+Janus.Windows.GridEX.EditControls.MultiColumnCombo, Janus.Windows.GridEX.v2, Version=2.0.1000.0, Culture=neutral, PublicKeyToken=21d5517571b185bf
+Northwoods.Go.GoView, Northwoods.Go, Version=2.6.2.2, Culture=neutral, PublicKeyToken=a4e3b7b70161cfe8

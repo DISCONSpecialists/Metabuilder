@@ -1,0 +1,1477 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6B40D926-F92F-4B7E-BA1C-3CC04D46A6AD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MetaBuilder.UIControls</RootNamespace>
+    <AssemblyName>MetaBuilder.UIControls</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'QuickBuild|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\QuickBuild\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;CONTROLAUTHORING</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'ControlsOnly|AnyCPU' ">
+    <OutputPath>bin\ControlsOnly\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'UnitTestsOnly|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\UnitTestsOnly\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;CONTROLAUTHORING</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'ShapeBuilding Only|AnyCPU' ">
+    <OutputPath>bin\ShapeBuilding Only\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'ServicePack|AnyCPU' ">
+    <OutputPath>bin\ServicePack\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'UnitTests|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\UnitTests\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Install|AnyCPU' ">
+    <OutputPath>bin\Install\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="adodb, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Ascend, Version=1.0.0.6, Culture=neutral, PublicKeyToken=25c7a393ba3f37cd, processorArchitecture=MSIL" />
+    <Reference Include="Ascend.Resources, Version=1.0.0.6, Culture=neutral, PublicKeyToken=9c9aecb37b1e03b6, processorArchitecture=MSIL" />
+    <Reference Include="Ascend.Windows.Forms, Version=1.0.0.6, Culture=neutral, PublicKeyToken=ecd86ece2d3eb46d, processorArchitecture=MSIL" />
+    <Reference Include="Janus.Windows.ButtonBar.v2, Version=2.0.1000.0, Culture=neutral, PublicKeyToken=21d5517571b185bf" />
+    <Reference Include="Janus.Windows.Common.v2, Version=2.0.1000.0, Culture=neutral, PublicKeyToken=21d5517571b185bf" />
+    <Reference Include="Janus.Windows.ExplorerBar.v2, Version=2.0.1000.0, Culture=neutral, PublicKeyToken=21d5517571b185bf" />
+    <Reference Include="Janus.Windows.GridEX.v2, Version=2.0.1000.0, Culture=neutral, PublicKeyToken=21d5517571b185bf" />
+    <Reference Include="Janus.Windows.UI.v2, Version=2.0.1000.0, Culture=neutral, PublicKeyToken=21d5517571b185bf" />
+    <Reference Include="Microsoft.Data.ConnectionUI, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Microsoft Visual Studio 8\Common7\IDE\Microsoft.Data.ConnectionUI.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.ConnectionUI.Dialog, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Microsoft Visual Studio 8\Common7\IDE\Microsoft.Data.ConnectionUI.Dialog.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.JScript" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=10.0.4504.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Other\References\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Caching, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Logging, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Practices.ObjectBuilder, Version=1.0.51206.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="NetSpell.SpellChecker, Version=2.1.7.41329, Culture=neutral, PublicKeyToken=318b389f0db66e46">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\AppFolder\References\NetSpell.SpellChecker.dll</HintPath>
+    </Reference>
+    <Reference Include="Northwoods.Go, Version=2.5.1.2, Culture=neutral, PublicKeyToken=a4e3b7b70161cfe8, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Northwoods Software\GoDiagram Win 2.5.1 for .NET 2.0\lib\Northwoods.Go.DLL</HintPath>
+    </Reference>
+    <Reference Include="Northwoods.Go.Draw, Version=2.5.1.2, Culture=neutral, PublicKeyToken=a4e3b7b70161cfe8, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Northwoods Software\GoDiagram Win 2.5.1 for .NET 2.0\lib\Northwoods.Go.Draw.dll</HintPath>
+    </Reference>
+    <Reference Include="Northwoods.Go.Layout, Version=2.5.1.2, Culture=neutral, PublicKeyToken=a4e3b7b70161cfe8, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Northwoods Software\GoDiagram Win 2.5.1 for .NET 2.0\lib\Northwoods.Go.Layout.dll</HintPath>
+    </Reference>
+    <Reference Include="Northwoods.Go.Xml, Version=2.5.1.2, Culture=neutral, PublicKeyToken=a4e3b7b70161cfe8, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Northwoods Software\GoDiagram Win 2.5.1 for .NET 2.0\lib\Northwoods.Go.Xml.DLL</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Core, Version=4.102.0.50, Culture=neutral, PublicKeyToken=632609b4d040f6b4" />
+    <Reference Include="Syncfusion.Grid.Windows, Version=4.102.0.50, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.Shared.Base, Version=4.102.0.50, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.Tools.Windows, Version=4.102.0.50, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.InteropServices.APIs, Version=1.0.4335.27195, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\AppFolder\References\System.Runtime.InteropServices.APIs.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.TreeListView, Version=1.0.4335.27217, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\AppFolder\References\System.Windows.Forms.TreeListView.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="TraceTool, Version=12.1.0.0, Culture=neutral, PublicKeyToken=81da3f4827b33fbd, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\tracetool new\DotNet\VS2005\Windows\Framework 2\Vs8_Windows_F2_Lib\bin\Debug\TraceTool.dll</HintPath>
+    </Reference>
+    <Reference Include="ZedGraph, Version=5.0.1.29433, Culture=neutral, PublicKeyToken=02a83cbd123fcd60, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\AppFolder\References\ZedGraph.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\DebugConsole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\SplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\SplashScreen.Designer.cs">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraphingUI\ShapeBinding.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GraphingUI\ShapeBinding.Designer.cs">
+      <DependentUpon>ShapeBinding.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraphingUI\PortFormatter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GraphingUI\PortFormatter.Designer.cs">
+      <DependentUpon>PortFormatter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraphingUI\Props.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dialogs\RelationshipManager\ArtifactEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\AssociatedClassesDropdown.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common\FullScreenForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\ClassDropdown.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common\NewObject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\NoProgressBar.cs" />
+    <Compile Include="PanelSwitchState.cs" />
+    <Compile Include="PartialBuildMode.cs" />
+    <Compile Include="Tree\ArtifactClassNode.cs" />
+    <Compile Include="Tree\ArtifactNode.cs" />
+    <Compile Include="Tree\ArtifactPropertiesNode.cs" />
+    <Compile Include="Tree\CaptionNode.cs" />
+    <Compile Include="Tree\MetaBaseTree.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Tree\MetaTreeNode.cs" />
+    <Compile Include="Tree\ObjectNode.cs" />
+    <Compile Include="Tree\OLDMetaBaseTree.cs" />
+    <Compile Include="Tree\OLDStructureTree.cs" />
+    <Compile Include="Tree\StructureTree.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Common\ChooseDiagram.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ChooseDiagram.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\Preferences.resx">
+      <DependentUpon>Preferences.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ChooseClass.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ChooseClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DebugInfo.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DebugInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FindText.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FindText.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraphingUI\DefinePort.resx">
+      <DependentUpon>DefinePort.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraphingUI\Formatting\Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraphingUI\LiteGraphViewContainer.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>LiteGraphViewContainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraphingUI\PaletteContainer.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PaletteContainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraphingUI\PaletteDocker.resx">
+      <DependentUpon>PaletteDocker.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraphingUI\DockingForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DockingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraphingUI\GraphViewContainer.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>GraphViewContainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraphingUI\PanningDocker.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PanningDocker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraphingUI\PropertyGridDocker.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PropertyGridDocker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraphingUI\ShapeBinding.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ShapeBinding.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraphingUI\TreeLayoutDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>TreeLayoutDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraphingUI\PortFormatter.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PortFormatter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraphingUI\Props.resx">
+      <DependentUpon>Props.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RelationshipManager\ArtifactEditor.resx">
+      <DependentUpon>ArtifactEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\AssociatedClassesDropdown.resx">
+      <DependentUpon>AssociatedClassesDropdown.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\FullScreenForm.resx">
+      <DependentUpon>FullScreenForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\ClassDropdown.resx">
+      <DependentUpon>ClassDropdown.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\NewObject.resx">
+      <DependentUpon>NewObject.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tree\MetaBaseTree.resx">
+      <DependentUpon>MetaBaseTree.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tree\OLDStructureTree.resx">
+      <DependentUpon>OLDStructureTree.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tree\StructureTree.resx">
+      <DependentUpon>StructureTree.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Common\About.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\CheckBoxComboBox\PopupComboBox.resx">
+      <DependentUpon>PopupComboBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\Reports.resx">
+      <DependentUpon>Reports.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\TempMappingExporter.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>TempMappingExporter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AssociationManager.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AssociationManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DatabaseManagement\ManageArtefacts.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ManageArtefacts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DatabaseManagement\Synchroniser.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Synchroniser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DefaultPortPositionSelector.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DefaultPortPositionSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditHyperlink.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>EditHyperlink.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ChooseWorkspace.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ChooseWorkspace.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ChooseWorkspaceForAction.resx">
+      <DependentUpon>ChooseWorkspaceForAction.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FindAndReplaceText.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FindAndReplaceText.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FindTextWinForms.resx">
+      <DependentUpon>FindTextWinForms.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DatabaseManagement\AddObjectsToRecycler.resx">
+      <DependentUpon>AddObjectsToRecycler.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DatabaseManagement\AddAssociationsToRecycler.resx">
+      <DependentUpon>AddAssociationsToRecycler.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DatabaseManagement\ExportMultipleObjectsContext.resx">
+      <DependentUpon>ExportMultipleObjectsContext.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DatabaseManagement\FindDuplicates.resx">
+      <DependentUpon>FindDuplicates.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DatabaseManagement\ManageMarkedForDeleteAssociations.resx">
+      <DependentUpon>ManageMarkedForDeleteAssociations.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DatabaseManagement\DatabaseManagement.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DatabaseManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DatabaseManagement\ManageMarkedForDeleteObjects.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ManageMarkedForDeleteObjects.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DeleteWorkspace.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DeleteWorkspace.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DiagramManager.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DiagramManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ManageHyperlinks.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ManageHyperlinks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MindMap\MindmapForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MindmapForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MoveToNextHighlight.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MoveToNextHighlight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\PortManipulator.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PortManipulator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\PromptForPassword.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PromptForPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\QueryForTextImport.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>QueryForTextImport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RefreshCollapsibleNodes.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RefreshCollapsibleNodes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RefreshComplexNodes.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RefreshComplexNodes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RefreshData.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RefreshData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\Registration\SpecifyProxy.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SpecifyProxy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RelationshipManager\RelmanContainer.resx">
+      <DependentUpon>RelmanContainer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RelationshipManager\TableContainer.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>TableContainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RelationshipManager\TreeContainer.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>TreeContainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SplashScreen.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraphingUI\ActionMenu\Actions\Action.resx">
+      <DependentUpon>Action.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraphingUI\ActionMenu\Actions\ActionList.resx">
+      <DependentUpon>ActionList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraphingUI\ActionMenu\DirBrowser\FolderDialog.resx">
+      <DependentUpon>FolderDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraphingUI\ActionMenu\DirBrowser\FolderForm.en.resx">
+      <DependentUpon>FolderForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraphingUI\ActionMenu\DirBrowser\FolderForm.fr.resx">
+      <DependentUpon>FolderForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraphingUI\ActionMenu\DirBrowser\FolderForm.resx">
+      <DependentUpon>FolderForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraphingUI\ActionMenu\DirBrowser\FolderTree.resx">
+      <DependentUpon>FolderTree.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraphingUI\ActionMenu\MenuExtender.resx">
+      <DependentUpon>MenuExtender.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraphingUI\AutoSaveForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AutoSaveForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraphingUI\ChooseRepository.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ChooseRepository.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraphingUI\CustomBox.resx">
+      <DependentUpon>CustomBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraphingUI\CustomPrinting\MyPrintDialog.resx">
+      <DependentUpon>MyPrintDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraphingUI\Formatting\GradientTypeEditorUI.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>GradientTypeEditorUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraphingUI\HelpDocker.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>HelpDocker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraphingUI\LayeredLayoutDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>LayeredLayoutDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraphingUI\LogDisplayer.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>LogDisplayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraphingUI\ObjectFinder.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ObjectFinder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraphingUI\ObjectManager.resx">
+      <DependentUpon>ObjectManager.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraphingUI\OffPageReferenceEditor.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>OffPageReferenceEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraphingUI\ServerWorkspacePermission.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ServerWorkspacePermission.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraphingUI\SubgraphBinding\EditSubgraphBinding.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>EditSubgraphBinding.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraphingUI\SubgraphBinding\PromptKeepAssociations.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PromptKeepAssociations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraphingUI\SynchronisationPanel.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SynchronisationPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraphingUI\TaskDocker.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>TaskDocker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraphingUI\Tools\Allocation\Allocation.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Allocation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraphingUI\Tools\DataModel\UI\ValidationResultForm.resx">
+      <DependentUpon>ValidationResultForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraphingUI\Tools\DocHandlers\ImportExport\OptionsForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>OptionsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraphingUI\Tools\eHPUM\eHPUM.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>eHPUM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraphingUI\Tools\Explorer\MetaObjectExplorer.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MetaObjectExplorer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraphingUI\Tools\GapAnalysis\ResourceGapAnalysis.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ResourceGapAnalysis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraphingUI\Tools\HeatMap\HeatMapMeasure.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>HeatMapMeasure.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraphingUI\Tools\ObjectFlowExport\ObjectFlowExportInterface.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ObjectFlowExportInterface.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraphingUI\Tools\SynchronisationManager\SynchronisationManager.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SynchronisationManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraphingUI\TreeLoader.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>TreeLoader.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraphingUI\UserPermissions.resx">
+      <DependentUpon>UserPermissions.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraphingUI\WorkspaceManager.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>WorkspaceManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RegForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RepositoryTree.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RepositoryTree.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SWOT\SWOT.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SWOT.cs</DependentUpon>
+    </EmbeddedResource>
+    <Content Include="GraphingUI\ActionMenu\Actions\ActionList.bmp" />
+    <Content Include="GraphingUI\ActionMenu\DirBrowser\FolderDialog.bmp" />
+    <Content Include="GraphingUI\ActionMenu\DirBrowser\FolderTree.bmp" />
+    <Compile Include="GraphingUI\Tools\DataModel\Inference\Reflexivity.cs" />
+    <Content Include="licensing info.txt" />
+    <None Include="Resources\saveall.gif" />
+    <None Include="Resources\DescriptionIcon.png" />
+    <None Include="Resources\Ellipse.png" />
+    <None Include="Resources\Diamond.png" />
+    <None Include="Resources\Triangle.png" />
+    <None Include="Resources\RoundedRectangle.png" />
+    <None Include="Resources\Rectangle.png" />
+    <None Include="Web References\RegistrationWS\Service.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Metabuilder.chm">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\RegistrationWS\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\RegistrationWS\Service.wsdl" />
+    <Compile Include="AppInterop.cs" />
+    <Compile Include="Common\CheckBoxComboBox\CheckBoxComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common\CheckBoxComboBox\CheckBoxComboBox.designer.cs">
+      <DependentUpon>CheckBoxComboBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\CheckBoxComboBox\GripBounds.cs" />
+    <Compile Include="Common\CheckBoxComboBox\NativeMethods.cs" />
+    <Compile Include="Common\CheckBoxComboBox\Popup.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common\CheckBoxComboBox\Popup.designer.cs">
+      <DependentUpon>Popup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\CheckBoxComboBox\PopupComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common\CheckBoxComboBox\PopupComboBox.designer.cs">
+      <DependentUpon>PopupComboBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\CheckBoxComboBox\Selection Wrappers\ListSelectionWrapper.cs" />
+    <Compile Include="Common\CheckBoxComboBox\Selection Wrappers\ObjectSelectionWrapper.cs" />
+    <Compile Include="Dialogs\DatabaseManagement\Synchroniser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\DatabaseManagement\Synchroniser.Designer.cs">
+      <DependentUpon>Synchroniser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\DefaultPortPositionSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\DefaultPortPositionSelector.Designer.cs">
+      <DependentUpon>DefaultPortPositionSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\FindAndReplaceText.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\FindAndReplaceText.Designer.cs">
+      <DependentUpon>FindAndReplaceText.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\MindMap\MindmapForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\MindMap\MindmapLayout.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Dialogs\PortManipulator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\PortManipulator.Designer.cs">
+      <DependentUpon>PortManipulator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraphingUI\AssemblyInfo.cs" />
+    <Compile Include="Common\About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\ChooseDiagram.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\ChooseDiagram.Designer.cs">
+      <DependentUpon>ChooseDiagram.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\GeneralUtil.cs" />
+    <Compile Include="Common\Preferences.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\Preferences.Designer.cs">
+      <DependentUpon>Preferences.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Reports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\Reports.designer.cs">
+      <DependentUpon>Reports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\ReportsExport.cs" />
+    <Compile Include="Common\TempMappingExporter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\TempMappingExporter.Designer.cs">
+      <DependentUpon>TempMappingExporter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CoreInjector.cs" />
+    <Compile Include="Dialogs\AssociationManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\AssociationManager.Designer.cs">
+      <DependentUpon>AssociationManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\ChooseClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\ChooseClass.Designer.cs">
+      <DependentUpon>ChooseClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\DatabaseManagement\ManageArtefacts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\DatabaseManagement\ManageArtefacts.Designer.cs">
+      <DependentUpon>ManageArtefacts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\EditHyperlink.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\EditHyperlink.Designer.cs">
+      <DependentUpon>EditHyperlink.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\ChooseWorkspace.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\ChooseWorkspace.Designer.cs">
+      <DependentUpon>ChooseWorkspace.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\ChooseWorkspaceForAction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\ChooseWorkspaceForAction.Designer.cs">
+      <DependentUpon>ChooseWorkspaceForAction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\FindTextWinForms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\FindTextWinForms.Designer.cs">
+      <DependentUpon>FindTextWinForms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\DatabaseManagement\AddObjectsToRecycler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\DatabaseManagement\AddObjectsToRecycler.Designer.cs">
+      <DependentUpon>AddObjectsToRecycler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\DatabaseManagement\AddAssociationsToRecycler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\DatabaseManagement\AddAssociationsToRecycler.Designer.cs">
+      <DependentUpon>AddAssociationsToRecycler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\DatabaseManagement\ExportMultipleObjectsContext.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\DatabaseManagement\ExportMultipleObjectsContext.Designer.cs">
+      <DependentUpon>ExportMultipleObjectsContext.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\DatabaseManagement\FindDuplicates.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\DatabaseManagement\FindDuplicates.Designer.cs">
+      <DependentUpon>FindDuplicates.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\DatabaseManagement\ManageMarkedForDeleteAssociations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\DatabaseManagement\ManageMarkedForDeleteAssociations.Designer.cs">
+      <DependentUpon>ManageMarkedForDeleteAssociations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\DatabaseManagement\DatabaseManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\DatabaseManagement\DatabaseManagement.Designer.cs">
+      <DependentUpon>DatabaseManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\DatabaseManagement\ManageMarkedForDeleteObjects.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\DatabaseManagement\ManageMarkedForDeleteObjects.Designer.cs">
+      <DependentUpon>ManageMarkedForDeleteObjects.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\DatabaseManagement\ObjectMerger.cs" />
+    <Compile Include="Dialogs\DebugInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\DebugInfo.Designer.cs">
+      <DependentUpon>DebugInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\DeleteWorkspace.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\DeleteWorkspace.Designer.cs">
+      <DependentUpon>DeleteWorkspace.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\DiagramManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\DiagramManager.Designer.cs">
+      <DependentUpon>DiagramManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\FindText.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\FindText.Designer.cs">
+      <DependentUpon>FindText.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\ManageHyperlinks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\ManageHyperlinks.Designer.cs">
+      <DependentUpon>ManageHyperlinks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\MoveToNextHighlight.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\MoveToNextHighlight.Designer.cs">
+      <DependentUpon>MoveToNextHighlight.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\PromptForPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\PromptForPassword.Designer.cs">
+      <DependentUpon>PromptForPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\QueryForTextImport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\QueryForTextImport.Designer.cs">
+      <DependentUpon>QueryForTextImport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\RefreshCollapsibleNodes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\RefreshCollapsibleNodes.Designer.cs">
+      <DependentUpon>RefreshCollapsibleNodes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\RefreshComplexNodes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\RefreshComplexNodes.Designer.cs">
+      <DependentUpon>RefreshComplexNodes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\RefreshData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\RefreshData.Designer.cs">
+      <DependentUpon>RefreshData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\Registration\SpecifyProxy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Registration\SpecifyProxy.Designer.cs">
+      <DependentUpon>SpecifyProxy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\RelationshipManager\HelperClasses.cs" />
+    <Compile Include="Dialogs\RelationshipManager\RelmanContainer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\RelationshipManager\RelmanContainer.Designer.cs">
+      <DependentUpon>RelmanContainer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\RelationshipManager\SerializableRelationshipView.cs" />
+    <Compile Include="Dialogs\RelationshipManager\TableContainer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\RelationshipManager\TableContainer.Designer.cs">
+      <DependentUpon>TableContainer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\RelationshipManager\TreeContainer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\RelationshipManager\TreeContainer.Designer.cs">
+      <DependentUpon>TreeContainer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraphingUI\ActionMenu\Actions\Action.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GraphingUI\ActionMenu\Actions\ActionCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GraphingUI\ActionMenu\Actions\ActionList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GraphingUI\ActionMenu\Actions\Design.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GraphingUI\ActionMenu\Design\ImageIndexEditor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GraphingUI\ActionMenu\DirBrowser\FolderDialog.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GraphingUI\ActionMenu\DirBrowser\FolderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GraphingUI\ActionMenu\DirBrowser\FolderTree.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GraphingUI\ActionMenu\MenuExtender.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GraphingUI\ActionMenu\MRUManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GraphingUI\ActionMenu\Utils\Win32.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GraphingUI\AutoSaveForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GraphingUI\AutoSaveForm.Designer.cs">
+      <DependentUpon>AutoSaveForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraphingUI\ChooseRepository.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GraphingUI\ChooseRepository.Designer.cs">
+      <DependentUpon>ChooseRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraphingUI\CustomBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GraphingUI\CustomBox.designer.cs">
+      <DependentUpon>CustomBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraphingUI\CustomPrinting\MyPrintDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GraphingUI\CustomPrinting\MyPrintDialog.Designer.cs">
+      <DependentUpon>MyPrintDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraphingUI\CustomPrinting\PrintableView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GraphingUI\DiagramSaver.cs" />
+    <Compile Include="GraphingUI\DockingFormController.cs" />
+    <Compile Include="GraphingUI\DupeChecker\Checker.cs" />
+    <Compile Include="GraphingUI\DupeChecker\FindExistingObject.cs" />
+    <Compile Include="GraphingUI\DefinePort.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GraphingUI\DefinePort.Designer.cs">
+      <DependentUpon>DefinePort.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraphingUI\Formatting\Main_Partial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GraphingUI\Formatting\UndoRedo\BasicFormatting.cs" />
+    <Compile Include="GraphingUI\Formatting\UndoRedo\FormatEditCommand.cs" />
+    <Compile Include="GraphingUI\Formatting\UndoRedo\FormattingContainer.cs" />
+    <Compile Include="GraphingUI\Formatting\UndoRedo\ShapeFormatting.cs" />
+    <Compile Include="GraphingUI\Formatting\UndoRedo\TextFormatting.cs" />
+    <Compile Include="GraphingUI\Formatting\GenericValueEditor.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GraphingUI\Formatting\GradientBuilder.cs" />
+    <Compile Include="GraphingUI\Formatting\GradientTypeEditorUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GraphingUI\Formatting\GradientTypeEditorUI.Designer.cs">
+      <DependentUpon>GradientTypeEditorUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraphingUI\Formatting\Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GraphingUI\Formatting\MouseRuler.cs" />
+    <Compile Include="GraphingUI\Formatting\SettingsCollection.cs" />
+    <Compile Include="GraphingUI\GraphViewContext.cs" />
+    <Compile Include="GraphingUI\HelpDocker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GraphingUI\HelpDocker.Designer.cs">
+      <DependentUpon>HelpDocker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraphingUI\IViewObserver.cs" />
+    <Compile Include="GraphingUI\LayeredLayoutDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GraphingUI\LiteGraphViewContainer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GraphingUI\LiteGraphViewContainer.Designer.cs">
+      <DependentUpon>LiteGraphViewContainer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraphingUI\LogDisplayer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GraphingUI\LogDisplayer.Designer.cs">
+      <DependentUpon>LogDisplayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraphingUI\ObjectFinder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GraphingUI\ObjectFinder.Designer.cs">
+      <DependentUpon>ObjectFinder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraphingUI\ObjectManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GraphingUI\ObjectManager.Designer.cs">
+      <DependentUpon>ObjectManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraphingUI\OffPageReferenceEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GraphingUI\OffPageReferenceEditor.Designer.cs">
+      <DependentUpon>OffPageReferenceEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraphingUI\PaletteContainer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GraphingUI\PaletteContainer.Designer.cs">
+      <DependentUpon>PaletteContainer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraphingUI\PaletteDocker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GraphingUI\PaletteDocker.Designer.cs">
+      <DependentUpon>PaletteDocker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraphingUI\DockingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GraphingUI\DockingForm.Designer.cs">
+      <DependentUpon>DockingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraphingUI\GraphViewContainer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GraphingUI\GraphViewContainer.Designer.cs">
+      <DependentUpon>GraphViewContainer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraphingUI\PanningDocker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GraphingUI\PanningDocker.Designer.cs">
+      <DependentUpon>PanningDocker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraphingUI\PluginSectionHandler.cs" />
+    <Compile Include="GraphingUI\PropertyGridDocker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GraphingUI\PropertyGridDocker.Designer.cs">
+      <DependentUpon>PropertyGridDocker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraphingUI\RepositoryDropdownRenderer.cs" />
+    <Compile Include="GraphingUI\RepositoryTree\AssociationTypeNode.cs" />
+    <Compile Include="GraphingUI\RepositoryTree\ClassAssociationNode.cs" />
+    <Compile Include="GraphingUI\RepositoryTree\ClassCollectionNode.cs" />
+    <Compile Include="GraphingUI\RepositoryTree\ClassNode.cs" />
+    <Compile Include="GraphingUI\RepositoryTree\GraphFileCollectionNode.cs" />
+    <Compile Include="GraphingUI\RepositoryTree\GraphFileNode.cs" />
+    <Compile Include="GraphingUI\RepositoryTree\ItemNode.cs" />
+    <Compile Include="GraphingUI\RepositoryTree\RelationshipCollectionNode.cs" />
+    <Compile Include="GraphingUI\RepositoryTree\RepositoryNode.cs" />
+    <Compile Include="GraphingUI\RepositoryTree\WorkspaceNode.cs" />
+    <Compile Include="GraphingUI\ServerWorkspacePermission.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GraphingUI\ServerWorkspacePermission.Designer.cs">
+      <DependentUpon>ServerWorkspacePermission.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraphingUI\ShowProgressDelegate.cs" />
+    <Compile Include="GraphingUI\SQLScriptRunner.cs" />
+    <Compile Include="GraphingUI\SubgraphBinding\EditSubgraphBinding.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GraphingUI\SubgraphBinding\EditSubgraphBinding.Designer.cs">
+      <DependentUpon>EditSubgraphBinding.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraphingUI\SubgraphBinding\LinkedContainerControlller.cs" />
+    <Compile Include="GraphingUI\SubgraphBinding\PromptKeepAssociations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GraphingUI\SubgraphBinding\PromptKeepAssociations.Designer.cs">
+      <DependentUpon>PromptKeepAssociations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraphingUI\SynchronisationPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GraphingUI\SynchronisationPanel.Designer.cs">
+      <DependentUpon>SynchronisationPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraphingUI\TaskDocker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GraphingUI\TaskDocker.Designer.cs">
+      <DependentUpon>TaskDocker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraphingUI\Tools\Allocation\Allocation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GraphingUI\Tools\Allocation\Allocation.Designer.cs">
+      <DependentUpon>Allocation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraphingUI\Tools\DataModel\Engine2015.cs" />
+    <Compile Include="GraphingUI\Tools\DataModel\Validation\ADD\AttributeSetMustBeUnique.cs" />
+    <Compile Include="GraphingUI\Tools\DataModel\Validation\ADD\Cluster\Cluster.cs" />
+    <Compile Include="GraphingUI\Tools\DataModel\Validation\ADD\Inference\Augmentative.cs" />
+    <Compile Include="GraphingUI\Tools\DataModel\Validation\ADD\Inference\Ordinary.cs" />
+    <Compile Include="GraphingUI\Tools\DataModel\Validation\ADD\Inference\Reflexive.cs" />
+    <Compile Include="GraphingUI\Tools\DataModel\Validation\ADD\Inference\Transitive.cs" />
+    <Compile Include="GraphingUI\Tools\DataModel\Validation\ADD\SubSetLinkMustHaveSelectorAttribute.cs" />
+    <Compile Include="GraphingUI\Tools\DataModel\Validation\ADD\EntityCanOnlyHaveOneSuperset.cs" />
+    <Compile Include="GraphingUI\Tools\DataModel\Validation\ADD\SubSetIndicatorMustHaveMoreThanOneSubSet.cs" />
+    <Compile Include="GraphingUI\Tools\DataModel\Validation\ADD\SuperSetMustDictateSubsetType.cs" />
+    <Compile Include="GraphingUI\Tools\DataModel\Validation\Basic\ComplexNodeMustHaveChildren.cs" />
+    <Compile Include="GraphingUI\Tools\DataModel\Validation\Basic\NodeMustHaveType.cs" />
+    <Compile Include="GraphingUI\Tools\DataModel\Validation\Basic\NodeMustHaveUniqueName.cs" />
+    <Compile Include="GraphingUI\Tools\DataModel\Validation\Basic\NodeMustBeLinked.cs" />
+    <Compile Include="GraphingUI\Tools\DataModel\Validation\EntityCannotHaveSameKeysetAsAnother.cs" />
+    <Compile Include="GraphingUI\Tools\DataModel\Validation\EntityMustDictateSubsetKeyAttributes.cs" />
+    <Compile Include="GraphingUI\Tools\DeleteObjectsFromFiles.cs" />
+    <Compile Include="GraphingUI\Tools\DocHandlers\ImportExport\BaseExporter.cs" />
+    <Compile Include="GraphingUI\Tools\DocHandlers\ImportExport\BaseImporter.cs" />
+    <Compile Include="GraphingUI\Tools\DocHandlers\ImportExport\OptionsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GraphingUI\Tools\DocHandlers\ImportExport\OptionsForm.Designer.cs">
+      <DependentUpon>OptionsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraphingUI\Tools\eHPUM\eHPUM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GraphingUI\Tools\eHPUM\eHPUM.Designer.cs">
+      <DependentUpon>eHPUM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraphingUI\Tools\eHPUM\ImportDiagram.cs" />
+    <Compile Include="GraphingUI\Tools\eHPUM\ImportObject.cs" />
+    <Compile Include="GraphingUI\Tools\Explorer\MetaObjectExplorer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GraphingUI\Tools\Explorer\MetaObjectExplorer.Designer.cs">
+      <DependentUpon>MetaObjectExplorer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraphingUI\Tools\GapAnalysis\ResourceGapAnalysis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GraphingUI\Tools\GapAnalysis\ResourceGapAnalysis.Designer.cs">
+      <DependentUpon>ResourceGapAnalysis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraphingUI\Tools\HeatMap\Capability.cs" />
+    <Compile Include="GraphingUI\Tools\HeatMap\HeatMapMeasure.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GraphingUI\Tools\HeatMap\HeatMapMeasure.Designer.cs">
+      <DependentUpon>HeatMapMeasure.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraphingUI\Tools\Help\ContextHelp.cs" />
+    <Compile Include="GraphingUI\Tools\Help\HelpItem.cs" />
+    <Compile Include="GraphingUI\Tools\LoadFromDatabase.cs" />
+    <Compile Include="GraphingUI\Tools\MetaComparer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GraphingUI\Tools\DataModel\Accessor.cs" />
+    <Compile Include="GraphingUI\Tools\DataModel\Synthesis\DSDBuilder.cs" />
+    <Compile Include="GraphingUI\Tools\DataModel\Entity.cs" />
+    <Compile Include="GraphingUI\Tools\DataModel\FEBT\SIDBuilder.cs" />
+    <Compile Include="GraphingUI\Tools\DataModel\Model.cs" />
+    <Compile Include="GraphingUI\Tools\DataModel\Inference\BaseRule.cs" />
+    <Compile Include="GraphingUI\Tools\DataModel\FEBT\PatternFinder.cs" />
+    <Compile Include="GraphingUI\Tools\DataModel\UI\InferenceRulesOptions.cs" />
+    <Compile Include="GraphingUI\Tools\DataModel\UI\ValidationResultForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GraphingUI\Tools\DataModel\UI\ValidationResultForm.Designer.cs">
+      <DependentUpon>ValidationResultForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraphingUI\Tools\DataModel\Validation\EntityCannotBeDuplicated.cs" />
+    <Compile Include="GraphingUI\Tools\DataModel\Validation\EntityCannotHaveMoreThanOneSuperset.cs" />
+    <Compile Include="GraphingUI\Tools\DataModel\Validation\EntityMustBeConnected.cs" />
+    <Compile Include="GraphingUI\Tools\DataModel\Validation\EntityMustDictateSubsets.cs" />
+    <Compile Include="GraphingUI\Tools\DataModel\Validation\EntityMustHaveKeyAttributes.cs" />
+    <Compile Include="GraphingUI\Tools\DataModel\Validation\EntityMustHaveType.cs" />
+    <Compile Include="GraphingUI\Tools\DataModel\Validation\EntityHasDuplicateSelectorAttributes.cs" />
+    <Compile Include="GraphingUI\Tools\DataModel\Inference\Augmentation.cs" />
+    <Compile Include="GraphingUI\Tools\DataModel\Inference\Ordinary.cs" />
+    <Compile Include="GraphingUI\Tools\DataModel\Inference\Transitivity.cs" />
+    <Compile Include="GraphingUI\Tools\DataModel\Engine.cs" />
+    <Compile Include="GraphingUI\Tools\DataModel\Validation\XORCannotContainDuplicateSelector.cs" />
+    <Compile Include="GraphingUI\Tools\DataModel\Validation\XORMustHaveMutuallyExclusiveEntities.cs" />
+    <Compile Include="GraphingUI\Tools\DataModel\Validation\XORMustHaveSelectorAttribute.cs" />
+    <Compile Include="GraphingUI\Tools\DataModel\Validation\XORMustHaveSubsetLink.cs" />
+    <Compile Include="GraphingUI\Tools\DataModel\Validation\XOROnlyOneEntityWarning.cs" />
+    <Compile Include="GraphingUI\Tools\DataModel\Validation\BaseRule.cs" />
+    <Compile Include="GraphingUI\Tools\DataModel\Table.cs" />
+    <Compile Include="GraphingUI\Tools\DataModel\Tester.cs" />
+    <Compile Include="GraphingUI\Tools\ObjectFlowExport\Exporter.cs" />
+    <Compile Include="GraphingUI\Tools\ObjectFlowExport\Flow.cs" />
+    <Compile Include="GraphingUI\Tools\ObjectFlowExport\ObjectFlow.cs" />
+    <Compile Include="GraphingUI\Tools\ObjectFlowExport\ObjectFlowAssociation.cs" />
+    <Compile Include="GraphingUI\Tools\ObjectFlowExport\ObjectFlowExportInterface.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GraphingUI\Tools\ObjectFlowExport\ObjectFlowExportInterface.Designer.cs">
+      <DependentUpon>ObjectFlowExportInterface.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraphingUI\Tools\SynchronisationManager\SynchronisationManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GraphingUI\Tools\SynchronisationManager\SynchronisationManager.Designer.cs">
+      <DependentUpon>SynchronisationManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraphingUI\Tools\SynchronisationManager\SynchronisationRules.cs" />
+    <Compile Include="GraphingUI\Tools\SynchronisationManager\VersionControlledItem.cs" />
+    <Compile Include="GraphingUI\TreeLayoutDialog.cs" />
+    <Compile Include="GraphingUI\TreeLoader.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GraphingUI\TreeLoader.Designer.cs">
+      <DependentUpon>TreeLoader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraphingUI\UserPermissions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GraphingUI\UserPermissions.Designer.cs">
+      <DependentUpon>UserPermissions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraphingUI\WorkspaceManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GraphingUI\WorkspaceManager.Designer.cs">
+      <DependentUpon>WorkspaceManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MetaTree\ClassAssociationCollectionNode.cs" />
+    <Compile Include="MetaTree\DocumentNode.cs" />
+    <Compile Include="MetaTree\EmptyNode.cs" />
+    <Compile Include="MetaTree\GraphNodeCollectionNode.cs" />
+    <Compile Include="MetaTree\GraphObjectNode.cs" />
+    <Compile Include="MetaTree\MetaTree.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MetaTree\MetaTreeBase.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MetaTree\MetaTreeBase.Designer.cs">
+      <DependentUpon>MetaTreeBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MetaTree\MetaTreeNode.cs" />
+    <Compile Include="MetaTree\ObjectNode.cs" />
+    <Compile Include="MetaTree\WorkspaceNode.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="ProxyAndNetwork.cs" />
+    <Compile Include="RegForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RepositoryTree.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RepositoryTree.Designer.cs">
+      <DependentUpon>RepositoryTree.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <Compile Include="SWOT\SWOT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SWOT\SWOT.Designer.cs">
+      <DependentUpon>SWOT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SWOT\SWOTWriter.cs" />
+    <Compile Include="Tree\NewTree.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Web References\RegistrationWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://www.metabuilder.co.za/RegistrationWS/Service.asmx">
+      <UrlBehavior>Static</UrlBehavior>
+      <RelPath>Web References\RegistrationWS\</RelPath>
+      <UpdateFromURL>http://www.metabuilder.co.za/RegistrationWS/Service.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>MetaBuilder_UIControls_RegistrationWS_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\2 - Controls\ObjectListViewDemo\ObjectListView\ObjectListView2005.csproj">
+      <Project>{18feda0c-d147-4286-b39a-01204808106a}</Project>
+      <Name>ObjectListView2005</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Misc\Common\MetaBuilder.Dock\MetaBuilder.Docking.csproj">
+      <Project>{C75532C4-765B-418E-B09B-46D36B2ABDB1}</Project>
+      <Name>MetaBuilder.Docking</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Misc\Common\MetaBuilder.ResourceManager\MetaBuilder.ResourceManagement.csproj">
+      <Project>{8F7E3611-6B54-4C3E-8795-90453172D628}</Project>
+      <Name>MetaBuilder.ResourceManagement</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Misc\Common\MetaBuilder.SplashScreen\MetaBuilder.SplashScreen.csproj">
+      <Project>{743EDB81-D2AC-4A52-A313-50BD4229401B}</Project>
+      <Name>MetaBuilder.SplashScreen</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Misc\Common\MetaBuilder.Sync\MetaBuilder.Sync.csproj">
+      <Project>{ED9F3CFD-303E-49CF-AC53-2E830699AEAF}</Project>
+      <Name>MetaBuilder.Sync</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Misc\Common\PluginSDK\MetaBuilder.PluginSDK.csproj">
+      <Project>{86DE2EA4-EC67-4F0A-BC70-7E23BF009D64}</Project>
+      <Name>MetaBuilder.PluginSDK</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Misc\External\MetaBuilder.CommonControls\MetaBuilder.CommonControls.csproj">
+      <Project>{E73BB233-D88B-44A7-A98F-D71EE158381D}</Project>
+      <Name>MetaBuilder.CommonControls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Misc\External\NetTiers\MetaBuilder.BusinessLogic\MetaBuilder.BusinessLogic.csproj">
+      <Project>{B72D3674-44C0-49FE-A4F1-64910F292641}</Project>
+      <Name>MetaBuilder.BusinessLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Misc\External\NetTiers\MetaBuilder.DataAccessLayer\MetaBuilder.DataAccessLayer.csproj">
+      <Project>{02252C54-158A-4DD2-928C-75A3906CCFA9}</Project>
+      <Name>MetaBuilder.DataAccessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Misc\External\OpenLicense\OpenLicense.csproj">
+      <Project>{645A64F9-27CD-453C-96E0-9DF733D035B1}</Project>
+      <Name>OpenLicense</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Misc\External\XPTable\XPTable.csproj">
+      <Project>{86FA531A-298B-473E-A40F-D53D058D9A3F}</Project>
+      <Name>XPTable</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MetaBuilder.BusinessFacade\MetaBuilder.BusinessFacade.csproj">
+      <Project>{AB8F12D8-2969-49EC-9361-2641FAF5F422}</Project>
+      <Name>MetaBuilder.BusinessFacade</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MetaBuilder.Core\MetaBuilder.Core.csproj">
+      <Project>{AC8718BA-4640-4CB6-8611-5D8717849DAA}</Project>
+      <Name>MetaBuilder.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MetaBuilder.Graphing.Persistence\MetaBuilder.Graphing.Persistence.csproj">
+      <Project>{FA0415E3-5C92-4224-814D-E06B3EF0AC6D}</Project>
+      <Name>MetaBuilder.Graphing.Persistence</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MetaBuilder.Meta\MetaBuilder.Meta.csproj">
+      <Project>{A6A472F1-D4A5-44C4-9689-36BD0EE52036}</Project>
+      <Name>MetaBuilder.Meta</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MetaBuilder.Graphing\MetaBuilder.Graphing.csproj">
+      <Project>{71200AD5-44C5-4ABB-A8AB-014A60C923BF}</Project>
+      <Name>MetaBuilder.Graphing</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MetaBuilder.MetaControls\MetaBuilder.MetaControls.csproj">
+      <Project>{F455C73B-87A6-4815-A3FB-F19B286AE406}</Project>
+      <Name>MetaBuilder.MetaControls</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="MSDASC">
+      <Guid>{2206CEB0-19C1-11D1-89E0-00C04FD7A829}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="OLEDBError">
+      <Guid>{C8B522D5-5CF3-11CE-ADE5-00AA0044773D}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="GraphingUI\Tools\DataModel\Validation\ADD\DSD\" />
+    <Folder Include="GraphingUI\Tools\DataModel\Validation\ADD\SID\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

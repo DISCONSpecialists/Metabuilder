@@ -1,0 +1,108 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="MetaBuilder.UIControls.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="MetaBuilder_UIControls_RegistrationWS_Service" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://www.metabuilder.co.za/RegistrationWS/Service.asmx</Value>
+    </Setting>
+    <Setting Name="View_ShowGrid" Type="System.String" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="View_SmoothingMode" Type="System.String" Scope="User">
+      <Value Profile="(Default)">HighQuality</Value>
+    </Setting>
+    <Setting Name="View_SnapToGrid" Type="System.String" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="Paths_Symbols" Type="System.String" Scope="User">
+      <Value Profile="(Default)">c:\Program Files\Discon Specialists\MetaBuilder\MetaData\Symbols\</Value>
+    </Setting>
+    <Setting Name="Paths_Stencils" Type="System.String" Scope="User">
+      <Value Profile="(Default)">c:\Program Files\Discon Specialists\MetaBuilder\MetaData\Stencils\</Value>
+    </Setting>
+    <Setting Name="Paths_Diagrams" Type="System.String" Scope="User">
+      <Value Profile="(Default)">c:\Program Files\Discon Specialists\MetaBuilder\MetaData\Diagrams\</Value>
+    </Setting>
+    <Setting Name="Paths_ArrowHeads" Type="System.String" Scope="User">
+      <Value Profile="(Default)">c:\Program Files\Discon Specialists\MetaBuilder\MetaData\ArrowHeads\</Value>
+    </Setting>
+    <Setting Name="Paths_Export" Type="System.String" Scope="User">
+      <Value Profile="(Default)">c:\Program Files\Discon Specialists\MetaBuilder\MetaData\Export\</Value>
+    </Setting>
+    <Setting Name="Paths_Debug" Type="System.String" Scope="User">
+      <Value Profile="(Default)">c:\Program Files\Discon Specialists\MetaBuilder\MetaData\DebugReports\</Value>
+    </Setting>
+    <Setting Name="Paths_Thumbnails" Type="System.String" Scope="User">
+      <Value Profile="(Default)">c:\Program Files\Discon Specialists\MetaBuilder\MetaData\Thumbs\</Value>
+    </Setting>
+    <Setting Name="FormLayout_MetaPropertyGrid" Type="System.String" Scope="User">
+      <Value Profile="(Default)">DockRight</Value>
+    </Setting>
+    <Setting Name="FormLayout_PropertyGrid" Type="System.String" Scope="User">
+      <Value Profile="(Default)">DockLeft</Value>
+    </Setting>
+    <Setting Name="FormLayout_Output" Type="System.String" Scope="User">
+      <Value Profile="(Default)">DockBottom</Value>
+    </Setting>
+    <Setting Name="FormLayout_Stencils" Type="System.String" Scope="User">
+      <Value Profile="(Default)">DockLeft</Value>
+    </Setting>
+    <Setting Name="FormLayout_Navigator" Type="System.String" Scope="User">
+      <Value Profile="(Default)">DockLeft</Value>
+    </Setting>
+    <Setting Name="General_UserFullname" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Deon Fourie</Value>
+    </Setting>
+    <Setting Name="General_UserInitials" Type="System.String" Scope="User">
+      <Value Profile="(Default)">DF</Value>
+    </Setting>
+    <Setting Name="General_Company" Type="System.String" Scope="User">
+      <Value Profile="(Default)">DISCON Specialists</Value>
+    </Setting>
+    <Setting Name="Save_EnableAutosave" Type="System.String" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="Save_DefaultTarget" Type="System.String" Scope="User">
+      <Value Profile="(Default)">DatabaseAndFileSystem</Value>
+    </Setting>
+    <Setting Name="Versioning_AutoCheckoutAllShapes" Type="System.String" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="Versioning_PurgeMinorVersions" Type="System.String" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="Paths_MetaData_SourceFiles" Type="System.String" Scope="User">
+      <Value Profile="(Default)">c:\Program Files\Discon Specialists\MetaBuilder\MetaData\SourceFiles</Value>
+    </Setting>
+    <Setting Name="Save_AutosaveInterval" Type="System.String" Scope="User">
+      <Value Profile="(Default)">20</Value>
+    </Setting>
+    <Setting Name="Versioning_PurgeMinorVersionsInterval" Type="System.String" Scope="User">
+      <Value Profile="(Default)">20</Value>
+    </Setting>
+    <Setting Name="View_CanvasWidth" Type="System.String" Scope="User">
+      <Value Profile="(Default)">1000</Value>
+    </Setting>
+    <Setting Name="View_CanvasHeight" Type="System.String" Scope="User">
+      <Value Profile="(Default)">1000</Value>
+    </Setting>
+    <Setting Name="View_GridSize" Type="System.String" Scope="User">
+      <Value Profile="(Default)">20</Value>
+    </Setting>
+    <Setting Name="General_NumberOfUndoLevels" Type="System.String" Scope="User">
+      <Value Profile="(Default)">20</Value>
+    </Setting>
+    <Setting Name="DB_LocalInstanceConnectionString" Type="System.String" Scope="User">
+      <Value Profile="(Default)">server=.\sqlexpress;Integrated Security=true;database=MetaBuilder;Connection Reset=FALSE</Value>
+    </Setting>
+    <Setting Name="DB_SyncServerConnectionString" Type="System.String" Scope="User">
+      <Value Profile="(Default)">server=.\sqlexpress;Integrated Security=true;database=MetaBuilder;Connection Reset=FALSE</Value>
+    </Setting>
+    <Setting Name="Save_PromptForDocumentPropertiesOnFirstSave" Type="System.String" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="ID" Type="System.String" Scope="User">
+      <Value Profile="(Default)">ID</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

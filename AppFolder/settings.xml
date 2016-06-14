@@ -1,0 +1,39 @@
+<settings>
+  <Paths_Diagrams>c:\Program Files\Discon Specialists\MetaBuilder\MetaData\Diagrams\</Paths_Diagrams>
+  <Paths_Export>c:\Program Files\Discon Specialists\MetaBuilder\MetaData\Export\</Paths_Export>
+  <Paths_SourceFiles>c:\Program Files\Discon Specialists\MetaBuilder\MetaData\SourceFiles\</Paths_SourceFiles>
+  <Paths_SymbolStores>c:\Program Files\Discon Specialists\MetaBuilder\MetaData\SymbolStores\</Paths_SymbolStores>
+  <Database_LocalInstanceConnectionString>Server=.\..../.;Initial Catalog=MetaBuilder;Integrated Security=true;</Database_LocalInstanceConnectionString>
+  <Database_SyncServerConnectionString>NONE SPECIFIED</Database_SyncServerConnectionString>
+  <General_Company>Company Name</General_Company>
+  <General_UndoLevels>20</General_UndoLevels>
+  <General_UserFullName>Full Name</General_UserFullName>
+  <General_UserInitials>FN</General_UserInitials>
+  <Save_AutosaveInterval>20</Save_AutosaveInterval>
+  <Save_EnableAutosave>True</Save_EnableAutosave>
+  <Save_PromptForDocumentPropertiesOnFirstSave>True</Save_PromptForDocumentPropertiesOnFirstSave>
+  <Versioning_AutoCheckoutAllShapes>True</Versioning_AutoCheckoutAllShapes>
+  <Versioning_PurgeMinorVersions>True</Versioning_PurgeMinorVersions>
+  <Versioning_PurgeMinorVersionsInterval>20</Versioning_PurgeMinorVersionsInterval>
+  <View_CanvasHeight>1000</View_CanvasHeight>
+  <View_CanvasWidth>1000</View_CanvasWidth>
+  <View_GridCellSize>20</View_GridCellSize>
+  <View_ShowGrid>True</View_ShowGrid>
+  <View_SnapToGrid>True</View_SnapToGrid>
+  <View_SmoothingMode>HighQuality</View_SmoothingMode>
+  <View_CheckDuplicates>True</View_CheckDuplicates>
+  <View_CheckDuplicates_Alert_Mechanism>False</View_CheckDuplicates_Alert_Mechanism>
+  <View_ValidateOnOpen>True</View_ValidateOnOpen>
+  <View_CheckDuplicatesAcrossWorkspaces>True</View_CheckDuplicatesAcrossWorkspaces>
+  <Print_ArtefactLines>False</Print_ArtefactLines>
+  <Print_Comments>False</Print_Comments>
+  <Print_VCIndicators>True</Print_VCIndicators>
+  <View_ArrowMoveLarge>50</View_ArrowMoveLarge>
+  <View_ArrowMoveSmall>5</View_ArrowMoveSmall>
+  <View_AutoSaveEnabled>True</View_AutoSaveEnabled>
+  <View_AutoSaveInterval>5</View_AutoSaveInterval>
+  <View_SaveToDatabaseEnabled>True</View_SaveToDatabaseEnabled>
+  <View_CheckExistenceOnOtherDiagramsOnDelete>False</View_CheckExistenceOnOtherDiagramsOnDelete>
+  <Paths_Symbols>C:\Program Files\DISCON Specialists\MetaBuilder\MetaData\Symbols\</Paths_Symbols>
+  <View_CompareAndRefresh>Prompt</View_CompareAndRefresh>
+</settings>

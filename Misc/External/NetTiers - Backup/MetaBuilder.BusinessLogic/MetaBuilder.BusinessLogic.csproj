@@ -1,0 +1,1290 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B72D3674-44C0-49FE-A4F1-64910F292641}</ProjectGuid>
+    <ProjectType>Local</ProjectType>
+    <OutputType>Library</OutputType>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>MetaBuilder.BusinessLogic</AssemblyName>
+    <AssemblyOriginatorKeyFile>..\MetaBuilder.snk</AssemblyOriginatorKeyFile>
+    <SignAssembly>false</SignAssembly>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <RootNamespace>MetaBuilder.BusinessLogic</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>
+    </DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugType>pdbonly</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'GenerateDebug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>MetaBuilder.BusinessLogic.xml</DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'ServicePack|AnyCPU' ">
+    <OutputPath>bin\ServicePack\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'UnitTests|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\UnitTests\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <BaseAddress>285212672</BaseAddress>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Install|AnyCPU' ">
+    <OutputPath>bin\Install\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Caching, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Logging, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Practices.ObjectBuilder, Version=1.0.51206.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Drawing" />
+  </ItemGroup>
+  <!-- Custom code folder: C:\NetTiers\MetaBuilder\MetaBuilder.BusinessLogic\App_Code -->
+  <ItemGroup>
+    <Compile Include="App_Code\**\*.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <!-- Include any user files -->
+  <ItemGroup>
+    <Compile Include="**\*.user.*" Exclude="**\*.csproj.user;**\.svn\**">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssociationTypeList.cs" />
+    <Compile Include="FileTypeList.cs" />
+    <Compile Include="IRepositoryItem.cs" />
+    <Compile Include="IWorkspaceItem.cs" />
+    <Compile Include="PermissionList.cs" />
+    <Compile Include="Views\METAView_Activity_Listing.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_Activity_ListingBase.generated.cs">
+      <DependentUpon>METAView_Activity_Listing.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_Activity_Retrieval.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_Activity_RetrievalBase.generated.cs">
+      <DependentUpon>METAView_Activity_Retrieval.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_Attribute_Listing.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_Attribute_ListingBase.generated.cs">
+      <DependentUpon>METAView_Attribute_Listing.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_Attribute_Retrieval.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_Attribute_RetrievalBase.generated.cs">
+      <DependentUpon>METAView_Attribute_Retrieval.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_CAD_Listing.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_CAD_ListingBase.generated.cs">
+      <DependentUpon>METAView_CAD_Listing.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_CAD_Retrieval.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_CAD_RetrievalBase.generated.cs">
+      <DependentUpon>METAView_CAD_Retrieval.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_CADReal_Listing.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_CADReal_ListingBase.generated.cs">
+      <DependentUpon>METAView_CADReal_Listing.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_CADReal_Retrieval.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_CADReal_RetrievalBase.generated.cs">
+      <DependentUpon>METAView_CADReal_Retrieval.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_CategoryFactor_Listing.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_CategoryFactor_ListingBase.generated.cs">
+      <DependentUpon>METAView_CategoryFactor_Listing.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_CategoryFactor_Retrieval.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_CategoryFactor_RetrievalBase.generated.cs">
+      <DependentUpon>METAView_CategoryFactor_Retrieval.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_Competency_Listing.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_Competency_ListingBase.generated.cs">
+      <DependentUpon>METAView_Competency_Listing.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_Competency_Retrieval.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_Competency_RetrievalBase.generated.cs">
+      <DependentUpon>METAView_Competency_Retrieval.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_Condition_Listing.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_Condition_ListingBase.generated.cs">
+      <DependentUpon>METAView_Condition_Listing.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_Condition_Retrieval.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_Condition_RetrievalBase.generated.cs">
+      <DependentUpon>METAView_Condition_Retrieval.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_Conditional_Listing.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_Conditional_ListingBase.generated.cs">
+      <DependentUpon>METAView_Conditional_Listing.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_Conditional_Retrieval.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_Conditional_RetrievalBase.generated.cs">
+      <DependentUpon>METAView_Conditional_Retrieval.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_ConditionalDescription_Listing.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_ConditionalDescription_ListingBase.generated.cs">
+      <DependentUpon>METAView_ConditionalDescription_Listing.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_ConditionalDescription_Retrieval.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_ConditionalDescription_RetrievalBase.generated.cs">
+      <DependentUpon>METAView_ConditionalDescription_Retrieval.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_ConnectionSpeed_Listing.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_ConnectionSpeed_ListingBase.generated.cs">
+      <DependentUpon>METAView_ConnectionSpeed_Listing.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_ConnectionSpeed_Retrieval.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_ConnectionSpeed_RetrievalBase.generated.cs">
+      <DependentUpon>METAView_ConnectionSpeed_Retrieval.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_ConnectionType_Listing.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_ConnectionType_ListingBase.generated.cs">
+      <DependentUpon>METAView_ConnectionType_Listing.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_ConnectionType_Retrieval.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_ConnectionType_RetrievalBase.generated.cs">
+      <DependentUpon>METAView_ConnectionType_Retrieval.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_CSF_Listing.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_CSF_ListingBase.generated.cs">
+      <DependentUpon>METAView_CSF_Listing.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_CSF_Retrieval.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_CSF_RetrievalBase.generated.cs">
+      <DependentUpon>METAView_CSF_Retrieval.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_DataColumn_Listing.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_DataColumn_ListingBase.generated.cs">
+      <DependentUpon>METAView_DataColumn_Listing.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_DataColumn_Retrieval.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_DataColumn_RetrievalBase.generated.cs">
+      <DependentUpon>METAView_DataColumn_Retrieval.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_DataSchema_Listing.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_DataSchema_ListingBase.generated.cs">
+      <DependentUpon>METAView_DataSchema_Listing.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_DataSchema_Retrieval.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_DataSchema_RetrievalBase.generated.cs">
+      <DependentUpon>METAView_DataSchema_Retrieval.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_DataTable_Listing.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_DataTable_ListingBase.generated.cs">
+      <DependentUpon>METAView_DataTable_Listing.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_DataTable_Retrieval.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_DataTable_RetrievalBase.generated.cs">
+      <DependentUpon>METAView_DataTable_Retrieval.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_DataView_Listing.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_DataView_ListingBase.generated.cs">
+      <DependentUpon>METAView_DataView_Listing.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_DataView_Retrieval.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_DataView_RetrievalBase.generated.cs">
+      <DependentUpon>METAView_DataView_Retrieval.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_DatedResponsibility_Listing.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_DatedResponsibility_ListingBase.generated.cs">
+      <DependentUpon>METAView_DatedResponsibility_Listing.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_DatedResponsibility_Retrieval.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_DatedResponsibility_RetrievalBase.generated.cs">
+      <DependentUpon>METAView_DatedResponsibility_Retrieval.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_Employee_Listing.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_Employee_ListingBase.generated.cs">
+      <DependentUpon>METAView_Employee_Listing.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_Employee_Retrieval.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_Employee_RetrievalBase.generated.cs">
+      <DependentUpon>METAView_Employee_Retrieval.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_Entity_Listing.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_Entity_ListingBase.generated.cs">
+      <DependentUpon>METAView_Entity_Listing.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_Entity_Retrieval.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_Entity_RetrievalBase.generated.cs">
+      <DependentUpon>METAView_Entity_Retrieval.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_Environment_Listing.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_Environment_ListingBase.generated.cs">
+      <DependentUpon>METAView_Environment_Listing.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_Environment_Retrieval.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_Environment_RetrievalBase.generated.cs">
+      <DependentUpon>METAView_Environment_Retrieval.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_EnvironmentCategory_Listing.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_EnvironmentCategory_ListingBase.generated.cs">
+      <DependentUpon>METAView_EnvironmentCategory_Listing.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_EnvironmentCategory_Retrieval.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_EnvironmentCategory_RetrievalBase.generated.cs">
+      <DependentUpon>METAView_EnvironmentCategory_Retrieval.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_Exception_Listing.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_Exception_ListingBase.generated.cs">
+      <DependentUpon>METAView_Exception_Listing.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_Exception_Retrieval.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_Exception_RetrievalBase.generated.cs">
+      <DependentUpon>METAView_Exception_Retrieval.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_FlowDescription_Listing.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_FlowDescription_ListingBase.generated.cs">
+      <DependentUpon>METAView_FlowDescription_Listing.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_FlowDescription_Retrieval.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_FlowDescription_RetrievalBase.generated.cs">
+      <DependentUpon>METAView_FlowDescription_Retrieval.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_Function_Listing.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_Function_ListingBase.generated.cs">
+      <DependentUpon>METAView_Function_Listing.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_Function_Retrieval.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_Function_RetrievalBase.generated.cs">
+      <DependentUpon>METAView_Function_Retrieval.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_FunctionalDependency_Listing.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_FunctionalDependency_ListingBase.generated.cs">
+      <DependentUpon>METAView_FunctionalDependency_Listing.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_FunctionalDependency_Retrieval.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_FunctionalDependency_RetrievalBase.generated.cs">
+      <DependentUpon>METAView_FunctionalDependency_Retrieval.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_GovernanceMechanism_Listing.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_GovernanceMechanism_ListingBase.generated.cs">
+      <DependentUpon>METAView_GovernanceMechanism_Listing.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_GovernanceMechanism_Retrieval.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_GovernanceMechanism_RetrievalBase.generated.cs">
+      <DependentUpon>METAView_GovernanceMechanism_Retrieval.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_Implication_Listing.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_Implication_ListingBase.generated.cs">
+      <DependentUpon>METAView_Implication_Listing.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_Implication_Retrieval.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_Implication_RetrievalBase.generated.cs">
+      <DependentUpon>METAView_Implication_Retrieval.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_Iteration_Listing.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_Iteration_ListingBase.generated.cs">
+      <DependentUpon>METAView_Iteration_Listing.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_Iteration_Retrieval.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_Iteration_RetrievalBase.generated.cs">
+      <DependentUpon>METAView_Iteration_Retrieval.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_Job_Listing.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_Job_ListingBase.generated.cs">
+      <DependentUpon>METAView_Job_Listing.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_Job_Retrieval.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_Job_RetrievalBase.generated.cs">
+      <DependentUpon>METAView_Job_Retrieval.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_JobPosition_Listing.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_JobPosition_ListingBase.generated.cs">
+      <DependentUpon>METAView_JobPosition_Listing.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_JobPosition_Retrieval.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_JobPosition_RetrievalBase.generated.cs">
+      <DependentUpon>METAView_JobPosition_Retrieval.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_Location_Listing.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_Location_ListingBase.generated.cs">
+      <DependentUpon>METAView_Location_Listing.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_Location_Retrieval.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_Location_RetrievalBase.generated.cs">
+      <DependentUpon>METAView_Location_Retrieval.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_LocationAssociation_Listing.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_LocationAssociation_ListingBase.generated.cs">
+      <DependentUpon>METAView_LocationAssociation_Listing.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_LocationAssociation_Retrieval.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_LocationAssociation_RetrievalBase.generated.cs">
+      <DependentUpon>METAView_LocationAssociation_Retrieval.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_Logic_Listing.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_Logic_ListingBase.generated.cs">
+      <DependentUpon>METAView_Logic_Listing.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_Logic_Retrieval.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_Logic_RetrievalBase.generated.cs">
+      <DependentUpon>METAView_Logic_Retrieval.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_MeasurementItem_Listing.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_MeasurementItem_ListingBase.generated.cs">
+      <DependentUpon>METAView_MeasurementItem_Listing.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_MeasurementItem_Retrieval.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_MeasurementItem_RetrievalBase.generated.cs">
+      <DependentUpon>METAView_MeasurementItem_Retrieval.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_Model_Listing.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_Model_ListingBase.generated.cs">
+      <DependentUpon>METAView_Model_Listing.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_Model_Retrieval.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_Model_RetrievalBase.generated.cs">
+      <DependentUpon>METAView_Model_Retrieval.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_ModelReal_Listing.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_ModelReal_ListingBase.generated.cs">
+      <DependentUpon>METAView_ModelReal_Listing.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_ModelReal_Retrieval.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_ModelReal_RetrievalBase.generated.cs">
+      <DependentUpon>METAView_ModelReal_Retrieval.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_MutuallyExclusiveIndicator_Listing.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_MutuallyExclusiveIndicator_ListingBase.generated.cs">
+      <DependentUpon>METAView_MutuallyExclusiveIndicator_Listing.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_MutuallyExclusiveIndicator_Retrieval.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_MutuallyExclusiveIndicator_RetrievalBase.generated.cs">
+      <DependentUpon>METAView_MutuallyExclusiveIndicator_Retrieval.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_NetworkComponent_Listing.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_NetworkComponent_ListingBase.generated.cs">
+      <DependentUpon>METAView_NetworkComponent_Listing.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_NetworkComponent_Retrieval.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_NetworkComponent_RetrievalBase.generated.cs">
+      <DependentUpon>METAView_NetworkComponent_Retrieval.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_Object_Listing.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_Object_ListingBase.generated.cs">
+      <DependentUpon>METAView_Object_Listing.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_Object_Retrieval.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_Object_RetrievalBase.generated.cs">
+      <DependentUpon>METAView_Object_Retrieval.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_OrganizationalUnit_Listing.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_OrganizationalUnit_ListingBase.generated.cs">
+      <DependentUpon>METAView_OrganizationalUnit_Listing.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_OrganizationalUnit_Retrieval.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_OrganizationalUnit_RetrievalBase.generated.cs">
+      <DependentUpon>METAView_OrganizationalUnit_Retrieval.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_Peripheral_Listing.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_Peripheral_ListingBase.generated.cs">
+      <DependentUpon>METAView_Peripheral_Listing.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_Peripheral_Retrieval.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_Peripheral_RetrievalBase.generated.cs">
+      <DependentUpon>METAView_Peripheral_Retrieval.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_ProbOfRealization_Listing.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_ProbOfRealization_ListingBase.generated.cs">
+      <DependentUpon>METAView_ProbOfRealization_Listing.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_ProbOfRealization_Retrieval.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_ProbOfRealization_RetrievalBase.generated.cs">
+      <DependentUpon>METAView_ProbOfRealization_Retrieval.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_Process_Listing.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_Process_ListingBase.generated.cs">
+      <DependentUpon>METAView_Process_Listing.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_Process_Retrieval.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_Process_RetrievalBase.generated.cs">
+      <DependentUpon>METAView_Process_Retrieval.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_Rationale_Listing.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_Rationale_ListingBase.generated.cs">
+      <DependentUpon>METAView_Rationale_Listing.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_Rationale_Retrieval.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_Rationale_RetrievalBase.generated.cs">
+      <DependentUpon>METAView_Rationale_Retrieval.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_Responsibility_Listing.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_Responsibility_ListingBase.generated.cs">
+      <DependentUpon>METAView_Responsibility_Listing.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_Responsibility_Retrieval.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_Responsibility_RetrievalBase.generated.cs">
+      <DependentUpon>METAView_Responsibility_Retrieval.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_Role_Listing.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_Role_ListingBase.generated.cs">
+      <DependentUpon>METAView_Role_Listing.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_Role_Retrieval.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_Role_RetrievalBase.generated.cs">
+      <DependentUpon>METAView_Role_Retrieval.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_Scenario_Listing.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_Scenario_ListingBase.generated.cs">
+      <DependentUpon>METAView_Scenario_Listing.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_Scenario_Retrieval.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_Scenario_RetrievalBase.generated.cs">
+      <DependentUpon>METAView_Scenario_Retrieval.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_SelectorAttribute_Listing.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_SelectorAttribute_ListingBase.generated.cs">
+      <DependentUpon>METAView_SelectorAttribute_Listing.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_SelectorAttribute_Retrieval.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_SelectorAttribute_RetrievalBase.generated.cs">
+      <DependentUpon>METAView_SelectorAttribute_Retrieval.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_Skill_Listing.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_Skill_ListingBase.generated.cs">
+      <DependentUpon>METAView_Skill_Listing.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_Skill_Retrieval.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_Skill_RetrievalBase.generated.cs">
+      <DependentUpon>METAView_Skill_Retrieval.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_Software_Listing.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_Software_ListingBase.generated.cs">
+      <DependentUpon>METAView_Software_Listing.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_Software_Retrieval.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_Software_RetrievalBase.generated.cs">
+      <DependentUpon>METAView_Software_Retrieval.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_StorageComponent_Listing.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_StorageComponent_ListingBase.generated.cs">
+      <DependentUpon>METAView_StorageComponent_Listing.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_StorageComponent_Retrieval.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_StorageComponent_RetrievalBase.generated.cs">
+      <DependentUpon>METAView_StorageComponent_Retrieval.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_StrategicTheme_Listing.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_StrategicTheme_ListingBase.generated.cs">
+      <DependentUpon>METAView_StrategicTheme_Listing.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_StrategicTheme_Retrieval.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_StrategicTheme_RetrievalBase.generated.cs">
+      <DependentUpon>METAView_StrategicTheme_Retrieval.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_SystemComponent_Listing.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_SystemComponent_ListingBase.generated.cs">
+      <DependentUpon>METAView_SystemComponent_Listing.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_SystemComponent_Retrieval.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_SystemComponent_RetrievalBase.generated.cs">
+      <DependentUpon>METAView_SystemComponent_Retrieval.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_TimeIndicator_Listing.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_TimeIndicator_ListingBase.generated.cs">
+      <DependentUpon>METAView_TimeIndicator_Listing.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_TimeIndicator_Retrieval.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_TimeIndicator_RetrievalBase.generated.cs">
+      <DependentUpon>METAView_TimeIndicator_Retrieval.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_TimeScheme_Listing.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_TimeScheme_ListingBase.generated.cs">
+      <DependentUpon>METAView_TimeScheme_Listing.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_TimeScheme_Retrieval.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_TimeScheme_RetrievalBase.generated.cs">
+      <DependentUpon>METAView_TimeScheme_Retrieval.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_TimeUnit_Listing.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_TimeUnit_ListingBase.generated.cs">
+      <DependentUpon>METAView_TimeUnit_Listing.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_TimeUnit_Retrieval.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\METAView_TimeUnit_RetrievalBase.generated.cs">
+      <DependentUpon>METAView_TimeUnit_Retrieval.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\vw_FieldValue.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\vw_FieldValueBase.generated.cs">
+      <DependentUpon>vw_FieldValue.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VCStatus.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VCStatusBase.generated.cs">
+      <DependentUpon>VCStatus.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IVCStatus.cs">
+      <DependentUpon>VCStatus.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VCStatusList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DomainDefinitionPossibleValue.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DomainDefinitionPossibleValueBase.generated.cs">
+      <DependentUpon>DomainDefinitionPossibleValue.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IDomainDefinitionPossibleValue.cs">
+      <DependentUpon>DomainDefinitionPossibleValue.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Workspace.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WorkspaceBase.generated.cs">
+      <DependentUpon>Workspace.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IWorkspace.cs">
+      <DependentUpon>Workspace.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ClassType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ClassTypeBase.generated.cs">
+      <DependentUpon>ClassType.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IClassType.cs">
+      <DependentUpon>ClassType.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WorkspaceType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WorkspaceTypeBase.generated.cs">
+      <DependentUpon>WorkspaceType.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IWorkspaceType.cs">
+      <DependentUpon>WorkspaceType.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WorkspaceTypeList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="User.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UserBase.generated.cs">
+      <DependentUpon>User.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IUser.cs">
+      <DependentUpon>User.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GraphFile.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GraphFileBase.generated.cs">
+      <DependentUpon>GraphFile.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IGraphFile.cs">
+      <DependentUpon>GraphFile.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Class.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ClassBase.generated.cs">
+      <DependentUpon>Class.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IClass.cs">
+      <DependentUpon>Class.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MetaObject.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MetaObjectBase.generated.cs">
+      <DependentUpon>MetaObject.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IMetaObject.cs">
+      <DependentUpon>MetaObject.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UserPermission.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UserPermissionBase.generated.cs">
+      <DependentUpon>UserPermission.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IUserPermission.cs">
+      <DependentUpon>UserPermission.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Config.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ConfigBase.generated.cs">
+      <DependentUpon>Config.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IConfig.cs">
+      <DependentUpon>Config.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AssociationType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AssociationTypeBase.generated.cs">
+      <DependentUpon>AssociationType.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IAssociationType.cs">
+      <DependentUpon>AssociationType.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ClassAssociation.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ClassAssociationBase.generated.cs">
+      <DependentUpon>ClassAssociation.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IClassAssociation.cs">
+      <DependentUpon>ClassAssociation.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ObjectAssociation.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ObjectAssociationBase.generated.cs">
+      <DependentUpon>ObjectAssociation.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IObjectAssociation.cs">
+      <DependentUpon>ObjectAssociation.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FileType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FileTypeBase.generated.cs">
+      <DependentUpon>FileType.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IFileType.cs">
+      <DependentUpon>FileType.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ObjectFieldValue.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ObjectFieldValueBase.generated.cs">
+      <DependentUpon>ObjectFieldValue.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IObjectFieldValue.cs">
+      <DependentUpon>ObjectFieldValue.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GraphFileAssociation.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GraphFileAssociationBase.generated.cs">
+      <DependentUpon>GraphFileAssociation.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IGraphFileAssociation.cs">
+      <DependentUpon>GraphFileAssociation.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AllowedArtifact.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AllowedArtifactBase.generated.cs">
+      <DependentUpon>AllowedArtifact.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IAllowedArtifact.cs">
+      <DependentUpon>AllowedArtifact.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DomainDefinition.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DomainDefinitionBase.generated.cs">
+      <DependentUpon>DomainDefinition.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IDomainDefinition.cs">
+      <DependentUpon>DomainDefinition.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Artifact.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ArtifactBase.generated.cs">
+      <DependentUpon>Artifact.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IArtifact.cs">
+      <DependentUpon>Artifact.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Permission.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PermissionBase.generated.cs">
+      <DependentUpon>Permission.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IPermission.cs">
+      <DependentUpon>Permission.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GraphFileObject.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GraphFileObjectBase.generated.cs">
+      <DependentUpon>GraphFileObject.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IGraphFileObject.cs">
+      <DependentUpon>GraphFileObject.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Field.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FieldBase.generated.cs">
+      <DependentUpon>Field.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IField.cs">
+      <DependentUpon>Field.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IEntity.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IEntityId.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IEntityKey.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EntityBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EntityBaseCore.generated.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>EntityBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EntityKeyBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EntityKeyBaseCore.generated.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>EntityKeyBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\VList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EntityFilter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EntityPropertyComparer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EntityHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EntityUtil.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IEntityFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EntityFactoryBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EntityFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EntityLocator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EntityManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IEntityCacheItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EntityCache.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GenericTypeConverter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Validation\BrokenRule.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Validation\BrokenRulesList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Validation\CommonRules.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Validation\ValidationRuleArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Validation\ValidationRuleHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Validation\ValidationRuleInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Validation\ValidationRules.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Code\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSHARP.Targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

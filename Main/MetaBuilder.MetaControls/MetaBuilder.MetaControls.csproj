@@ -1,0 +1,281 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F455C73B-87A6-4815-A3FB-F19B286AE406}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MetaBuilder.MetaControls</RootNamespace>
+    <AssemblyName>MetaBuilder.MetaControls</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'ServicePack|AnyCPU' ">
+    <OutputPath>bin\ServicePack\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'UnitTests|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\UnitTests\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Install|AnyCPU' ">
+    <OutputPath>bin\Install\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ascend, Version=1.0.0.6, Culture=neutral, PublicKeyToken=25c7a393ba3f37cd, processorArchitecture=MSIL" />
+    <Reference Include="Ascend.Windows.Forms, Version=1.0.0.6, Culture=neutral, PublicKeyToken=ecd86ece2d3eb46d, processorArchitecture=MSIL" />
+    <Reference Include="FastColoredTextBox, Version=2.6.7.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\AppFolder\References\FastColoredTextBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.Common.v2, Version=2.0.1000.0, Culture=neutral, PublicKeyToken=21d5517571b185bf" />
+    <Reference Include="Janus.Windows.GridEX.v2, Version=2.0.1000.0, Culture=neutral, PublicKeyToken=21d5517571b185bf" />
+    <Reference Include="Northwoods.Go, Version=2.6.2.2, Culture=neutral, PublicKeyToken=a4e3b7b70161cfe8, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Documents and Settings\Administrator\My Documents\GoDiagram Win 2.6.2 for .NET 2.0\lib\Northwoods.Go.DLL</HintPath>
+    </Reference>
+    <Reference Include="Northwoods.Go.Draw, Version=2.5.1.2, Culture=neutral, PublicKeyToken=a4e3b7b70161cfe8, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Northwoods Software\GoDiagram Win 2.5.1 for .NET 2.0\lib\Northwoods.Go.Draw.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Core, Version=4.102.0.50, Culture=neutral, PublicKeyToken=632609b4d040f6b4, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.Edit.Windows, Version=4.102.0.50, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.Shared.Base, Version=4.102.0.50, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.Shared.Windows, Version=4.102.0.50, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.Tools.Windows, Version=4.102.0.50, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TraceTool, Version=12.1.0.0, Culture=neutral, PublicKeyToken=81da3f4827b33fbd, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\tracetool new\DotNet\VS2005\Windows\Framework 2\Vs8_Windows_F2_Lib\bin\Debug\TraceTool.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssociationList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AssociationList.Designer.cs">
+      <DependentUpon>AssociationList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssociationLocatorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AssociationLocatorControl.Designer.cs">
+      <DependentUpon>AssociationLocatorControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContextFilter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ContextFilter.Designer.cs">
+      <DependentUpon>ContextFilter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DuplicateObjectFinderControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DuplicateObjectFinderControl.Designer.cs">
+      <DependentUpon>DuplicateObjectFinderControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FontComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="HelperClasses.cs" />
+    <Compile Include="MergeObjects.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MergeObjects.Designer.cs">
+      <DependentUpon>MergeObjects.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MetaButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MetaColor.cs" />
+    <Compile Include="ObjectProperties.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ObjectProperties.Designer.cs">
+      <DependentUpon>ObjectProperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ObjectPropertiesWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ObjectPropertiesWindow.Designer.cs">
+      <DependentUpon>ObjectPropertiesWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SerializableAssociationSearchResult.cs" />
+    <Compile Include="CustomListItem.cs" />
+    <Compile Include="MetaPropertyGrid.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MetaPropertyGridDocker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MetaPropertyGridDocker.Designer.cs">
+      <DependentUpon>MetaPropertyGridDocker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ObjectFinderControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ObjectFinderControl.Designer.cs">
+      <DependentUpon>ObjectFinderControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ObjectList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ObjectList.Designer.cs">
+      <DependentUpon>ObjectList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SerializableObjectSearchResult.cs" />
+    <Compile Include="SQLConnectionStringBuilder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SQLConnectionStringBuilder.Designer.cs">
+      <DependentUpon>SQLConnectionStringBuilder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tasks\DiagrammingTask.cs" />
+    <Compile Include="Tasks\DuplicationTask.cs" />
+    <Compile Include="Tasks\MissingPortTask.cs" />
+    <Compile Include="Tasks\TaskBase.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AssociationList.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AssociationList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssociationLocatorControl.resx">
+      <DependentUpon>AssociationLocatorControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContextFilter.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ContextFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DuplicateObjectFinderControl.resx">
+      <DependentUpon>DuplicateObjectFinderControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MergeObjects.resx">
+      <DependentUpon>MergeObjects.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MetaPropertyGrid.resx">
+      <DependentUpon>MetaPropertyGrid.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MetaPropertyGridDocker.resx">
+      <DependentUpon>MetaPropertyGridDocker.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ObjectFinderControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ObjectFinderControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ObjectList.resx">
+      <DependentUpon>ObjectList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ObjectProperties.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ObjectProperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ObjectPropertiesWindow.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ObjectPropertiesWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="SQLConnectionStringBuilder.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SQLConnectionStringBuilder.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Misc\Common\MetaBuilder.Dock\MetaBuilder.Docking.csproj">
+      <Project>{C75532C4-765B-418E-B09B-46D36B2ABDB1}</Project>
+      <Name>MetaBuilder.Docking</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Misc\Common\MetaBuilder.SplashScreen\MetaBuilder.SplashScreen.csproj">
+      <Project>{743EDB81-D2AC-4A52-A313-50BD4229401B}</Project>
+      <Name>MetaBuilder.SplashScreen</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Misc\External\NetTiers\MetaBuilder.BusinessLogic\MetaBuilder.BusinessLogic.csproj">
+      <Project>{B72D3674-44C0-49FE-A4F1-64910F292641}</Project>
+      <Name>MetaBuilder.BusinessLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Misc\External\NetTiers\MetaBuilder.DataAccessLayer\MetaBuilder.DataAccessLayer.csproj">
+      <Project>{02252C54-158A-4DD2-928C-75A3906CCFA9}</Project>
+      <Name>MetaBuilder.DataAccessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Misc\External\XPTable\XPTable.csproj">
+      <Project>{86FA531A-298B-473E-A40F-D53D058D9A3F}</Project>
+      <Name>XPTable</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MetaBuilder.BusinessFacade\MetaBuilder.BusinessFacade.csproj">
+      <Project>{AB8F12D8-2969-49EC-9361-2641FAF5F422}</Project>
+      <Name>MetaBuilder.BusinessFacade</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MetaBuilder.Core\MetaBuilder.Core.csproj">
+      <Project>{AC8718BA-4640-4CB6-8611-5D8717849DAA}</Project>
+      <Name>MetaBuilder.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MetaBuilder.Meta\MetaBuilder.Meta.csproj">
+      <Project>{A6A472F1-D4A5-44C4-9689-36BD0EE52036}</Project>
+      <Name>MetaBuilder.Meta</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MetaBuilder.Graphing\MetaBuilder.Graphing.csproj">
+      <Project>{71200AD5-44C5-4ABB-A8AB-014A60C923BF}</Project>
+      <Name>MetaBuilder.Graphing</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

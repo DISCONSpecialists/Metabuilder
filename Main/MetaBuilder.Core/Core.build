@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<project name="MetaBuilder" basedir="." default="build" >
+	
+	<property name="OutputLibName" value="Core"/>
+	<property name="Config" value="debug"/>
+	<property name="BaseOutputDir" value="..\bin"/>
+	<property name="PutDlls" value="${BaseOutputDir}\${Config}"/>
+
+	<target name="clean" description="Clean previous files">
+		<delete file="${PutDlls}\${OutputLibName}.dll"/>
+		<delete file="${PutDlls}\${OutputLibName}.pdb"/>
+	</target>
+
+	<target name="build" description="Build this project" depends="clean">
+		<csc target="library" output="${BaseOutputDir}\${Config}\${OutputLibName}.dll" debug="true" unsafe="true">
+
+			<nowarn>
+				<!-- do not report warnings for "does not need clscompliant attribute"-->
+				<warning number="3021" />
+			</nowarn>
+			<sources>
+				<include name="**/*.cs" />
+			</sources>
+
+			<resources dynamicprefix="true" prefix="${OutputLibName}">
+				<include name="**/*.resx" />
+			</resources>
+
+			<references>
+				
+				<include name="System.dll" />
+				<include name="System.Data.dll" />
+				<include name="System.Drawing.dll" />
+				<include name="System.Xml.dll" />
+
+				<!-- Enterprise Library References -->
+
+				<!-- Dependencies -->
+				<include name="${PutDlls}\ConfigReader.dll"/>
+
+
+			</references>
+		</csc>
+		<echo message="Built ${OutputLibName}"/>
+	</target>
+</project>

@@ -1,0 +1,2 @@
+COPY "$(SolutionDir)Other\DisconPlugins\$(OutDir)$(TargetName).dll" "$(SolutionDir)Stable\MetaBuilder.WinUI\bin\debug\DisconPlugins.dll" /y
+COPY "$(SolutionDir)Other\DisconPlugins\$(OutDir)$(TargetName).pdb" "$(SolutionDir)Stable\MetaBuilder.WinUI\bin\debug\DisconPlugins.pdb" /y

@@ -1,0 +1,1764 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MetaBuilder.DataAccessLayer</name>
+    </assembly>
+    <members>
+        <member name="T:MetaBuilder.DataAccessLayer.StringBuilderExpression">
+            <summary>
+            Represents a SQL filter builder expression enumeration.
+            </summary>
+        </member>
+        <member name="F:MetaBuilder.DataAccessLayer.StringBuilderExpression.Append">
+            <summary>
+            Append
+            </summary>
+        </member>
+        <member name="F:MetaBuilder.DataAccessLayer.StringBuilderExpression.AppendEquals">
+            <summary>
+            AppendEquals
+            </summary>
+        </member>
+        <member name="F:MetaBuilder.DataAccessLayer.StringBuilderExpression.AppendNotEquals">
+            <summary>
+            AppendNotEquals
+            </summary>
+        </member>
+        <member name="F:MetaBuilder.DataAccessLayer.StringBuilderExpression.AppendIn">
+            <summary>
+            AppendIn
+            </summary>
+        </member>
+        <member name="F:MetaBuilder.DataAccessLayer.StringBuilderExpression.AppendNotIn">
+            <summary>
+            AppendNotIn
+            </summary>
+        </member>
+        <member name="F:MetaBuilder.DataAccessLayer.StringBuilderExpression.AppendInQuery">
+            <summary>
+            AppendInQuery
+            </summary>
+        </member>
+        <member name="F:MetaBuilder.DataAccessLayer.StringBuilderExpression.AppendNotInQuery">
+            <summary>
+            AppendNotInQuery
+            </summary>
+        </member>
+        <member name="F:MetaBuilder.DataAccessLayer.StringBuilderExpression.AppendRange">
+            <summary>
+            AppendRange
+            </summary>
+        </member>
+        <member name="F:MetaBuilder.DataAccessLayer.StringBuilderExpression.AppendNotRange">
+            <summary>
+            AppendNotRange
+            </summary>
+        </member>
+        <member name="F:MetaBuilder.DataAccessLayer.StringBuilderExpression.AppendIsNull">
+            <summary>
+            AppendIsNull
+            </summary>
+        </member>
+        <member name="F:MetaBuilder.DataAccessLayer.StringBuilderExpression.AppendIsNotNull">
+            <summary>
+            AppendIsNotNull
+            </summary>
+        </member>
+        <member name="F:MetaBuilder.DataAccessLayer.StringBuilderExpression.AppendGreaterThan">
+            <summary>
+            AppendGreaterThan
+            </summary>
+        </member>
+        <member name="F:MetaBuilder.DataAccessLayer.StringBuilderExpression.AppendGreaterThanOrEqual">
+            <summary>
+            AppendGreaterThanOrEqual
+            </summary>
+        </member>
+        <member name="F:MetaBuilder.DataAccessLayer.StringBuilderExpression.AppendLessThan">
+            <summary>
+            AppendLessThan
+            </summary>
+        </member>
+        <member name="F:MetaBuilder.DataAccessLayer.StringBuilderExpression.AppendLessThanOrEqual">
+            <summary>
+            AppendLessThanOrEqual
+            </summary>
+        </member>
+        <member name="F:MetaBuilder.DataAccessLayer.StringBuilderExpression.AppendStartsWith">
+            <summary>
+            AppendStartsWith
+            </summary>
+        </member>
+        <member name="F:MetaBuilder.DataAccessLayer.StringBuilderExpression.AppendEndsWith">
+            <summary>
+            AppendEndsWith
+            </summary>
+        </member>
+        <member name="F:MetaBuilder.DataAccessLayer.StringBuilderExpression.AppendContains">
+            <summary>
+            AppendContains
+            </summary>
+        </member>
+        <member name="F:MetaBuilder.DataAccessLayer.StringBuilderExpression.AppendNotContains">
+            <summary>
+            AppendNotContains
+            </summary>
+        </member>
+        <member name="F:MetaBuilder.DataAccessLayer.StringBuilderExpression.AppendLike">
+            <summary>
+            AppendLike
+            </summary>
+        </member>
+        <member name="F:MetaBuilder.DataAccessLayer.StringBuilderExpression.AppendNotLike">
+            <summary>
+            AppendLike
+            </summary>
+        </member>
+        <member name="T:MetaBuilder.DataAccessLayer.SqlStringBuilder">
+            <summary>
+            Represents a SQL filter expression.
+            </summary>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlStringBuilder.#ctor">
+            <summary>
+            Initializes a new instance of the SqlStringBuilder class.
+            </summary>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlStringBuilder.#ctor(System.Boolean)">
+            <summary>
+            Initializes a new instance of the SqlStringBuilder class.
+            </summary>
+            <param name="ignoreCase">Specifies whether to create case-insensitive statements.</param>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlStringBuilder.#ctor(System.Boolean,System.Boolean)">
+            <summary>
+            Initializes a new instance of the SqlStringBuilder class.
+            </summary>
+            <param name="ignoreCase">Specifies whether to create case-insensitive statements.</param>
+            <param name="useAnd">Specifies whether to combine statements using AND or OR.</param>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlStringBuilder.Append(System.String,System.String)">
+            <summary>
+            Appends the specified column and value to the current filter.
+            </summary>
+            <param name="column"></param>
+            <param name="searchText"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlStringBuilder.Append(System.String,System.String,System.Boolean)">
+            <summary>
+            Appends the specified column and search text to the current filter.
+            </summary>
+            <param name="column"></param>
+            <param name="searchText"></param>
+            <param name="ignoreCase"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlStringBuilder.Append(System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            Appends the specified column and search text to the current filter.
+            </summary>
+            <param name="junction"></param>
+            <param name="column"></param>
+            <param name="searchText"></param>
+            <param name="ignoreCase"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlStringBuilder.AppendEquals(System.String,System.String)">
+            <summary>
+            Appends the specified column and value to the current filter.
+            </summary>
+            <param name="column"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlStringBuilder.AppendEquals(System.String,System.String,System.String)">
+            <summary>
+            Appends the specified column and value to the current filter.
+            </summary>
+            <param name="junction"></param>
+            <param name="column"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlStringBuilder.AppendNotEquals(System.String,System.String)">
+            <summary>
+            Appends the specified column and value to the current filter.
+            as a NOT EQUALS expression.
+            </summary>
+            <param name="column"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlStringBuilder.AppendNotEquals(System.String,System.String,System.String)">
+            <summary>
+            Appends the specified column and value to the current filter
+            as a NOT EQUALS expression.
+            </summary>
+            <param name="junction"></param>
+            <param name="column"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlStringBuilder.AppendIn(System.String,System.String[])">
+            <summary>
+            Appends the specified column and list of values to the current filter.
+            </summary>
+            <param name="column"></param>
+            <param name="values"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlStringBuilder.AppendIn(System.String,System.String[],System.Boolean)">
+            <summary>
+            Appends the specified column and list of values to the current filter.
+            </summary>
+            <param name="column"></param>
+            <param name="values"></param>
+            <param name="encode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlStringBuilder.AppendIn(System.String,System.String,System.String[])">
+            <summary>
+            Appends the specified column and list of values to the current filter.
+            </summary>
+            <param name="junction"></param>
+            <param name="column"></param>
+            <param name="values"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlStringBuilder.AppendIn(System.String,System.String,System.String[],System.Boolean)">
+            <summary>
+            Appends the specified column and list of values to the current filter.
+            </summary>
+            <param name="junction"></param>
+            <param name="column"></param>
+            <param name="values"></param>
+            <param name="encode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlStringBuilder.AppendNotIn(System.String,System.String[])">
+            <summary>
+            Appends the specified column and list of values to the current filter.
+            as a NOT IN expression.
+            </summary>
+            <param name="column"></param>
+            <param name="values"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlStringBuilder.AppendNotIn(System.String,System.String[],System.Boolean)">
+            <summary>
+            Appends the specified column and list of values to the current filter.
+            as a NOT IN expression.
+            </summary>
+            <param name="column"></param>
+            <param name="values"></param>
+            <param name="encode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlStringBuilder.AppendNotIn(System.String,System.String,System.String[])">
+            <summary>
+            Appends the specified column and list of values to the current filter.
+            as a NOT IN expression.
+            </summary>
+            <param name="junction"></param>
+            <param name="column"></param>
+            <param name="values"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlStringBuilder.AppendNotIn(System.String,System.String,System.String[],System.Boolean)">
+            <summary>
+            Appends the specified column and list of values to the current filter
+            as a NOT IN expression.
+            </summary>
+            <param name="junction"></param>
+            <param name="column"></param>
+            <param name="values"></param>
+            <param name="encode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlStringBuilder.AppendInQuery(System.String,System.String)">
+            <summary>
+            Appends the specified sub-query to the current filter.
+            </summary>
+            <param name="column"></param>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlStringBuilder.AppendInQuery(System.String,System.String,System.String)">
+            <summary>
+            Appends the specified sub-query to the current filter.
+            </summary>
+            <param name="junction"></param>
+            <param name="column"></param>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlStringBuilder.AppendNotInQuery(System.String,System.String)">
+            <summary>
+            Appends the specified sub-query to the current filter
+            as a NOT IN expression.
+            </summary>
+            <param name="column"></param>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlStringBuilder.AppendNotInQuery(System.String,System.String,System.String)">
+            <summary>
+            Appends the specified sub-query to the current filter
+            as a NOT IN expression.
+            </summary>
+            <param name="junction"></param>
+            <param name="column"></param>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlStringBuilder.AppendRange(System.String,System.String,System.String)">
+            <summary>
+            Appends the specified column and value range to the current filter.
+            </summary>
+            <param name="column"></param>
+            <param name="from"></param>
+            <param name="to"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlStringBuilder.AppendRange(System.String,System.String,System.String,System.String)">
+            <summary>
+            Appends the specified column and value range to the current filter.
+            </summary>
+            <param name="junction"></param>
+            <param name="column"></param>
+            <param name="from"></param>
+            <param name="to"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlStringBuilder.AppendNotRange(System.String,System.String,System.String)">
+            <summary>
+            Appends the specified column and value not in range to the current filter.
+            </summary>
+            <param name="column"></param>
+            <param name="from"></param>
+            <param name="to"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlStringBuilder.AppendNotRange(System.String,System.String,System.String,System.String)">
+            <summary>
+            Appends the specified column and value not in range to the current filter.
+            </summary>
+            <param name="junction"></param>
+            <param name="column"></param>
+            <param name="from"></param>
+            <param name="to"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlStringBuilder.AppendIsNull(System.String)">
+            <summary>
+            Appends an IS NULL expression to the current filter.
+            </summary>
+            <param name="column"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlStringBuilder.AppendIsNull(System.String,System.String)">
+            <summary>
+            Appends an IS NULL expression to the current filter.
+            </summary>
+            <param name="junction"></param>
+            <param name="column"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlStringBuilder.AppendIsNotNull(System.String)">
+            <summary>
+            Appends an IS NOT NULL expression to the current filter.
+            </summary>
+            <param name="column"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlStringBuilder.AppendIsNotNull(System.String,System.String)">
+            <summary>
+            Appends an IS NOT NULL expression to the current filter.
+            </summary>
+            <param name="junction"></param>
+            <param name="column"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlStringBuilder.AppendGreaterThan(System.String,System.String)">
+            <summary>
+            Appends the specified column and value to the current filter.
+            </summary>
+            <param name="column"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlStringBuilder.AppendGreaterThan(System.String,System.String,System.String)">
+            <summary>
+            Appends the specified column and value to the current filter.
+            </summary>
+            <param name="junction"></param>
+            <param name="column"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlStringBuilder.AppendGreaterThanOrEqual(System.String,System.String)">
+            <summary>
+            Appends the specified column and value to the current filter.
+            </summary>
+            <param name="column"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlStringBuilder.AppendGreaterThanOrEqual(System.String,System.String,System.String)">
+            <summary>
+            Appends the specified column and value to the current filter.
+            </summary>
+            <param name="junction"></param>
+            <param name="column"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlStringBuilder.AppendLessThan(System.String,System.String)">
+            <summary>
+            Appends the specified column and value to the current filter.
+            </summary>
+            <param name="column"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlStringBuilder.AppendLessThan(System.String,System.String,System.String)">
+            <summary>
+            Appends the specified column and value to the current filter.
+            </summary>
+            <param name="junction"></param>
+            <param name="column"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlStringBuilder.AppendLessThanOrEqual(System.String,System.String)">
+            <summary>
+            Appends the specified column and value to the current filter.
+            </summary>
+            <param name="column"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlStringBuilder.AppendLessThanOrEqual(System.String,System.String,System.String)">
+            <summary>
+            Appends the specified column and value to the current filter.
+            </summary>
+            <param name="junction"></param>
+            <param name="column"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlStringBuilder.AppendStartsWith(System.String,System.String)">
+            <summary>
+            Appends the specified column and value to the current filter.
+            </summary>
+            <param name="column"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlStringBuilder.AppendStartsWith(System.String,System.String,System.String)">
+            <summary>
+            Appends the specified column and value to the current filter.
+            </summary>
+            <param name="junction"></param>
+            <param name="column"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlStringBuilder.AppendEndsWith(System.String,System.String)">
+            <summary>
+            Appends the specified column and value to the current filter.
+            </summary>
+            <param name="column"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlStringBuilder.AppendEndsWith(System.String,System.String,System.String)">
+            <summary>
+            Appends the specified column and value to the current filter.
+            </summary>
+            <param name="junction"></param>
+            <param name="column"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlStringBuilder.AppendContains(System.String,System.String)">
+            <summary>
+            Appends the specified column and value to the current filter.
+            </summary>
+            <param name="column"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlStringBuilder.AppendContains(System.String,System.String,System.String)">
+            <summary>
+            Appends the specified column and value to the current filter.
+            </summary>
+            <param name="junction"></param>
+            <param name="column"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlStringBuilder.AppendNotContains(System.String,System.String)">
+            <summary>
+            Appends the specified column and value to the current filter.
+            </summary>
+            <param name="column"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlStringBuilder.AppendNotContains(System.String,System.String,System.String)">
+            <summary>
+            Appends the specified column and value to the current filter.
+            </summary>
+            <param name="junction"></param>
+            <param name="column"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlStringBuilder.AppendLike(System.String,System.String)">
+            <summary>
+            Appends the specified column and value to the current filter.
+            </summary>
+            <param name="column"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlStringBuilder.AppendLike(System.String,System.String,System.String)">
+            <summary>
+            Appends the specified column and value to the current filter.
+            </summary>
+            <param name="junction"></param>
+            <param name="column"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlStringBuilder.AppendNotLike(System.String,System.String)">
+            <summary>
+            Appends the specified column and value to the current filter.
+            </summary>
+            <param name="column"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlStringBuilder.AppendNotLike(System.String,System.String,System.String)">
+            <summary>
+            Appends the specified column and value to the current filter.
+            </summary>
+            <param name="junction"></param>
+            <param name="column"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlStringBuilder.AppendInternal(System.String,System.String,System.String,System.String)">
+            <summary>
+            Appends the SQL expression to the internal <see cref="T:System.Text.StringBuilder"/>.
+            </summary>
+            <param name="junction">The junction.</param>
+            <param name="column">The column.</param>
+            <param name="compare">The compare.</param>
+            <param name="value">The value.</param>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlStringBuilder.AppendInternal(System.String,System.String)">
+            <summary>
+            Appends the SQL expression to the internal <see cref="T:System.Text.StringBuilder"/>.
+            </summary>
+            <param name="junction">The junction.</param>
+            <param name="query">The query.</param>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlStringBuilder.Clear">
+            <summary>
+            Clears the internal string buffer.
+            </summary>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlStringBuilder.ToString">
+            <summary>
+            Converts the value of this instance to a System.String.
+            </summary>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlStringBuilder.ToString(System.String)">
+            <summary>
+            Converts the value of this instance to a System.String and
+            prepends the specified junction if the expression is not empty.
+            </summary>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlStringBuilder.Parse(System.String,System.String,System.Boolean)">
+            <summary>
+            Parses the specified searchText to create a SQL filter expression.
+            </summary>
+            <param name="column"></param>
+            <param name="searchText"></param>
+            <param name="ignoreCase"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlStringBuilder.GetInQueryValues(System.String,System.Boolean)">
+            <summary>
+            Gets an encoded list of values for use with an IN clause.
+            </summary>
+            <param name="values">Comma string with the in parameters already in one string</param>
+            <param name="encode">tells whether or not to enclose the parameters with ' and to replace ' with '' within the parameters.</param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlStringBuilder.GetInQueryValues(System.String[],System.Boolean)">
+            <summary>
+            Gets an encoded list of values for use with an IN clause.
+            </summary>
+            <param name="values">String Array with the in parameters</param>
+            <param name="encode">tells whether or not to enclose the parameters with ' and to replace ' with '' within the parameters.</param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlStringBuilder.BeginGroup">
+            <summary>
+            Begins a new group of parameters by adding an open parenthesis "("
+            </summary>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlStringBuilder.BeginGroup(System.String)">
+            <summary>
+            Begins a new groups of parameters using the specified junction operator
+            </summary>
+            <param name="junction">The junction operator to be used</param>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlStringBuilder.EndGroup">
+            <summary>
+            Ends a group of parameters by add a closing parenthesis ")"
+            </summary>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlStringBuilder.EnsureGroups">
+            <summary>
+            Makes sure that all groups have been ended (each call to BeginGroup has a corresponding EndGroup)
+            </summary>
+        </member>
+        <member name="F:MetaBuilder.DataAccessLayer.SqlStringBuilder.junction">
+            <summary>
+            The Junction member variable.
+            </summary>
+        </member>
+        <member name="F:MetaBuilder.DataAccessLayer.SqlStringBuilder.ignoreCase">
+            <summary>
+            The IgnoreCase member variable.
+            </summary>
+        </member>
+        <member name="P:MetaBuilder.DataAccessLayer.SqlStringBuilder.Junction">
+            <summary>
+            Gets or sets the Junction property.
+            </summary>
+        </member>
+        <member name="P:MetaBuilder.DataAccessLayer.SqlStringBuilder.IgnoreCase">
+            <summary>
+            Gets or sets the IgnoreCase property.
+            </summary>
+        </member>
+        <member name="P:MetaBuilder.DataAccessLayer.SqlStringBuilder.Length">
+            <summary>
+            Gets or sets the length of the internal StringBuilder object.
+            </summary>
+            <value>The length.</value>
+        </member>
+        <member name="T:MetaBuilder.DataAccessLayer.SqlFilterBuilder`1">
+            <summary>
+            Allows for building SQL filter expressions using strongly-typed
+            column enumeration values.
+            </summary>
+            <typeparam name="EntityColumn">An enumeration of entity column names.</typeparam>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlFilterBuilder`1.#ctor">
+            <summary>
+            Initializes a new instance of the SqlFilterBuilder class.
+            </summary>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlFilterBuilder`1.#ctor(System.Boolean)">
+            <summary>
+            Initializes a new instance of the SqlFilterBuilder class.
+            </summary>
+            <param name="ignoreCase">Specifies whether to create case-insensitive statements.</param>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlFilterBuilder`1.#ctor(System.Boolean,System.Boolean)">
+            <summary>
+            Initializes a new instance of the SqlFilterBuilder class.
+            </summary>
+            <param name="ignoreCase">Specifies whether to create case-insensitive statements.</param>
+            <param name="useAnd">Specifies whether to combine statements using AND or OR.</param>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlFilterBuilder`1.Append(`0,System.String)">
+            <summary>
+            Appends the specified column and search text to the current filter.
+            </summary>
+            <param name="column"></param>
+            <param name="searchText"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlFilterBuilder`1.Append(`0,System.String,System.Boolean)">
+            <summary>
+            Appends the specified column and search text to the current filter.
+            </summary>
+            <param name="column"></param>
+            <param name="searchText"></param>
+            <param name="ignoreCase"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlFilterBuilder`1.Append(System.String,`0,System.String,System.Boolean)">
+            <summary>
+            Appends the specified column and search text to the current filter.
+            </summary>
+            <param name="junction"></param>
+            <param name="column"></param>
+            <param name="searchText"></param>
+            <param name="ignoreCase"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlFilterBuilder`1.AppendEquals(`0,System.String)">
+            <summary>
+            Appends the specified column and value to the current filter.
+            </summary>
+            <param name="column"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlFilterBuilder`1.AppendEquals(System.String,`0,System.String)">
+            <summary>
+            Appends the specified column and value to the current filter.
+            </summary>
+            <param name="junction"></param>
+            <param name="column"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlFilterBuilder`1.AppendNotEquals(`0,System.String)">
+            <summary>
+            Appends the specified column and value to the current filter
+            as a NOT EQUALS expression.
+            </summary>
+            <param name="column"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlFilterBuilder`1.AppendNotEquals(System.String,`0,System.String)">
+            <summary>
+            Appends the specified column and value to the current filter.
+            as a NOT EQUALS expression.
+            </summary>
+            <param name="junction"></param>
+            <param name="column"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlFilterBuilder`1.AppendIn(`0,System.String[])">
+            <summary>
+            Appends the specified column and list of values to the current filter.
+            </summary>
+            <param name="column"></param>
+            <param name="values"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlFilterBuilder`1.AppendIn(`0,System.String[],System.Boolean)">
+            <summary>
+            Appends the specified column and list of values to the current filter.
+            </summary>
+            <param name="column"></param>
+            <param name="values"></param>
+            <param name="encode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlFilterBuilder`1.AppendIn(System.String,`0,System.String[])">
+            <summary>
+            Appends the specified column and list of values to the current filter.
+            </summary>
+            <param name="junction"></param>
+            <param name="column"></param>
+            <param name="values"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlFilterBuilder`1.AppendIn(System.String,`0,System.String[],System.Boolean)">
+            <summary>
+            Appends the specified column and list of values to the current filter.
+            </summary>
+            <param name="junction"></param>
+            <param name="column"></param>
+            <param name="values"></param>
+            <param name="encode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlFilterBuilder`1.AppendNotIn(`0,System.String[])">
+            <summary>
+            Appends the specified column and list of values to the current filter
+            as a NOT IN expression.
+            </summary>
+            <param name="column"></param>
+            <param name="values"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlFilterBuilder`1.AppendNotIn(`0,System.String[],System.Boolean)">
+            <summary>
+            Appends the specified column and list of values to the current filter.
+            as a NOT IN expression.
+            </summary>
+            <param name="column"></param>
+            <param name="values"></param>
+            <param name="encode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlFilterBuilder`1.AppendNotIn(System.String,`0,System.String[])">
+            <summary>
+            Appends the specified column and list of values to the current filter.
+            as a NOT IN expression.
+            </summary>
+            <param name="junction"></param>
+            <param name="column"></param>
+            <param name="values"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlFilterBuilder`1.AppendNotIn(System.String,`0,System.String[],System.Boolean)">
+            <summary>
+            Appends the specified column and list of values to the current filter.
+            as a NOT IN expression.
+            </summary>
+            <param name="junction"></param>
+            <param name="column"></param>
+            <param name="values"></param>
+            <param name="encode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlFilterBuilder`1.AppendInQuery(`0,System.String)">
+            <summary>
+            Appends the specified sub-query to the current filter.
+            </summary>
+            <param name="column"></param>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlFilterBuilder`1.AppendInQuery(System.String,`0,System.String)">
+            <summary>
+            Appends the specified sub-query to the current filter.
+            </summary>
+            <param name="junction"></param>
+            <param name="column"></param>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlFilterBuilder`1.AppendNotInQuery(`0,System.String)">
+            <summary>
+            Appends the specified sub-query to the current filter.
+            as a NOT IN expression.
+            </summary>
+            <param name="column"></param>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlFilterBuilder`1.AppendNotInQuery(System.String,`0,System.String)">
+            <summary>
+            Appends the specified sub-query to the current filter
+            as a NOT IN expression.
+            </summary>
+            <param name="junction"></param>
+            <param name="column"></param>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlFilterBuilder`1.AppendIsNull(`0)">
+            <summary>
+            Appends an IS NULL expression to the current filter.
+            </summary>
+            <param name="column"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlFilterBuilder`1.AppendIsNull(System.String,`0)">
+            <summary>
+            Appends an IS NULL expression to the current filter.
+            </summary>
+            <param name="junction"></param>
+            <param name="column"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlFilterBuilder`1.AppendIsNotNull(`0)">
+            <summary>
+            Appends an IS NOT NULL expression to the current filter.
+            </summary>
+            <param name="column"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlFilterBuilder`1.AppendIsNotNull(System.String,`0)">
+            <summary>
+            Appends an IS NOT NULL expression to the current filter.
+            </summary>
+            <param name="junction"></param>
+            <param name="column"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlFilterBuilder`1.AppendRange(`0,System.String,System.String)">
+            <summary>
+            Appends the specified column and value range to the current filter.
+            </summary>
+            <param name="column"></param>
+            <param name="from"></param>
+            <param name="to"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlFilterBuilder`1.AppendRange(System.String,`0,System.String,System.String)">
+            <summary>
+            Appends the specified column and value range to the current filter.
+            </summary>
+            <param name="junction"></param>
+            <param name="column"></param>
+            <param name="from"></param>
+            <param name="to"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlFilterBuilder`1.AppendNotRange(`0,System.String,System.String)">
+            <summary>
+            Appends the specified column and value not in range to the current filter.
+            </summary>
+            <param name="column"></param>
+            <param name="from"></param>
+            <param name="to"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlFilterBuilder`1.AppendNotRange(System.String,`0,System.String,System.String)">
+            <summary>
+            Appends the specified column and value not in range to the current filter.
+            </summary>
+            <param name="junction"></param>
+            <param name="column"></param>
+            <param name="from"></param>
+            <param name="to"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlFilterBuilder`1.AppendGreaterThan(`0,System.String)">
+            <summary>
+            Appends the specified column and value to the current filter.
+            </summary>
+            <param name="column"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlFilterBuilder`1.AppendGreaterThan(System.String,`0,System.String)">
+            <summary>
+            Appends the specified column and value to the current filter.
+            </summary>
+            <param name="junction"></param>
+            <param name="column"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlFilterBuilder`1.AppendGreaterThanOrEqual(`0,System.String)">
+            <summary>
+            Appends the specified column and value to the current filter.
+            </summary>
+            <param name="column"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlFilterBuilder`1.AppendGreaterThanOrEqual(System.String,`0,System.String)">
+            <summary>
+            Appends the specified column and value to the current filter.
+            </summary>
+            <param name="junction"></param>
+            <param name="column"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlFilterBuilder`1.AppendLessThan(`0,System.String)">
+            <summary>
+            Appends the specified column and value to the current filter.
+            </summary>
+            <param name="column"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlFilterBuilder`1.AppendLessThan(System.String,`0,System.String)">
+            <summary>
+            Appends the specified column and value to the current filter.
+            </summary>
+            <param name="junction"></param>
+            <param name="column"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlFilterBuilder`1.AppendLessThanOrEqual(`0,System.String)">
+            <summary>
+            Appends the specified column and value to the current filter.
+            </summary>
+            <param name="column"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlFilterBuilder`1.AppendLessThanOrEqual(System.String,`0,System.String)">
+            <summary>
+            Appends the specified column and value to the current filter.
+            </summary>
+            <param name="junction"></param>
+            <param name="column"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlFilterBuilder`1.AppendStartsWith(`0,System.String)">
+            <summary>
+            Appends the specified column and value to the current filter.
+            </summary>
+            <param name="column"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlFilterBuilder`1.AppendStartsWith(System.String,`0,System.String)">
+            <summary>
+            Appends the specified column and value to the current filter.
+            </summary>
+            <param name="junction"></param>
+            <param name="column"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlFilterBuilder`1.AppendEndsWith(`0,System.String)">
+            <summary>
+            Appends the specified column and value to the current filter.
+            </summary>
+            <param name="column"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlFilterBuilder`1.AppendEndsWith(System.String,`0,System.String)">
+            <summary>
+            Appends the specified column and value to the current filter.
+            </summary>
+            <param name="junction"></param>
+            <param name="column"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlFilterBuilder`1.AppendContains(`0,System.String)">
+            <summary>
+            Appends the specified column and value to the current filter.
+            </summary>
+            <param name="column"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlFilterBuilder`1.AppendContains(System.String,`0,System.String)">
+            <summary>
+            Appends the specified column and value to the current filter.
+            </summary>
+            <param name="junction"></param>
+            <param name="column"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlFilterBuilder`1.AppendNotContains(`0,System.String)">
+            <summary>
+            Appends the specified column and value to the current filter.
+            </summary>
+            <param name="column"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlFilterBuilder`1.AppendNotContains(System.String,`0,System.String)">
+            <summary>
+            Appends the specified column and value to the current filter.
+            </summary>
+            <param name="junction"></param>
+            <param name="column"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlFilterBuilder`1.AppendLike(`0,System.String)">
+            <summary>
+            Appends the specified column and value to the current filter.
+            </summary>
+            <param name="column"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlFilterBuilder`1.AppendLike(System.String,`0,System.String)">
+            <summary>
+            Appends the specified column and value to the current filter.
+            </summary>
+            <param name="junction"></param>
+            <param name="column"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlFilterBuilder`1.AppendNotLike(`0,System.String)">
+            <summary>
+            Appends the specified column and value to the current filter.
+            </summary>
+            <param name="column"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlFilterBuilder`1.AppendNotLike(System.String,`0,System.String)">
+            <summary>
+            Appends the specified column and value to the current filter.
+            </summary>
+            <param name="junction"></param>
+            <param name="column"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlFilterBuilder`1.GetColumnName(`0)">
+            <summary>
+            Gets the column name from the specified column enumeration value.
+            </summary>
+            <param name="column"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MetaBuilder.DataAccessLayer.ParameterizedSqlFilterBuilder`1">
+            <summary>
+            Allows for building parameterized SQL filter expressions using strongly-typed
+            column enumeration values.
+            </summary>
+            <typeparam name="EntityColumn">An enumeration of entity column names.</typeparam>
+        </member>
+        <member name="T:MetaBuilder.DataAccessLayer.IFilterParameterCollection">
+            <summary>
+              Represents a type which will contain a method to 
+              retrieve the A collection of <see cref="T:MetaBuilder.DataAccessLayer.SqlFilterParameterCollection"/> 
+              objects to use dynamic and parameterized filters.
+            </summary>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.IFilterParameterCollection.GetParameters">
+            <summary>
+            Gets a collection of <see cref="T:MetaBuilder.DataAccessLayer.SqlFilterParameter"/> objects
+            </summary>
+            <returns><see cref="T:MetaBuilder.DataAccessLayer.SqlFilterParameterCollection"/> object</returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.ParameterizedSqlFilterBuilder`1.#ctor">
+            <summary>
+            Initializes a new instance of the ParameterizedSqlFilterBuilder&lt;EntityColumn&gt; class.
+            </summary>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.ParameterizedSqlFilterBuilder`1.#ctor(System.Boolean)">
+            <summary>
+            Initializes a new instance of the ParameterizedSqlFilterBuilder&lt;EntityColumn&gt; class.
+            </summary>
+            <param name="ignoreCase">Specifies whether to create case-insensitive statements.</param>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.ParameterizedSqlFilterBuilder`1.#ctor(System.Boolean,System.Boolean)">
+            <summary>
+            Initializes a new instance of the ParameterizedSqlFilterBuilder&lt;EntityColumn&gt; class.
+            </summary>
+            <param name="ignoreCase">Specifies whether to create case-insensitive statements.</param>
+            <param name="useAnd">Specifies whether to combine statements using AND or OR.</param>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.ParameterizedSqlFilterBuilder`1.Append(System.String,`0,System.String,System.Boolean)">
+            <summary>
+            Appends the specified column and search text to the current filter.
+            </summary>
+            <param name="junction"></param>
+            <param name="column"></param>
+            <param name="searchText"></param>
+            <param name="ignoreCase"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.ParameterizedSqlFilterBuilder`1.AppendEquals(System.String,`0,System.String)">
+            <summary>
+            Appends the specified column and value to the current filter.
+            </summary>
+            <param name="junction"></param>
+            <param name="column"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.ParameterizedSqlFilterBuilder`1.AppendEquals(System.String,System.String,System.String)">
+            <summary>
+            Appends the specified column and value to the current filter.
+            </summary>
+            <param name="junction"></param>
+            <param name="column"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.ParameterizedSqlFilterBuilder`1.AppendNotEquals(System.String,`0,System.String)">
+            <summary>
+            Appends the specified column and value to the current filter.
+            as a NOT EQUALS expression.
+            </summary>
+            <param name="junction"></param>
+            <param name="column"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.ParameterizedSqlFilterBuilder`1.AppendNotEquals(System.String,System.String,System.String)">
+            <summary>
+            Appends the specified column and value to the current filter
+            as a NOT EQUALS expression.
+            </summary>
+            <param name="junction"></param>
+            <param name="column"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.ParameterizedSqlFilterBuilder`1.AppendIn(System.String,`0,System.String[],System.Boolean)">
+            <summary>
+            Appends the specified column and list of values to the current filter.
+            </summary>
+            <param name="junction"></param>
+            <param name="column"></param>
+            <param name="values"></param>
+            <param name="encode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.ParameterizedSqlFilterBuilder`1.AppendIn(System.String,System.String,System.String[],System.Boolean)">
+            <summary>
+            Appends the specified column and list of values to the current filter.
+            </summary>
+            <param name="junction"></param>
+            <param name="column"></param>
+            <param name="values"></param>
+            <param name="encode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.ParameterizedSqlFilterBuilder`1.AppendNotIn(System.String,`0,System.String[],System.Boolean)">
+            <summary>
+            Appends the specified column and list of values to the current filter.
+            as a NOT IN expression.
+            </summary>
+            <param name="junction"></param>
+            <param name="column"></param>
+            <param name="values"></param>
+            <param name="encode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.ParameterizedSqlFilterBuilder`1.AppendNotIn(System.String,System.String,System.String[],System.Boolean)">
+            <summary>
+            Appends the specified column and list of values to the current filter
+            as a NOT IN expression.
+            </summary>
+            <param name="junction"></param>
+            <param name="column"></param>
+            <param name="values"></param>
+            <param name="encode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.ParameterizedSqlFilterBuilder`1.AppendInQuery(System.String,`0,System.String)">
+            <summary>
+            Appends the specified sub-query to the current filter.
+            </summary>
+            <param name="junction"></param>
+            <param name="column"></param>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.ParameterizedSqlFilterBuilder`1.AppendNotInQuery(System.String,`0,System.String)">
+            <summary>
+            Appends the specified sub-query to the current filter
+            as a NOT IN expression.
+            </summary>
+            <param name="junction"></param>
+            <param name="column"></param>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.ParameterizedSqlFilterBuilder`1.AppendRange(System.String,`0,System.String,System.String)">
+            <summary>
+            Appends the specified column and value range to the current filter.
+            </summary>
+            <param name="junction"></param>
+            <param name="column"></param>
+            <param name="from"></param>
+            <param name="to"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.ParameterizedSqlFilterBuilder`1.AppendRange(System.String,System.String,System.String,System.String)">
+            <summary>
+            Appends the specified column and value range to the current filter.
+            </summary>
+            <param name="junction"></param>
+            <param name="column"></param>
+            <param name="from"></param>
+            <param name="to"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.ParameterizedSqlFilterBuilder`1.AppendNotRange(System.String,`0,System.String,System.String)">
+            <summary>
+            Appends the specified column and value not in range to the current filter.
+            </summary>
+            <param name="junction"></param>
+            <param name="column"></param>
+            <param name="from"></param>
+            <param name="to"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.ParameterizedSqlFilterBuilder`1.AppendNotRange(System.String,System.String,System.String,System.String)">
+            <summary>
+            Appends the specified column and value not in range to the current filter.
+            </summary>
+            <param name="junction"></param>
+            <param name="column"></param>
+            <param name="from"></param>
+            <param name="to"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.ParameterizedSqlFilterBuilder`1.AppendGreaterThan(System.String,`0,System.String)">
+            <summary>
+            Appends the specified column and value to the current filter.
+            </summary>
+            <param name="junction"></param>
+            <param name="column"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.ParameterizedSqlFilterBuilder`1.AppendGreaterThan(System.String,System.String,System.String)">
+            <summary>
+            Appends the specified column and value to the current filter.
+            </summary>
+            <param name="junction"></param>
+            <param name="column"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.ParameterizedSqlFilterBuilder`1.AppendGreaterThanOrEqual(System.String,`0,System.String)">
+            <summary>
+            Appends the specified column and value to the current filter.
+            </summary>
+            <param name="junction"></param>
+            <param name="column"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.ParameterizedSqlFilterBuilder`1.AppendGreaterThanOrEqual(System.String,System.String,System.String)">
+            <summary>
+            Appends the specified column and value to the current filter.
+            </summary>
+            <param name="junction"></param>
+            <param name="column"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.ParameterizedSqlFilterBuilder`1.AppendLessThan(System.String,`0,System.String)">
+            <summary>
+            Appends the specified column and value to the current filter.
+            </summary>
+            <param name="junction"></param>
+            <param name="column"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.ParameterizedSqlFilterBuilder`1.AppendLessThan(System.String,System.String,System.String)">
+            <summary>
+            Appends the specified column and value to the current filter.
+            </summary>
+            <param name="junction"></param>
+            <param name="column"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.ParameterizedSqlFilterBuilder`1.AppendLessThanOrEqual(System.String,`0,System.String)">
+            <summary>
+            Appends the specified column and value to the current filter.
+            </summary>
+            <param name="junction"></param>
+            <param name="column"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.ParameterizedSqlFilterBuilder`1.AppendLessThanOrEqual(System.String,System.String,System.String)">
+            <summary>
+            Appends the specified column and value to the current filter.
+            </summary>
+            <param name="junction"></param>
+            <param name="column"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.ParameterizedSqlFilterBuilder`1.AppendStartsWith(System.String,`0,System.String)">
+            <summary>
+            Appends the specified column and value to the current filter.
+            </summary>
+            <param name="junction"></param>
+            <param name="column"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.ParameterizedSqlFilterBuilder`1.AppendStartsWith(System.String,System.String,System.String)">
+            <summary>
+            Appends the specified column and value to the current filter.
+            </summary>
+            <param name="junction"></param>
+            <param name="column"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.ParameterizedSqlFilterBuilder`1.AppendEndsWith(System.String,`0,System.String)">
+            <summary>
+            Appends the specified column and value to the current filter.
+            </summary>
+            <param name="junction"></param>
+            <param name="column"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.ParameterizedSqlFilterBuilder`1.AppendEndsWith(System.String,System.String,System.String)">
+            <summary>
+            Appends the specified column and value to the current filter.
+            </summary>
+            <param name="junction"></param>
+            <param name="column"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.ParameterizedSqlFilterBuilder`1.AppendContains(System.String,`0,System.String)">
+            <summary>
+            Appends the specified column and value to the current filter.
+            </summary>
+            <param name="junction"></param>
+            <param name="column"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.ParameterizedSqlFilterBuilder`1.AppendContains(System.String,System.String,System.String)">
+            <summary>
+            Appends the specified column and value to the current filter.
+            </summary>
+            <param name="junction"></param>
+            <param name="column"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.ParameterizedSqlFilterBuilder`1.AppendNotContains(System.String,`0,System.String)">
+            <summary>
+            Appends the specified column and value to the current filter.
+            </summary>
+            <param name="junction"></param>
+            <param name="column"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.ParameterizedSqlFilterBuilder`1.AppendNotContains(System.String,System.String,System.String)">
+            <summary>
+            Appends the specified column and value to the current filter.
+            </summary>
+            <param name="junction"></param>
+            <param name="column"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.ParameterizedSqlFilterBuilder`1.AppendLike(System.String,`0,System.String)">
+            <summary>
+            Appends the specified column and value to the current filter.
+            </summary>
+            <param name="junction"></param>
+            <param name="column"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.ParameterizedSqlFilterBuilder`1.AppendLike(System.String,System.String,System.String)">
+            <summary>
+            Appends the specified column and value to the current filter.
+            </summary>
+            <param name="junction"></param>
+            <param name="column"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.ParameterizedSqlFilterBuilder`1.Parse(System.String,System.String,System.Boolean)">
+            <summary>
+            Parses the specified searchText to create a SQL filter expression.
+            </summary>
+            <param name="column"></param>
+            <param name="searchText"></param>
+            <param name="ignoreCase"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.ParameterizedSqlFilterBuilder`1.GetInQueryValues(System.String,System.Boolean)">
+            <summary>
+            Gets an encoded list of values for use with an IN clause.
+            </summary>
+            <param name="values"></param>
+            <param name="encode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.ParameterizedSqlFilterBuilder`1.GetParameters">
+            <summary>
+            Gets the current collection of <see cref="T:MetaBuilder.DataAccessLayer.SqlFilterParameter"/> objects and
+            also sets the collection's FilterExpression property.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:MetaBuilder.DataAccessLayer.ParameterizedSqlFilterBuilder`1.parameters">
+            <summary>
+            The Parameters member variable.
+            </summary>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.ParameterizedSqlFilterBuilder`1.MetaBuilder#DataAccessLayer#IFilterParameterCollection#GetParameters">
+            <summary>
+            Gets a collection of <see cref="T:MetaBuilder.DataAccessLayer.SqlFilterParameter"/> objects 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:MetaBuilder.DataAccessLayer.ParameterizedSqlFilterBuilder`1.Parameters">
+            <summary>
+            Gets or sets the Parameters property.
+            </summary>
+        </member>
+        <member name="T:MetaBuilder.DataAccessLayer.SqlFilterParameterCollection">
+            <summary>
+            A collection of <see cref="T:MetaBuilder.DataAccessLayer.SqlFilterParameter"/> objects.
+            </summary>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlFilterParameterCollection.SetCurrentColumn(System.Object)">
+            <summary>
+            Sets the CurrentColumn property.
+            </summary>
+            <param name="column"></param>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlFilterParameterCollection.GetParameter(System.String)">
+            <summary>
+            Gets the next parameter name for the specified value.
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="F:MetaBuilder.DataAccessLayer.SqlFilterParameterCollection.currentColumn">
+            <summary>
+            The CurrentColumn member variable.
+            </summary>
+        </member>
+        <member name="F:MetaBuilder.DataAccessLayer.SqlFilterParameterCollection.filterExpression">
+            <summary>
+            The FilterExpression member variable.
+            </summary>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlFilterParameterCollection.MetaBuilder#DataAccessLayer#IFilterParameterCollection#GetParameters">
+            <summary>
+            Gets a list of sql parameters for the filter 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:MetaBuilder.DataAccessLayer.SqlFilterParameterCollection.CurrentColumn">
+            <summary>
+            Gets the CurrentColumn property.
+            </summary>
+        </member>
+        <member name="P:MetaBuilder.DataAccessLayer.SqlFilterParameterCollection.FilterExpression">
+            <summary>
+            Gets or sets the FilterExpression property.
+            </summary>
+        </member>
+        <member name="T:MetaBuilder.DataAccessLayer.SqlFilterParameter">
+            <summary>
+            Represents the information needed for a database command parameter.
+            </summary>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlFilterParameter.#ctor(System.Enum,System.String,System.Int32)">
+            <summary>
+            Initializes a new instance of the SqlFilterParameter class.
+            </summary>
+            <param name="column"></param>
+            <param name="value"></param>
+            <param name="index"></param>
+        </member>
+        <member name="F:MetaBuilder.DataAccessLayer.SqlFilterParameter.column">
+            <summary>
+            The Column member variable.
+            </summary>
+        </member>
+        <member name="F:MetaBuilder.DataAccessLayer.SqlFilterParameter.parameterValue">
+            <summary>
+            The Value member variable.
+            </summary>
+        </member>
+        <member name="F:MetaBuilder.DataAccessLayer.SqlFilterParameter.parameterIndex">
+            <summary>
+            The Index member variable.
+            </summary>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlFilterParameter.GetValue">
+            <summary>
+            Gets the current value converted to the appropriate <see cref="T:System.Type"/>.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:MetaBuilder.DataAccessLayer.SqlFilterParameter.Column">
+            <summary>
+            Gets or sets the Column property.
+            </summary>
+        </member>
+        <member name="P:MetaBuilder.DataAccessLayer.SqlFilterParameter.Value">
+            <summary>
+            Gets or sets the Value property.
+            </summary>
+        </member>
+        <member name="P:MetaBuilder.DataAccessLayer.SqlFilterParameter.Index">
+            <summary>
+            Gets the parameter index.
+            </summary>
+        </member>
+        <member name="P:MetaBuilder.DataAccessLayer.SqlFilterParameter.Name">
+            <summary>
+            Gets the parameter name.
+            </summary>
+        </member>
+        <member name="P:MetaBuilder.DataAccessLayer.SqlFilterParameter.DbType">
+            <summary>
+            Gets the <see cref="T:System.Data.SqlDbType"/> for
+            the current entity column enumeration value.
+            </summary>
+        </member>
+        <member name="P:MetaBuilder.DataAccessLayer.SqlFilterParameter.SystemType">
+            <summary>
+            Gets the <see cref="T:System.Type"/> for
+            the current entity column enumeration value.
+            </summary>
+        </member>
+        <member name="T:MetaBuilder.DataAccessLayer.SqlSortBuilder`1">
+            <summary>
+            Allows for building SQL OrderBy expressions using strongly-typed column enumeration values.
+            </summary>
+            <typeparam name="EntityColumn">An enumeration of entity column names.</typeparam>
+        </member>
+        <member name="T:MetaBuilder.DataAccessLayer.ISortColumnCollection">
+            <summary>
+              Represents a type which will contain a method to 
+              retrieve the A collection of <see cref="T:MetaBuilder.DataAccessLayer.SqlSortColumnCollection"/> 
+              objects to generate an OrderBy clause.
+            </summary>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.ISortColumnCollection.GetSortColumns">
+            <summary>
+            Gets a collection of <see cref="T:MetaBuilder.DataAccessLayer.SqlSortColumn"/> objects
+            </summary>
+            <returns><see cref="T:MetaBuilder.DataAccessLayer.SqlSortColumnCollection"/> object</returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlSortBuilder`1.#ctor">
+            <summary>
+            Initializes a new instance of the SqlFilterBuilder class.
+            </summary>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlSortBuilder`1.Append(System.Enum,MetaBuilder.DataAccessLayer.SqlSortDirection)">
+            <summary>
+            Appends the specified column and sorts it by the specified SqlSortDirection 
+            </summary>
+            <param name="column">The column to sort</param>
+            <param name="sortDirection">The specified column's sort direction</param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlSortBuilder`1.AppendASC(System.Enum)">
+            <summary>
+            Appends the specified column and sorts it Ascending
+            </summary>
+            <param name="column">The column to sort</param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlSortBuilder`1.AppendDESC(System.Enum)">
+            <summary>
+            Appends the specified column and sorts it Descending
+            </summary>
+            <param name="column">The column to sort</param>
+            <returns></returns>
+        </member>
+        <member name="F:MetaBuilder.DataAccessLayer.SqlSortBuilder`1.sortColumns">
+            <summary>
+            The Sort Columns member variable.
+            </summary>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlSortBuilder`1.AddColumn(System.Enum,MetaBuilder.DataAccessLayer.SqlSortDirection)">
+            <summary>
+            Adds a column to the sort builder
+            </summary>
+            <param name="column">The entity's column to sort by</param>
+            <param name="sortDirection">The sort direction</param>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlSortBuilder`1.ToString">
+            <summary>
+            Provides the actual SQL sort string.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlSortBuilder`1.GetColumnName(`0)">
+            <summary>
+            Gets the column name from the specified column enumeration value.
+            </summary>
+            <param name="column"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlSortBuilder`1.GetSortColumns">
+            <summary>
+            Gets the current collection of <see cref="T:MetaBuilder.DataAccessLayer.SqlFilterParameter"/> objects and
+            also sets the collection's FilterExpression property.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlSortBuilder`1.MetaBuilder#DataAccessLayer#ISortColumnCollection#GetSortColumns">
+            <summary>
+            Gets a collection of <see cref="T:MetaBuilder.DataAccessLayer.SqlFilterParameter"/> objects 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:MetaBuilder.DataAccessLayer.SqlSortBuilder`1.SortColumns">
+            <summary>
+            Gets or sets the SortColumns property.
+            </summary>
+        </member>
+        <member name="T:MetaBuilder.DataAccessLayer.SqlSortColumnCollection">
+            <summary>
+            A collection of <see cref="T:MetaBuilder.DataAccessLayer.SqlSortColumn"/> objects.
+            </summary>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlSortColumnCollection.SetCurrentColumn(System.Object)">
+            <summary>
+            Sets the CurrentColumn property.
+            </summary>
+            <param name="column"></param>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlSortColumnCollection.ToString">
+            <summary>
+            Provides the actual SQL sort string.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:MetaBuilder.DataAccessLayer.SqlSortColumnCollection._currentColumn">
+            <summary>
+            The CurrentColumn member variable.
+            </summary>
+        </member>
+        <member name="F:MetaBuilder.DataAccessLayer.SqlSortColumnCollection.sortExpression">
+            <summary>
+            The SortExpression member variable.
+            </summary>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlSortColumnCollection.MetaBuilder#DataAccessLayer#ISortColumnCollection#GetSortColumns">
+            <summary>
+            Gets a list of sql parameters for the filter 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:MetaBuilder.DataAccessLayer.SqlSortColumnCollection.CurrentColumn">
+            <summary>
+            Gets the CurrentColumn property.
+            </summary>
+        </member>
+        <member name="P:MetaBuilder.DataAccessLayer.SqlSortColumnCollection.SortExpression">
+            <summary>
+            Gets or sets the SortExpression property.
+            </summary>
+        </member>
+        <member name="T:MetaBuilder.DataAccessLayer.SqlSortColumn">
+            <summary>
+            Represents the information of a sorted column.
+            </summary>
+        </member>
+        <member name="M:MetaBuilder.DataAccessLayer.SqlSortColumn.#ctor(System.Enum,MetaBuilder.DataAccessLayer.SqlSortDirection)">
+            <summary>
+            Initializes a new instance of the SqlSortColumn class.
+            </summary>
+            <param name="column"></param>
+            <param name="sortDirection"></param>
+        </member>
+        <member name="F:MetaBuilder.DataAccessLayer.SqlSortColumn._column">
+            <summary>
+            The Column member variable.
+            </summary>
+        </member>
+        <member name="F:MetaBuilder.DataAccessLayer.SqlSortColumn._sortDirection">
+            <summary>
+            The Value member variable.
+            </summary>
+        </member>
+        <member name="P:MetaBuilder.DataAccessLayer.SqlSortColumn.Column">
+            <summary>
+            Gets or sets the Column property.
+            </summary>
+        </member>
+        <member name="P:MetaBuilder.DataAccessLayer.SqlSortColumn.SortDirection">
+            <summary>
+            Gets or sets the Value property.
+            </summary>
+        </member>

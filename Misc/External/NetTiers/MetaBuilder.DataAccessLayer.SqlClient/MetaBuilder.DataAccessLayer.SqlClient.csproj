@@ -1,0 +1,785 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{57769669-DE6B-4520-ADA4-6DA59740C258}</ProjectGuid>
+    <ProjectType>Local</ProjectType>
+    <OutputType>Library</OutputType>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>MetaBuilder.DataAccessLayer.SqlClient</AssemblyName>
+    <AssemblyOriginatorKeyFile>..\MetaBuilder.snk</AssemblyOriginatorKeyFile>
+    <SignAssembly>false</SignAssembly>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <RootNamespace>MetaBuilder.DataAccessLayer.SqlClient</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>MetaBuilder.DataAccessLayer.SqlClient.xml</DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>
+    </DefineConstants>
+    <DocumentationFile>MetaBuilder.DataAccessLayer.SqlClient.xml</DocumentationFile>
+    <DebugType>pdbonly</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'GenerateDebug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>MetaBuilder.DataAccessLayer.SqlClient.xml</DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'ServicePack|AnyCPU' ">
+    <OutputPath>bin\ServicePack\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'UnitTests|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\UnitTests\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <BaseAddress>285212672</BaseAddress>
+    <DocumentationFile>MetaBuilder.DataAccessLayer.SqlClient.xml</DocumentationFile>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Install|AnyCPU' ">
+    <OutputPath>bin\Install\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ObjectBuilder, Version=1.0.51206.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\Microsoft.Practices.ObjectBuilder.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <!-- Custom code folder: C:\NetTiers\MetaBuilder\MetaBuilder.DataAccessLayer.SqlClient\App_Code -->
+  <ItemGroup>
+    <Compile Include="App_Code\**\*.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <!-- Include any user files -->
+  <ItemGroup>
+    <Compile Include="**\*.user.*" Exclude="**\*.csproj.user;**\.svn\**">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="SqlUURIProvider.cs" />
+    <Compile Include="SqlUURIProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_Activity_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_Activity_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_Activity_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_Activity_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_ApplicationInterface_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_ApplicationInterface_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_ApplicationInterface_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_ApplicationInterface_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_Assumption_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_Assumption_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_Assumption_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_Assumption_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_Attribute_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_Attribute_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_Attribute_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_Attribute_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_BusinessCompetency_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_BusinessCompetency_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_BusinessCompetency_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_BusinessCompetency_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_BusinessInterface_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_BusinessInterface_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_BusinessInterface_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_BusinessInterface_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_CADReal_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_CADReal_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_CADReal_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_CADReal_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_CAD_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_CAD_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_CAD_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_CAD_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_CategoryFactor_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_CategoryFactor_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_CategoryFactor_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_CategoryFactor_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_Channel_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_Channel_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_Channel_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_Channel_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_Competency_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_Competency_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_Competency_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_Competency_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_ComputingComponent_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_ComputingComponent_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_ComputingComponent_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_ComputingComponent_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_ConditionalDescription_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_ConditionalDescription_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_ConditionalDescription_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_ConditionalDescription_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_Conditional_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_Conditional_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_Conditional_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_Conditional_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_Condition_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_Condition_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_Condition_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_Condition_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_ConnectionSize_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_ConnectionSize_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_ConnectionSize_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_ConnectionSize_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_ConnectionSpeed_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_ConnectionSpeed_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_ConnectionSpeed_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_ConnectionSpeed_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_ConnectionType_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_ConnectionType_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_ConnectionType_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_ConnectionType_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_Constraint_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_Constraint_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_Constraint_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_Constraint_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_CSF_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_CSF_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_CSF_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_CSF_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_DataAttribute_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_DataAttribute_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_DataAttribute_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_DataAttribute_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_DataColumn_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_DataColumn_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_DataColumn_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_DataColumn_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_DataDomain_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_DataDomain_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_DataDomain_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_DataDomain_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_DataEntity_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_DataEntity_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_DataEntity_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_DataEntity_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_DataField_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_DataField_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_DataField_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_DataField_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_DataFlowIndicator_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_DataFlowIndicator_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_DataFlowIndicator_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_DataFlowIndicator_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_DataSchema_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_DataSchema_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_DataSchema_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_DataSchema_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_DataSubjectArea_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_DataSubjectArea_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_DataSubjectArea_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_DataSubjectArea_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_DataTable_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_DataTable_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_DataTable_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_DataTable_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_DataValue_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_DataValue_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_DataValue_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_DataValue_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_DataView_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_DataView_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_DataView_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_DataView_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_DatedResponsibility_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_DatedResponsibility_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_DatedResponsibility_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_DatedResponsibility_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_DependencyDescription_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_DependencyDescription_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_DependencyDescription_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_DependencyDescription_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_Driver_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_Driver_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_Driver_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_Driver_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_Employee_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_Employee_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_Employee_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_Employee_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_Entity_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_Entity_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_Entity_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_Entity_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_EnvironmentCategory_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_EnvironmentCategory_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_EnvironmentCategory_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_EnvironmentCategory_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_Environment_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_Environment_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_Environment_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_Environment_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_Event_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_Event_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_Event_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_Event_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_Exception_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_Exception_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_Exception_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_Exception_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_ExtractionRule_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_ExtractionRule_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_ExtractionRule_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_ExtractionRule_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_FlowDescription_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_FlowDescription_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_FlowDescription_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_FlowDescription_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_FunctionalDependency_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_FunctionalDependency_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_FunctionalDependency_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_FunctionalDependency_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_Function_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_Function_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_Function_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_Function_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_GatewayDescription_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_GatewayDescription_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_GatewayDescription_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_GatewayDescription_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_Gateway_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_Gateway_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_Gateway_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_Gateway_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_GovernanceMechanism_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_GovernanceMechanism_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_GovernanceMechanism_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_GovernanceMechanism_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_Implication_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_Implication_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_Implication_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_Implication_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_Iteration_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_Iteration_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_Iteration_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_Iteration_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_ITInfrastructureEnvironment_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_ITInfrastructureEnvironment_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_ITInfrastructureEnvironment_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_ITInfrastructureEnvironment_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_JobCompetency_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_JobCompetency_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_JobCompetency_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_JobCompetency_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_JobPosition_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_JobPosition_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_JobPosition_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_JobPosition_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_Job_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_Job_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_Job_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_Job_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_LocationAssociation_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_LocationAssociation_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_LocationAssociation_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_LocationAssociation_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_LocationScheme_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_LocationScheme_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_LocationScheme_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_LocationScheme_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_LocationUnit_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_LocationUnit_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_LocationUnit_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_LocationUnit_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_Location_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_Location_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_Location_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_Location_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_LogicalInformationArtefact_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_LogicalInformationArtefact_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_LogicalInformationArtefact_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_LogicalInformationArtefact_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_LogicalITInfrastructureComponent_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_LogicalITInfrastructureComponent_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_LogicalITInfrastructureComponent_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_LogicalITInfrastructureComponent_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_LogicalSoftwareComponent_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_LogicalSoftwareComponent_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_LogicalSoftwareComponent_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_LogicalSoftwareComponent_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_Logic_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_Logic_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_Logic_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_Logic_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_MarketSegment_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_MarketSegment_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_MarketSegment_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_MarketSegment_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_MeasurementItem_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_MeasurementItem_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_MeasurementItem_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_MeasurementItem_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_Measure_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_Measure_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_Measure_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_Measure_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_ModelReal_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_ModelReal_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_ModelReal_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_ModelReal_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_Model_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_Model_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_Model_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_Model_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_MutuallyExclusiveIndicator_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_MutuallyExclusiveIndicator_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_MutuallyExclusiveIndicator_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_MutuallyExclusiveIndicator_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_NetworkComponent_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_NetworkComponent_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_NetworkComponent_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_NetworkComponent_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_Network_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_Network_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_Network_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_Network_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_Object_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_Object_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_Object_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_Object_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_OrganizationalUnit_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_OrganizationalUnit_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_OrganizationalUnit_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_OrganizationalUnit_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_PeripheralComponent_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_PeripheralComponent_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_PeripheralComponent_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_PeripheralComponent_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_Peripheral_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_Peripheral_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_Peripheral_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_Peripheral_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_Person_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_Person_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_Person_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_Person_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_PhysicalDataComponent_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_PhysicalDataComponent_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_PhysicalDataComponent_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_PhysicalDataComponent_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_PhysicalInformationArtefact_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_PhysicalInformationArtefact_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_PhysicalInformationArtefact_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_PhysicalInformationArtefact_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_PhysicalSoftwareComponent_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_PhysicalSoftwareComponent_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_PhysicalSoftwareComponent_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_PhysicalSoftwareComponent_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_Position_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_Position_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_Position_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_Position_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_PrimaryDataSourceIndicator_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_PrimaryDataSourceIndicator_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_PrimaryDataSourceIndicator_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_PrimaryDataSourceIndicator_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_ProbabilityofRealization_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_ProbabilityofRealization_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_ProbabilityofRealization_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_ProbabilityofRealization_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_ProbOfRealization_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_ProbOfRealization_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_ProbOfRealization_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_ProbOfRealization_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_Process_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_Process_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_Process_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_Process_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_Rationale_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_Rationale_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_Rationale_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_Rationale_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_Report_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_Report_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_Report_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_Report_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_ResourceType_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_ResourceType_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_ResourceType_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_ResourceType_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_Resource_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_Resource_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_Resource_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_Resource_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_Responsibility_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_Responsibility_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_Responsibility_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_Responsibility_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_Risk_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_Risk_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_Risk_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_Risk_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_Role_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_Role_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_Role_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_Role_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_Scenario_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_Scenario_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_Scenario_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_Scenario_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_SecurityClassification_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_SecurityClassification_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_SecurityClassification_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_SecurityClassification_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_SelectorAttribute_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_SelectorAttribute_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_SelectorAttribute_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_SelectorAttribute_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_Skill_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_Skill_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_Skill_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_Skill_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_Software_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_Software_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_Software_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_Software_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_Stakeholder_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_Stakeholder_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_Stakeholder_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_Stakeholder_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_StatusIndicator_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_StatusIndicator_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_StatusIndicator_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_StatusIndicator_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_StorageComponent_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_StorageComponent_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_StorageComponent_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_StorageComponent_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_StrategicStatement_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_StrategicStatement_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_StrategicStatement_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_StrategicStatement_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_StrategicTheme_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_StrategicTheme_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_StrategicTheme_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_StrategicTheme_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_SubsetIndicator_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_SubsetIndicator_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_SubsetIndicator_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_SubsetIndicator_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_SystemComponent_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_SystemComponent_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_SystemComponent_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_SystemComponent_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_Sys_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_Sys_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_Sys_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_Sys_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_Task_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_Task_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_Task_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_Task_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_TimeDifference_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_TimeDifference_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_TimeDifference_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_TimeDifference_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_TimeIndicator_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_TimeIndicator_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_TimeIndicator_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_TimeIndicator_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_TimeReference_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_TimeReference_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_TimeReference_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_TimeReference_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_TimeScheme_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_TimeScheme_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_TimeScheme_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_TimeScheme_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_TimeUnit_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_TimeUnit_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_TimeUnit_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_TimeUnit_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_WorkPackage_ListingProvider.cs" />
+    <Compile Include="Views\SqlMETAView_WorkPackage_ListingProviderBase.generated.cs" />
+    <Compile Include="Views\SqlMETAView_WorkPackage_RetrievalProvider.cs" />
+    <Compile Include="Views\SqlMETAView_WorkPackage_RetrievalProviderBase.generated.cs" />
+    <Compile Include="Views\Sqlvw_FieldValueProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\Sqlvw_FieldValueProviderBase.generated.cs">
+      <DependentUpon>Sqlvw_FieldValueProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlVCStatusProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlVCStatusProviderBase.generated.cs">
+      <DependentUpon>SqlVCStatusProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlDomainDefinitionPossibleValueProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlDomainDefinitionPossibleValueProviderBase.generated.cs">
+      <DependentUpon>SqlDomainDefinitionPossibleValueProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlWorkspaceProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlWorkspaceProviderBase.generated.cs">
+      <DependentUpon>SqlWorkspaceProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlClassTypeProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlClassTypeProviderBase.generated.cs">
+      <DependentUpon>SqlClassTypeProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlWorkspaceTypeProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlWorkspaceTypeProviderBase.generated.cs">
+      <DependentUpon>SqlWorkspaceTypeProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlUserProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlUserProviderBase.generated.cs">
+      <DependentUpon>SqlUserProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlGraphFileProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlGraphFileProviderBase.generated.cs">
+      <DependentUpon>SqlGraphFileProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlClassProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlClassProviderBase.generated.cs">
+      <DependentUpon>SqlClassProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlMetaObjectProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlMetaObjectProviderBase.generated.cs">
+      <DependentUpon>SqlMetaObjectProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlUserPermissionProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlUserPermissionProviderBase.generated.cs">
+      <DependentUpon>SqlUserPermissionProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlConfigProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlConfigProviderBase.generated.cs">
+      <DependentUpon>SqlConfigProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlAssociationTypeProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlAssociationTypeProviderBase.generated.cs">
+      <DependentUpon>SqlAssociationTypeProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlClassAssociationProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlClassAssociationProviderBase.generated.cs">
+      <DependentUpon>SqlClassAssociationProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlObjectAssociationProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlObjectAssociationProviderBase.generated.cs">
+      <DependentUpon>SqlObjectAssociationProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlFileTypeProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlFileTypeProviderBase.generated.cs">
+      <DependentUpon>SqlFileTypeProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlObjectFieldValueProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlObjectFieldValueProviderBase.generated.cs">
+      <DependentUpon>SqlObjectFieldValueProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlGraphFileAssociationProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlGraphFileAssociationProviderBase.generated.cs">
+      <DependentUpon>SqlGraphFileAssociationProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlAllowedArtifactProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlAllowedArtifactProviderBase.generated.cs">
+      <DependentUpon>SqlAllowedArtifactProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlDomainDefinitionProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlDomainDefinitionProviderBase.generated.cs">
+      <DependentUpon>SqlDomainDefinitionProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlArtifactProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlArtifactProviderBase.generated.cs">
+      <DependentUpon>SqlArtifactProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlPermissionProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlPermissionProviderBase.generated.cs">
+      <DependentUpon>SqlPermissionProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlGraphFileObjectProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlGraphFileObjectProviderBase.generated.cs">
+      <DependentUpon>SqlGraphFileObjectProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlFieldProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlFieldProviderBase.generated.cs">
+      <DependentUpon>SqlFieldProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlNetTiersProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <!--<Compile Include="SqlDataRepository.cs">
+			  <SubType>Code</SubType>
+			</Compile>-->
+    <EmbeddedResource Include="Procedures.xml">
+      <SubType>EmbeddedResource</SubType>
+    </EmbeddedResource>
+    <Compile Include="StoredProcedureProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MetaBuilder.BusinessLogic\MetaBuilder.BusinessLogic.csproj">
+      <Project>{B72D3674-44C0-49FE-A4F1-64910F292641}</Project>
+      <Name>MetaBuilder.BusinessLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MetaBuilder.DataAccessLayer\MetaBuilder.DataAccessLayer.csproj">
+      <Project>{02252C54-158A-4DD2-928C-75A3906CCFA9}</Project>
+      <Name>MetaBuilder.DataAccessLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Code\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSHARP.Targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

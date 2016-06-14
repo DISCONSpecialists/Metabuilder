@@ -1,0 +1,392 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Reports>
+	<ReportItem Title="Business And Process Architecture" Description="This is not a report, since the query attribute is not present">
+		<ReportItem Title="Strategic Positioning" Query = "SELECT     METAView_StrategicStatement_Listing.Name AS [StrategicStatement Name], METAView_StrategicStatement_Listing.UniqueRef AS 
+                      StrategicStatement, METAView_Implication_Listing.Name AS Implication, 
+                      METAView_Implication_Listing.ExternalInfluenceIndicator AS [Implication - External Inference Indicator], 
+                      METAView_Implication_Listing.InternalCapabilityIndicator AS [Implication - Internal Capability Indicator], 
+                      METAView_Driver_Listing.Name AS [Driver], METAView_EnvironmentCategory_Listing.Name AS [Environment Category], 
+                      METAView_Environment_Listing.Name AS Environment, METAView_Scenario_Listing.Name AS Scenario, ActiveDiagramObjects.[File Name]
+                      FROM         ObjectAssociation INNER JOIN
+                      METAView_StrategicStatement_Listing ON ObjectAssociation.ObjectID = METAView_StrategicStatement_Listing.pkid AND 
+                      ObjectAssociation.ObjectMachine = METAView_StrategicStatement_Listing.Machine INNER JOIN
+                      METAView_Implication_Listing ON ObjectAssociation.ChildObjectID = METAView_Implication_Listing.pkid AND 
+                      ObjectAssociation.ChildObjectMachine = METAView_Implication_Listing.Machine INNER JOIN
+                      ObjectAssociation AS ObjectAssociation_1 ON METAView_Implication_Listing.pkid = ObjectAssociation_1.ObjectID AND 
+                      METAView_Implication_Listing.Machine = ObjectAssociation_1.ObjectMachine INNER JOIN
+                      METAView_Driver_Listing ON ObjectAssociation_1.ChildObjectID = METAView_Driver_Listing.pkid AND 
+                      ObjectAssociation_1.ChildObjectMachine = METAView_Driver_Listing.Machine INNER JOIN
+                      ObjectAssociation AS ObjectAssociation_2 ON METAView_Driver_Listing.pkid = ObjectAssociation_2.ObjectID AND 
+                      METAView_Driver_Listing.Machine = ObjectAssociation_2.ObjectMachine INNER JOIN
+                      METAView_EnvironmentCategory_Listing ON ObjectAssociation_2.ChildObjectID = METAView_EnvironmentCategory_Listing.pkid AND 
+                      ObjectAssociation_2.ChildObjectMachine = METAView_EnvironmentCategory_Listing.Machine INNER JOIN
+                      ObjectAssociation AS ObjectAssociation_3 ON METAView_EnvironmentCategory_Listing.pkid = ObjectAssociation_3.ObjectID AND 
+                      METAView_EnvironmentCategory_Listing.Machine = ObjectAssociation_3.ObjectMachine INNER JOIN
+                      METAView_Environment_Listing ON ObjectAssociation_3.ChildObjectID = METAView_Environment_Listing.pkid AND 
+                      ObjectAssociation_3.ChildObjectMachine = METAView_Environment_Listing.Machine INNER JOIN
+                      ObjectAssociation AS ObjectAssociation_4 ON METAView_Environment_Listing.pkid = ObjectAssociation_4.ObjectID AND 
+                      METAView_Environment_Listing.Machine = ObjectAssociation_4.ObjectMachine INNER JOIN
+                      METAView_Scenario_Listing ON ObjectAssociation_4.ChildObjectID = METAView_Scenario_Listing.pkid AND 
+                      ObjectAssociation_4.ChildObjectMachine = METAView_Scenario_Listing.Machine INNER JOIN
+                      ActiveDiagramObjects ON METAView_StrategicStatement_Listing.pkid = ActiveDiagramObjects.MetaObjectID AND 
+                      METAView_StrategicStatement_Listing.Machine = ActiveDiagramObjects.Machine INNER JOIN
+                      ActiveDiagramObjects AS ActiveDiagramObjects_1 ON METAView_Implication_Listing.pkid = ActiveDiagramObjects_1.MetaObjectID AND 
+                      METAView_Implication_Listing.Machine = ActiveDiagramObjects_1.Machine INNER JOIN
+                      ActiveDiagramObjects AS ActiveDiagramObjects_3 ON METAView_EnvironmentCategory_Listing.pkid = ActiveDiagramObjects_3.MetaObjectID AND 
+                      METAView_EnvironmentCategory_Listing.Machine = ActiveDiagramObjects_3.Machine INNER JOIN
+                      ActiveDiagramObjects AS ActiveDiagramObjects_4 ON METAView_Environment_Listing.pkid = ActiveDiagramObjects_4.MetaObjectID AND 
+                      METAView_Environment_Listing.Machine = ActiveDiagramObjects_4.Machine INNER JOIN
+                      ActiveDiagramObjects AS ActiveDiagramObjects_5 ON METAView_Scenario_Listing.pkid = ActiveDiagramObjects_5.MetaObjectID AND 
+                      METAView_Scenario_Listing.Machine = ActiveDiagramObjects_5.Machine INNER JOIN
+                      ActiveDiagramObjects AS ActiveDiagramObjects_2 ON METAView_Driver_Listing.pkid = ActiveDiagramObjects_2.MetaObjectID AND 
+                      METAView_Driver_Listing.Machine = ActiveDiagramObjects_2.Machine" Description = "Strategic Statement --> Implication --> Driver --> Envirnonment Category --> Environment --> Scenario">
+		</ReportItem>
+		<ReportItem Title="Strategy" Description="This is not a report, since the query attribute is not present">
+			<ReportItem Title = "Organisation Unit Function Strategic Statements Listing" Query = "SELECT     METAView_OrganizationalUnit_Listing.Name AS [Organisational Unit], METAView_Function_Listing.Name AS [Function], 
+                      METAView_StrategicStatement_Listing.Name AS StrategicStatement, METAView_OrganizationalUnit_Listing.WorkspaceName AS [Workspace Name], 
+                      AssociationType.Name AS Association, ClassAssociation.Caption, ActiveDiagramObjects_2.[File Name]
+                      FROM         AssociationType INNER JOIN
+                      ClassAssociation INNER JOIN
+                      ObjectAssociation ON ClassAssociation.CAid = ObjectAssociation.CAid ON AssociationType.pkid = ClassAssociation.AssociationTypeID INNER JOIN
+                      METAView_OrganizationalUnit_Listing ON ObjectAssociation.ObjectID = METAView_OrganizationalUnit_Listing.pkid AND 
+                      ObjectAssociation.ObjectMachine = METAView_OrganizationalUnit_Listing.Machine INNER JOIN
+                      ObjectAssociation AS ObjectAssociation_2 INNER JOIN
+                      METAView_Function_Listing ON ObjectAssociation_2.ObjectID = METAView_Function_Listing.pkid AND 
+                      ObjectAssociation_2.ObjectMachine = METAView_Function_Listing.Machine INNER JOIN
+                      METAView_StrategicStatement_Listing ON ObjectAssociation_2.ChildObjectID = METAView_StrategicStatement_Listing.pkid AND 
+                      ObjectAssociation_2.ChildObjectMachine = METAView_StrategicStatement_Listing.Machine ON 
+                      ObjectAssociation.ChildObjectID = METAView_Function_Listing.pkid AND 
+                      ObjectAssociation.ChildObjectMachine = METAView_Function_Listing.Machine INNER JOIN
+                      ActiveDiagramObjects ON METAView_Function_Listing.pkid = ActiveDiagramObjects.MetaObjectID AND 
+                      METAView_Function_Listing.Machine = ActiveDiagramObjects.Machine INNER JOIN
+                      ActiveDiagramObjects AS ActiveDiagramObjects_1 ON METAView_StrategicStatement_Listing.pkid = ActiveDiagramObjects_1.MetaObjectID AND 
+                      METAView_StrategicStatement_Listing.Machine = ActiveDiagramObjects_1.Machine INNER JOIN
+                      ActiveDiagramObjects AS ActiveDiagramObjects_2 ON METAView_OrganizationalUnit_Listing.pkid = ActiveDiagramObjects_2.MetaObjectID AND 
+                      METAView_OrganizationalUnit_Listing.Machine = ActiveDiagramObjects_2.Machine" Description="Organisation Unit --> Function --> Strategic Statement">
+			</ReportItem>
+			<ReportItem Title = "Organisation Unit Strategic Statements Listing" Query = "SELECT     METAView_OrganizationalUnit_Listing.Name AS [Organisational Unit], METAView_StrategicStatement_Listing.Name AS StrategicStatement, 
+                      METAView_OrganizationalUnit_Listing.WorkspaceName AS [Workspace Name], AssociationType.Name AS Association, ClassAssociation.Caption, 
+                      ActiveDiagramObjects.[File Name]
+                      FROM         AssociationType INNER JOIN
+                      ClassAssociation INNER JOIN
+                      ObjectAssociation ON ClassAssociation.CAid = ObjectAssociation.CAid ON AssociationType.pkid = ClassAssociation.AssociationTypeID INNER JOIN
+                      METAView_OrganizationalUnit_Listing ON ObjectAssociation.ObjectID = METAView_OrganizationalUnit_Listing.pkid AND 
+                      ObjectAssociation.ObjectMachine = METAView_OrganizationalUnit_Listing.Machine INNER JOIN
+                      METAView_StrategicStatement_Listing ON ObjectAssociation.ChildObjectID = METAView_StrategicStatement_Listing.pkid AND 
+                      ObjectAssociation.ChildObjectMachine = METAView_StrategicStatement_Listing.Machine INNER JOIN
+                      ActiveDiagramObjects ON METAView_StrategicStatement_Listing.pkid = ActiveDiagramObjects.MetaObjectID AND 
+                      METAView_StrategicStatement_Listing.Machine = ActiveDiagramObjects.Machine INNER JOIN
+                      ActiveDiagramObjects AS ActiveDiagramObjects_1 ON METAView_OrganizationalUnit_Listing.pkid = ActiveDiagramObjects_1.MetaObjectID AND 
+                      METAView_OrganizationalUnit_Listing.Machine = ActiveDiagramObjects_1.Machine" Description="Organisation Unit --> Strategic Statement">
+			</ReportItem>
+	</ReportItem>
+	<ReportItem Title="Functions And Processes" Description="This is not a report, since the query attribute is not present">
+		<ReportItem Title = "Function Listing" Query = "SELECT     METAView_Function_Listing.Name AS [Function], METAView_Function_Listing.WorkspaceName AS [Workspace Name], 
+                      ActiveDiagramObjects.[File Name]
+FROM         METAView_Function_Listing INNER JOIN
+                      ActiveDiagramObjects ON METAView_Function_Listing.pkid = ActiveDiagramObjects.MetaObjectID AND 
+                      METAView_Function_Listing.Machine = ActiveDiagramObjects.Machine" Description="List Of All Functions">
+		</ReportItem>
+		<ReportItem Title = "Process Listing" Query = "SELECT     METAView_Process_Listing.Name AS Process, METAView_Process_Listing.WorkspaceName AS [Workspace Name], 
+                      ActiveDiagramObjects.[File Name]
+FROM         METAView_Process_Listing INNER JOIN
+                      ActiveDiagramObjects ON METAView_Process_Listing.pkid = ActiveDiagramObjects.MetaObjectID AND 
+                      METAView_Process_Listing.Machine = ActiveDiagramObjects.Machine" Description="List Of All Processes">
+		</ReportItem>
+	</ReportItem>
+		<ReportItem Title="Data" Description="This is not a report, since the query attribute is not present">
+			<ReportItem Title = "Data Subject Area Listing" Query = "SELECT     METAView_DataSubjectArea_Listing.Name AS [Data Subject Area Name], METAView_DataSubjectArea_Listing.WorkspaceName AS [Workspace Name], 
+                      ActiveDiagramObjects.[File Name]
+                      FROM         METAView_DataSubjectArea_Listing INNER JOIN
+                      ActiveDiagramObjects ON METAView_DataSubjectArea_Listing.pkid = ActiveDiagramObjects.MetaObjectID AND 
+                      METAView_DataSubjectArea_Listing.Machine = ActiveDiagramObjects.Machine" Description="List Of All Data Subject Areas">
+			</ReportItem>
+			<ReportItem  Title = "Entity Dependencies" Query = "SELECT     ParentEntity.Name AS [Parent Entity], ParentEntity.DataEntityType AS [Parent Entity Type], AssociationType.Name AS [Association Type], 
+                      ClassAssociation.Caption, ChildEntity.Name AS [Child Entity], ChildEntity.DataEntityType AS [Child Entity Type], ParentEntity.pkid AS [Parent ID], 
+                      ParentEntity.Machine AS [Parent Machine], ChildEntity.pkid AS [Child ID], ChildEntity.Machine AS [Child Machine], 
+                      ParentEntity.WorkspaceName AS [Workspace Name], ActiveDiagramObjects.[File Name]
+                      FROM         ClassAssociation INNER JOIN
+                      AssociationType ON ClassAssociation.AssociationTypeID = AssociationType.pkid INNER JOIN
+                      ObjectAssociation ON ClassAssociation.CAid = ObjectAssociation.CAid INNER JOIN
+                      METAView_DataEntity_Listing AS ParentEntity ON ObjectAssociation.ObjectID = ParentEntity.pkid AND 
+                      ObjectAssociation.ObjectMachine = ParentEntity.Machine INNER JOIN
+                      METAView_DataEntity_Listing AS ChildEntity ON ObjectAssociation.ChildObjectID = ChildEntity.pkid AND 
+                      ObjectAssociation.ChildObjectMachine = ChildEntity.Machine INNER JOIN
+                      ActiveDiagramObjects ON ParentEntity.pkid = ActiveDiagramObjects.MetaObjectID AND 
+                      ParentEntity.Machine = ActiveDiagramObjects.Machine INNER JOIN
+                      ActiveDiagramObjects AS ActiveDiagramObjects_1 ON ChildEntity.pkid = ActiveDiagramObjects_1.MetaObjectID AND 
+                      ChildEntity.Machine = ActiveDiagramObjects_1.Machine" Description="List of dependencies between data entities">
+			</ReportItem>
+			<ReportItem  Title = "Attribute Listing" Query = "SELECT DISTINCT  METAView_DataEntity_Listing.Name AS [Entity Name], METAView_DataEntity_Listing.DataEntityType AS [Entity Type], METAView_DataAttribute_Listing.Name AS Attibute, 
+                      ClassAssociation.Caption AS [DataAttribute Type], METAView_DataEntity_Listing.WorkspaceName AS [Workspace Name], 
+                      ActiveDiagramObjects.[File Name]
+                      FROM         ActiveDiagramObjects AS ActiveDiagramObjects_1 INNER JOIN
+                      AssociationType INNER JOIN
+                      ClassAssociation ON AssociationType.pkid = ClassAssociation.AssociationTypeID INNER JOIN
+                      ObjectAssociation ON ClassAssociation.CAid = ObjectAssociation.CAid INNER JOIN
+                      METAView_DataAttribute_Listing ON ObjectAssociation.ChildObjectID = METAView_DataAttribute_Listing.pkid AND 
+                      ObjectAssociation.ChildObjectMachine = METAView_DataAttribute_Listing.Machine ON 
+                      ActiveDiagramObjects_1.MetaObjectID = METAView_DataAttribute_Listing.pkid AND 
+                      ActiveDiagramObjects_1.Machine = METAView_DataAttribute_Listing.Machine INNER JOIN
+                      METAView_DataEntity_Listing INNER JOIN
+                      ActiveDiagramObjects ON METAView_DataEntity_Listing.pkid = ActiveDiagramObjects.MetaObjectID AND 
+                      METAView_DataEntity_Listing.Machine = ActiveDiagramObjects.Machine ON ObjectAssociation.ObjectID = METAView_DataEntity_Listing.pkid AND 
+                      ObjectAssociation.ObjectMachine = METAView_DataEntity_Listing.Machine" Description="List Of All Attributes On Entities">
+			</ReportItem>
+			<ReportItem  Title = "Selector Attributes For Subset Dependencies" Query = "SELECT     K.Name AS SelectorAttribute, YZ.Name AS Superset, X.Name AS Subset, 'SubsetOf' AS ConnectionType
+FROM         ClassAssociation INNER JOIN
+                      ObjectAssociation ON ClassAssociation.CAid = ObjectAssociation.CAid INNER JOIN
+                      AssociationType ON ClassAssociation.AssociationTypeID = AssociationType.pkid INNER JOIN
+                      METAView_DataEntity_Listing AS YZ ON ObjectAssociation.ObjectID = YZ.pkid AND ObjectAssociation.ObjectMachine = YZ.Machine INNER JOIN
+                      METAView_DataEntity_Listing AS X ON ObjectAssociation.ChildObjectID = X.pkid AND ObjectAssociation.ChildObjectMachine = X.Machine LEFT OUTER JOIN
+                      Artifact AS ART INNER JOIN
+                      METAView_SelectorAttribute_Listing AS K ON ART.ArtifactObjectID = K.pkid AND ART.ArtefactMachine = K.Machine ON 
+                      ObjectAssociation.ChildObjectMachine = ART.ChildObjectMachine AND ObjectAssociation.ObjectMachine = ART.ObjectMachine AND 
+                      ObjectAssociation.ChildObjectID = ART.ChildObjectID AND ObjectAssociation.ObjectID = ART.ObjectID AND ObjectAssociation.CAid = ART.CAid
+WHERE     (AssociationType.Name = 'SubsetOf')
+ UNION 
+SELECT     K.Name AS SelectorAttribute, X.Name AS Superset, YZ.Name AS Subset, 'MutuallyExlusive' AS ConnectionType
+FROM         METAView_DataEntity_Listing AS X INNER JOIN
+                      METAView_DataEntity_Listing AS YZ INNER JOIN
+                      METAView_SubSetIndicator_Listing INNER JOIN
+                      ObjectAssociation AS ObjectAssociation_1 ON METAView_SubSetIndicator_Listing.Machine = ObjectAssociation_1.ObjectMachine AND 
+                      METAView_SubSetIndicator_Listing.pkid = ObjectAssociation_1.ObjectID INNER JOIN
+                      ObjectAssociation ON METAView_SubSetIndicator_Listing.pkid = ObjectAssociation.ChildObjectID AND 
+                      METAView_SubSetIndicator_Listing.Machine = ObjectAssociation.ChildObjectMachine ON YZ.pkid = ObjectAssociation.ObjectID AND 
+                      YZ.Machine = ObjectAssociation.ObjectMachine ON X.pkid = ObjectAssociation_1.ChildObjectID AND X.Machine = ObjectAssociation_1.ChildObjectMachine INNER JOIN
+                      ClassAssociation ON ObjectAssociation_1.CAid = ClassAssociation.CAid INNER JOIN
+                      AssociationType ON ClassAssociation.AssociationTypeID = AssociationType.pkid LEFT OUTER JOIN
+                      Artifact AS ART INNER JOIN
+                      METAView_SelectorAttribute_Listing AS K ON ART.ArtifactObjectID = K.pkid AND ART.ArtefactMachine = K.Machine ON ObjectAssociation_1.ObjectID = ART.ObjectID AND
+                       ObjectAssociation_1.ChildObjectID = ART.ChildObjectID AND ObjectAssociation_1.ObjectMachine = ART.ObjectMachine AND 
+                      ObjectAssociation_1.ChildObjectMachine = ART.ChildObjectMachine
+WHERE     (AssociationType.Name = 'SubsetOf')" Description="Not yet available">
+			</ReportItem>
+	</ReportItem>
+	<ReportItem Title="Organisation Reports" Description="This is not a report, since the query attribute is not present">
+		<ReportItem  Title = "Organisational Unit Listing" Query = "SELECT     METAView_OrganizationalUnit_Listing.Name AS [Organisation Unit Name], METAView_OrganizationalUnit_Listing.WorkspaceName AS [Workspace Name], 
+                      ActiveDiagramObjects.[File Name]
+FROM         METAView_OrganizationalUnit_Listing INNER JOIN
+                      ActiveDiagramObjects ON METAView_OrganizationalUnit_Listing.pkid = ActiveDiagramObjects.MetaObjectID AND 
+                      METAView_OrganizationalUnit_Listing.Machine = ActiveDiagramObjects.Machine" Description="List Of All Organisational Units">
+		</ReportItem>
+		<ReportItem  Title = "Organisational Unit Responsibility" Query = "SELECT     METAView_OrganizationalUnit_Listing.Name AS [Organisation Unit Name], METAView_Function_Listing.Name AS Responsibility, 
+                      METAView_OrganizationalUnit_Listing.WorkspaceName AS [Workspace Name], ActiveDiagramObjects.[File Name]
+FROM         METAView_OrganizationalUnit_Listing INNER JOIN
+                      ObjectAssociation ON METAView_OrganizationalUnit_Listing.pkid = ObjectAssociation.ObjectID AND 
+                      METAView_OrganizationalUnit_Listing.Machine = ObjectAssociation.ObjectMachine INNER JOIN
+                      METAView_Function_Listing ON ObjectAssociation.ChildObjectID = METAView_Function_Listing.pkid AND 
+                      ObjectAssociation.ChildObjectMachine = METAView_Function_Listing.Machine INNER JOIN
+                      ActiveDiagramObjects ON METAView_OrganizationalUnit_Listing.pkid = ActiveDiagramObjects.MetaObjectID AND 
+                      METAView_OrganizationalUnit_Listing.Machine = ActiveDiagramObjects.Machine INNER JOIN
+                      ActiveDiagramObjects AS ActiveDiagramObjects_1 ON METAView_Function_Listing.pkid = ActiveDiagramObjects_1.MetaObjectID AND 
+                      METAView_Function_Listing.Machine = ActiveDiagramObjects_1.Machine
+ UNION 
+SELECT     METAView_OrganizationalUnit_Listing.Name AS [Organisation Unit Name], METAView_Process_Listing.Name AS Responsibility, 
+                      METAView_OrganizationalUnit_Listing.WorkspaceName AS [Workspace Name], ActiveDiagramObjects.[File Name]
+FROM         METAView_OrganizationalUnit_Listing INNER JOIN
+                      ObjectAssociation ON METAView_OrganizationalUnit_Listing.pkid = ObjectAssociation.ObjectID AND 
+                      METAView_OrganizationalUnit_Listing.Machine = ObjectAssociation.ObjectMachine INNER JOIN
+                      METAView_Process_Listing ON ObjectAssociation.ChildObjectID = METAView_Process_Listing.pkid AND 
+                      ObjectAssociation.ChildObjectMachine = METAView_Process_Listing.Machine INNER JOIN
+                      ActiveDiagramObjects ON METAView_OrganizationalUnit_Listing.pkid = ActiveDiagramObjects.MetaObjectID AND 
+                      METAView_OrganizationalUnit_Listing.Machine = ActiveDiagramObjects.Machine INNER JOIN
+                      ActiveDiagramObjects AS ActiveDiagramObjects_1 ON METAView_Process_Listing.pkid = ActiveDiagramObjects_1.MetaObjectID AND 
+                      METAView_Process_Listing.Machine = ActiveDiagramObjects_1.Machine" Description="Organisation Unit --> Processes Or Functions">
+		</ReportItem>
+		<ReportItem  Title = "Organisational Unit To Governance Mechanism" Query = "SELECT     METAView_OrganizationalUnit_Listing.Name AS [Organisation Unit Name], METAView_GovernanceMechanism_Listing.Name AS [Governance Mechanism], 
+                      METAView_OrganizationalUnit_Listing.WorkspaceName AS [Workspace Name], ActiveDiagramObjects.[File Name]
+FROM         ObjectAssociation INNER JOIN
+                      METAView_OrganizationalUnit_Listing ON ObjectAssociation.ObjectID = METAView_OrganizationalUnit_Listing.pkid AND 
+                      ObjectAssociation.ObjectMachine = METAView_OrganizationalUnit_Listing.Machine INNER JOIN
+                      METAView_GovernanceMechanism_Listing ON ObjectAssociation.ChildObjectID = METAView_GovernanceMechanism_Listing.pkid AND 
+                      ObjectAssociation.ChildObjectMachine = METAView_GovernanceMechanism_Listing.Machine INNER JOIN
+                      ActiveDiagramObjects ON METAView_OrganizationalUnit_Listing.pkid = ActiveDiagramObjects.MetaObjectID AND 
+                      METAView_OrganizationalUnit_Listing.Machine = ActiveDiagramObjects.Machine INNER JOIN
+                      ActiveDiagramObjects AS ActiveDiagramObjects_1 ON METAView_GovernanceMechanism_Listing.pkid = ActiveDiagramObjects_1.MetaObjectID AND 
+                      METAView_GovernanceMechanism_Listing.Machine = ActiveDiagramObjects_1.Machine" Description="Organisation Unit --> Governance Mechanism">
+		</ReportItem>
+	</ReportItem>
+	<ReportItem Title="Location Reports" Description="This is not a report, since the query attribute is not present">
+		<ReportItem  Title = "Locations" Query = "SELECT     METAView_Location_Listing.Name AS Location, METAView_Location_Listing.WorkspaceName AS [Workspace Name], 
+                      ActiveDiagramObjects.[File Name]
+FROM         METAView_Location_Listing INNER JOIN
+                      ActiveDiagramObjects ON METAView_Location_Listing.pkid = ActiveDiagramObjects.MetaObjectID AND 
+                      METAView_Location_Listing.Machine = ActiveDiagramObjects.Machine" Description="List Of All Locations">
+		</ReportItem>
+</ReportItem>
+<ReportItem Title="Business Process Operation" Description="This is not a report, since the query attribute is not present">
+	<ReportItem  Title = "Organisation Unit Responsibility And Data Artefact Inputs" Query = "SELECT     METAView_OrganizationalUnit_Listing.Name AS [Organisation Unit], METAView_Function_Listing.Name AS Responsibility, 
+                      AssociationType.Name AS [Association Type], METAView_PhysicalInformationArtefact_Listing.Name AS [Physical Information Artefact], 
+                      METAView_Function_Listing.WorkspaceName AS [Workspace Name], ActiveDiagramObjects_1.[File Name]
+FROM         ObjectAssociation AS ObjectAssociation_1 INNER JOIN
+                      ClassAssociation INNER JOIN
+                      ObjectAssociation ON ClassAssociation.CAid = ObjectAssociation.CAid INNER JOIN
+                      AssociationType ON ClassAssociation.AssociationTypeID = AssociationType.pkid INNER JOIN
+                      METAView_Function_Listing ON ObjectAssociation.ChildObjectID = METAView_Function_Listing.pkid AND 
+                      ObjectAssociation.ChildObjectMachine = METAView_Function_Listing.Machine INNER JOIN
+                      METAView_PhysicalInformationArtefact_Listing ON ObjectAssociation.ObjectID = METAView_PhysicalInformationArtefact_Listing.pkid AND 
+                      ObjectAssociation.ObjectMachine = METAView_PhysicalInformationArtefact_Listing.Machine ON ObjectAssociation_1.ObjectID = METAView_Function_Listing.pkid AND 
+                      ObjectAssociation_1.ObjectMachine = METAView_Function_Listing.Machine INNER JOIN
+                      METAView_OrganizationalUnit_Listing ON ObjectAssociation_1.ChildObjectID = METAView_OrganizationalUnit_Listing.pkid AND 
+                      ObjectAssociation_1.ChildObjectMachine = METAView_OrganizationalUnit_Listing.Machine INNER JOIN
+                      ActiveDiagramObjects ON METAView_PhysicalInformationArtefact_Listing.pkid = ActiveDiagramObjects.MetaObjectID AND 
+                      METAView_PhysicalInformationArtefact_Listing.Machine = ActiveDiagramObjects.Machine INNER JOIN
+                      ActiveDiagramObjects AS ActiveDiagramObjects_1 ON METAView_Function_Listing.pkid = ActiveDiagramObjects_1.MetaObjectID AND 
+                      METAView_Function_Listing.Machine = ActiveDiagramObjects_1.Machine INNER JOIN
+                      ActiveDiagramObjects AS ActiveDiagramObjects_2 ON METAView_OrganizationalUnit_Listing.pkid = ActiveDiagramObjects_2.MetaObjectID AND 
+                      METAView_OrganizationalUnit_Listing.Machine = ActiveDiagramObjects_2.Machine
+ WHERE      (AssociationType.Name = 'Read')
+ UNION 
+SELECT     METAView_OrganizationalUnit_Listing.Name AS [Organisation Unit], METAView_Process_Listing.Name AS Responsibility, 
+                      AssociationType.Name AS [Association Type], METAView_PhysicalInformationArtefact_Listing.Name AS [Physical Information Artefact], 
+                      METAView_Process_Listing.WorkspaceName AS [Workspace Name], ActiveDiagramObjects.[File Name]
+FROM         METAView_PhysicalInformationArtefact_Listing INNER JOIN
+                      ObjectAssociation INNER JOIN
+                      ClassAssociation ON ObjectAssociation.CAid = ClassAssociation.CAid INNER JOIN
+                      AssociationType ON ClassAssociation.AssociationTypeID = AssociationType.pkid INNER JOIN
+                      METAView_Process_Listing ON ObjectAssociation.ChildObjectID = METAView_Process_Listing.pkid AND 
+                      ObjectAssociation.ChildObjectMachine = METAView_Process_Listing.Machine ON METAView_PhysicalInformationArtefact_Listing.pkid = ObjectAssociation.ObjectID AND 
+                      METAView_PhysicalInformationArtefact_Listing.Machine = ObjectAssociation.ObjectMachine INNER JOIN
+                      ObjectAssociation AS ObjectAssociation_1 ON METAView_Process_Listing.pkid = ObjectAssociation_1.ObjectID AND 
+                      METAView_Process_Listing.Machine = ObjectAssociation_1.ObjectMachine INNER JOIN
+                      METAView_OrganizationalUnit_Listing ON ObjectAssociation_1.ChildObjectID = METAView_OrganizationalUnit_Listing.pkid AND 
+                      ObjectAssociation_1.ChildObjectMachine = METAView_OrganizationalUnit_Listing.Machine INNER JOIN
+                      ActiveDiagramObjects AS ActiveDiagramObjects_1 ON METAView_PhysicalInformationArtefact_Listing.pkid = ActiveDiagramObjects_1.MetaObjectID AND 
+                      METAView_PhysicalInformationArtefact_Listing.Machine = ActiveDiagramObjects_1.Machine INNER JOIN
+                      ActiveDiagramObjects ON METAView_Process_Listing.pkid = ActiveDiagramObjects.MetaObjectID AND 
+                      METAView_Process_Listing.Machine = ActiveDiagramObjects.Machine INNER JOIN
+                      ActiveDiagramObjects AS ActiveDiagramObjects_2 ON METAView_OrganizationalUnit_Listing.pkid = ActiveDiagramObjects_2.MetaObjectID AND 
+                      METAView_OrganizationalUnit_Listing.Machine = ActiveDiagramObjects_2.Machine
+ WHERE      (AssociationType.Name = 'Read')" Description="Manipulating Data Artefact">
+	</ReportItem>
+	<ReportItem  Title = "Organisation Unit Responsibility And Data Artefact Outputs" Query = "SELECT     METAView_OrganizationalUnit_Listing.Name AS [Organisation Unit], METAView_Function_Listing.Name AS Responsibility, 
+                      AssociationType.Name AS [Association Type], METAView_PhysicalInformationArtefact_Listing.Name AS [Physical Information Artefact], 
+                      METAView_Function_Listing.WorkspaceName AS [Workspace Name], ActiveDiagramObjects.[File Name]
+FROM         ObjectAssociation AS ObjectAssociation_1 INNER JOIN
+                      ClassAssociation INNER JOIN
+                      ObjectAssociation ON ClassAssociation.CAid = ObjectAssociation.CAid INNER JOIN
+                      AssociationType ON ClassAssociation.AssociationTypeID = AssociationType.pkid INNER JOIN
+                      METAView_PhysicalInformationArtefact_Listing ON ObjectAssociation.ChildObjectID = METAView_PhysicalInformationArtefact_Listing.pkid AND 
+                      ObjectAssociation.ChildObjectMachine = METAView_PhysicalInformationArtefact_Listing.Machine INNER JOIN
+                      METAView_Function_Listing ON ObjectAssociation.ObjectID = METAView_Function_Listing.pkid AND 
+                      ObjectAssociation.ObjectMachine = METAView_Function_Listing.Machine ON ObjectAssociation_1.ObjectID = METAView_Function_Listing.pkid AND 
+                      ObjectAssociation_1.ObjectMachine = METAView_Function_Listing.Machine INNER JOIN
+                      METAView_OrganizationalUnit_Listing ON ObjectAssociation_1.ChildObjectID = METAView_OrganizationalUnit_Listing.pkid AND 
+                      ObjectAssociation_1.ChildObjectMachine = METAView_OrganizationalUnit_Listing.Machine INNER JOIN
+                      ActiveDiagramObjects AS ActiveDiagramObjects_1 ON METAView_PhysicalInformationArtefact_Listing.pkid = ActiveDiagramObjects_1.MetaObjectID AND 
+                      METAView_PhysicalInformationArtefact_Listing.Machine = ActiveDiagramObjects_1.Machine INNER JOIN
+                      ActiveDiagramObjects ON METAView_Function_Listing.pkid = ActiveDiagramObjects.MetaObjectID AND 
+                      METAView_Function_Listing.Machine = ActiveDiagramObjects.Machine INNER JOIN
+                      ActiveDiagramObjects AS ActiveDiagramObjects_2 ON METAView_OrganizationalUnit_Listing.pkid = ActiveDiagramObjects_2.MetaObjectID AND 
+                      METAView_OrganizationalUnit_Listing.Machine = ActiveDiagramObjects_2.Machine  WHERE      (AssociationType.Name = 'Maintain') OR
+                      (AssociationType.Name = 'Update') OR
+                      (AssociationType.Name = 'Insert') OR
+                      (AssociationType.Name = 'Delete') OR
+                      (AssociationType.Name = 'Create')
+ UNION 
+SELECT     METAView_OrganizationalUnit_Listing.Name AS [Organisation Unit], METAView_Process_Listing.Name AS Responsibility, 
+                      AssociationType.Name AS [Association Type], METAView_PhysicalInformationArtefact_Listing.Name AS [Physical Information Artefact], 
+                      METAView_Process_Listing.WorkspaceName AS [Workspace Name], ActiveDiagramObjects.[File Name]
+FROM         ObjectAssociation AS ObjectAssociation_1 INNER JOIN
+                      ClassAssociation INNER JOIN
+                      ObjectAssociation ON ClassAssociation.CAid = ObjectAssociation.CAid INNER JOIN
+                      AssociationType ON ClassAssociation.AssociationTypeID = AssociationType.pkid INNER JOIN
+                      METAView_PhysicalInformationArtefact_Listing ON ObjectAssociation.ChildObjectID = METAView_PhysicalInformationArtefact_Listing.pkid AND 
+                      ObjectAssociation.ChildObjectMachine = METAView_PhysicalInformationArtefact_Listing.Machine INNER JOIN
+                      METAView_Process_Listing ON ObjectAssociation.ObjectID = METAView_Process_Listing.pkid AND 
+                      ObjectAssociation.ObjectMachine = METAView_Process_Listing.Machine ON ObjectAssociation_1.ObjectID = METAView_Process_Listing.pkid AND 
+                      ObjectAssociation_1.ObjectMachine = METAView_Process_Listing.Machine INNER JOIN
+                      METAView_OrganizationalUnit_Listing ON ObjectAssociation_1.ChildObjectID = METAView_OrganizationalUnit_Listing.pkid AND 
+                      ObjectAssociation_1.ChildObjectMachine = METAView_OrganizationalUnit_Listing.Machine INNER JOIN
+                      ActiveDiagramObjects AS ActiveDiagramObjects_1 ON METAView_OrganizationalUnit_Listing.pkid = ActiveDiagramObjects_1.MetaObjectID AND 
+                      METAView_OrganizationalUnit_Listing.Machine = ActiveDiagramObjects_1.Machine INNER JOIN
+                      ActiveDiagramObjects ON METAView_Process_Listing.pkid = ActiveDiagramObjects.MetaObjectID AND 
+                      METAView_Process_Listing.Machine = ActiveDiagramObjects.Machine INNER JOIN
+                      ActiveDiagramObjects AS ActiveDiagramObjects_2 ON METAView_PhysicalInformationArtefact_Listing.pkid = ActiveDiagramObjects_2.MetaObjectID AND 
+                      METAView_PhysicalInformationArtefact_Listing.Machine = ActiveDiagramObjects_2.Machine  WHERE      (AssociationType.Name = 'Maintain') OR
+                      (AssociationType.Name = 'Update') OR
+                      (AssociationType.Name = 'Insert') OR
+                      (AssociationType.Name = 'Delete') OR
+                      (AssociationType.Name = 'Create')" Description="Writing To A Data Artefact">
+	</ReportItem>
+</ReportItem>
+	</ReportItem>
+	<ReportItem Title="Application Architecture" Description="This is not a report, since the query attribute is not present">
+		<ReportItem  Title = "Physical Software Component List" Query = "SELECT     METAView_PhysicalSoftwareComponent_Listing.Name AS [Physical Software Component Name], METAView_PhysicalSoftwareComponent_Listing.VersionNumber, METAView_PhysicalSoftwareComponent_Listing.SoftwareType, 
+                      METAView_PhysicalSoftwareComponent_Listing.Description, METAView_PhysicalSoftwareComponent_Listing.WorkspaceName AS [Workspace Name]
+FROM         METAView_PhysicalSoftwareComponent_Listing INNER JOIN
+                      ActiveDiagramObjects ON METAView_PhysicalSoftwareComponent_Listing.pkid = ActiveDiagramObjects.MetaObjectID AND 
+                      METAView_PhysicalSoftwareComponent_Listing.Machine = ActiveDiagramObjects.Machine" Description="List Of All Software">
+		</ReportItem>
+		<ReportItem  Title = "Physical Software Component Interfaces" Query = "SELECT     Originator.Name AS [Originator Name], Originator.SoftwareType AS [Originator Type], AssociationType.Name AS [Association Type], 
+                      Respondent.Name AS [Respondent Name], Respondent.SoftwareType AS [Respondent Type], Originator.WorkspaceName AS [Workspace Name], 
+                      ActiveDiagramObjects.[File Name]
+FROM         ObjectAssociation INNER JOIN
+                      METAView_PhysicalSoftwareComponent_Listing AS Originator ON ObjectAssociation.ObjectID = Originator.pkid AND 
+                      ObjectAssociation.ObjectMachine = Originator.Machine INNER JOIN
+                      METAView_PhysicalSoftwareComponent_Listing AS Respondent ON ObjectAssociation.ChildObjectID = Respondent.pkid AND 
+                      ObjectAssociation.ChildObjectMachine = Respondent.Machine INNER JOIN
+                      ClassAssociation ON ObjectAssociation.CAid = ClassAssociation.CAid INNER JOIN
+                      AssociationType ON ClassAssociation.AssociationTypeID = AssociationType.pkid INNER JOIN
+                      ActiveDiagramObjects ON Originator.pkid = ActiveDiagramObjects.MetaObjectID AND Originator.Machine = ActiveDiagramObjects.Machine INNER JOIN
+                      ActiveDiagramObjects AS ActiveDiagramObjects_1 ON Respondent.pkid = ActiveDiagramObjects_1.MetaObjectID AND 
+                      Respondent.Machine = ActiveDiagramObjects_1.Machine
+ WHERE      (AssociationType.Name = 'DynamicFlow')" Description="List of the interrelated software">
+		</ReportItem>
+		<ReportItem  Title = "Application Databases" Query = "SELECT     METAView_PhysicalSoftwareComponent_Listing.Name AS [Physical Software Component Name], METAView_DataSubjectArea_Listing.Name AS [Data Subject Area], 
+                      METAView_PhysicalSoftwareComponent_Listing.WorkspaceName AS [Workspace Name], ActiveDiagramObjects.[File Name]
+FROM         ObjectAssociation INNER JOIN
+                      METAView_DataSubjectArea_Listing ON ObjectAssociation.ObjectID = METAView_DataSubjectArea_Listing.pkid AND 
+                      ObjectAssociation.ObjectMachine = METAView_DataSubjectArea_Listing.Machine INNER JOIN
+                      METAView_PhysicalSoftwareComponent_Listing ON ObjectAssociation.ChildObjectID = METAView_PhysicalSoftwareComponent_Listing.pkid AND 
+                      ObjectAssociation.ChildObjectMachine = METAView_PhysicalSoftwareComponent_Listing.Machine INNER JOIN
+                      ActiveDiagramObjects ON METAView_PhysicalSoftwareComponent_Listing.pkid = ActiveDiagramObjects.MetaObjectID AND 
+                      METAView_PhysicalSoftwareComponent_Listing.Machine = ActiveDiagramObjects.Machine INNER JOIN
+                      ActiveDiagramObjects AS ActiveDiagramObjects_1 ON METAView_DataSubjectArea_Listing.pkid = ActiveDiagramObjects_1.MetaObjectID AND 
+                      METAView_DataSubjectArea_Listing.Machine = ActiveDiagramObjects_1.Machine" Description="DataSubjectArea --> Physical Software Component">
+		</ReportItem>
+	</ReportItem>
+	<ReportItem Title="IT And Infrastructure" Description="This is not a report, since the query attribute is not present">
+	<ReportItem  Title = "Physical Software Component On Hardware" Query = "SELECT     METAView_ComputingComponent_Listing.Name AS [Hardware Name], METAView_ComputingComponent_Listing.ComputingComponentType AS [Hardware Type], 
+                      METAView_PhysicalSoftwareComponent_Listing.Name AS [Physical Software Component Name], METAView_PhysicalSoftwareComponent_Listing.VersionNumber AS [Physical Software Component Version], 
+                      METAView_PhysicalSoftwareComponent_Listing.SoftwareType AS [Sofware Type], METAView_ComputingComponent_Listing.WorkspaceName AS [Workspace Name], 
+                      ActiveDiagramObjects.[File Name]
+FROM         ObjectAssociation INNER JOIN
+                      METAView_PhysicalSoftwareComponent_Listing ON ObjectAssociation.ObjectMachine = METAView_PhysicalSoftwareComponent_Listing.Machine AND 
+                      ObjectAssociation.ObjectID = METAView_PhysicalSoftwareComponent_Listing.pkid INNER JOIN
+                      METAView_ComputingComponent_Listing ON ObjectAssociation.ChildObjectMachine = METAView_ComputingComponent_Listing.Machine AND 
+                      ObjectAssociation.ChildObjectID = METAView_ComputingComponent_Listing.pkid INNER JOIN
+                      ActiveDiagramObjects AS ActiveDiagramObjects_1 ON METAView_PhysicalSoftwareComponent_Listing.pkid = ActiveDiagramObjects_1.MetaObjectID AND 
+                      METAView_PhysicalSoftwareComponent_Listing.Machine = ActiveDiagramObjects_1.Machine INNER JOIN
+                      ActiveDiagramObjects ON METAView_ComputingComponent_Listing.pkid = ActiveDiagramObjects.MetaObjectID AND 
+                      METAView_ComputingComponent_Listing.Machine = ActiveDiagramObjects.Machine
+ ORDER BY  [Hardware Name]" Description="Physical Software Component--> Computing Component">
+	</ReportItem>
+</ReportItem>
+    <ReportItem Title="Meta Model" Description="This is not a report, since the query attribute is not present">
+<ReportItem  Title = "Object Classes" Query = "SELECT     dbo.Class.Name AS Class, dbo.Class.Category, dbo.Field.Name AS Field, dbo.Field.DataType AS [Data Type], dbo.Field.Description, dbo.Field.SortOrder
+FROM         dbo.Class INNER JOIN
+                      dbo.Field ON dbo.Class.Name = dbo.Field.Class  WHERE  dbo.Class.IsActive = 1 AND dbo.Field.IsActive = 1" Description="All Available Classes">
+		</ReportItem>
+	<ReportItem  Title = "Object Class Associations" Query = "SELECT     dbo.Class.Name AS [From Class], dbo.AssociationType.Name AS [Association Type], Class_1.Name AS [To Class], dbo.ClassAssociation.CAid
+FROM         dbo.Class INNER JOIN
+                      dbo.ClassAssociation ON dbo.Class.Name = dbo.ClassAssociation.ParentClass INNER JOIN
+                      dbo.Class AS Class_1 ON dbo.ClassAssociation.ChildClass = Class_1.Name INNER JOIN
+                      dbo.AssociationType ON dbo.ClassAssociation.AssociationTypeID = dbo.AssociationType.pkid  WHERE  dbo.ClassAssociation.IsActive = 1" Description="All Available Associations">
+	</ReportItem>
+	<ReportItem  Title = "Artefacts On Object Class Associations" Query = "SELECT     dbo.Class.Name AS [From Class], dbo.AssociationType.Name AS [Association Type], Class_1.Name AS [To Class], dbo.ClassAssociation.CAid, 
+                      dbo.AllowedArtifact.Class AS [Artefact Class]
+FROM         dbo.Class INNER JOIN
+                      dbo.ClassAssociation ON dbo.Class.Name = dbo.ClassAssociation.ParentClass INNER JOIN
+                      dbo.Class AS Class_1 ON dbo.ClassAssociation.ChildClass = Class_1.Name INNER JOIN
+                      dbo.AssociationType ON dbo.ClassAssociation.AssociationTypeID = dbo.AssociationType.pkid INNER JOIN
+                      dbo.AllowedArtifact ON dbo.ClassAssociation.CAid = dbo.AllowedArtifact.CAid  WHERE  dbo.AllowedArtifact.IsActive = 1" Description="All Artifacts Allowed On Specified Associations">
+	</ReportItem>
+	<ReportItem  Title = "Domain Values For Object Properties" Query = "SELECT     dbo.DomainDefinition.Name AS [Domain Definition], dbo.DomainDefinitionPossibleValue.PossibleValue AS [Possible Value], 
+                      dbo.DomainDefinitionPossibleValue.Series, dbo.DomainDefinitionPossibleValue.Description
+FROM         dbo.DomainDefinition INNER JOIN
+                      dbo.DomainDefinitionPossibleValue ON dbo.DomainDefinition.pkid = dbo.DomainDefinitionPossibleValue.DomainDefinitionID  WHERE  dbo.DomainDefinition.IsActive = 1 AND DomainDefinitionPossibleValue.IsActive = 1" Description="All Possible Values For Domains">
+	</ReportItem>
+</ReportItem>
+</Reports>

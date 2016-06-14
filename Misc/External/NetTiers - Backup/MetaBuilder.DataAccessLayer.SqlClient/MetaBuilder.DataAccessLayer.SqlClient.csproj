@@ -1,0 +1,1126 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{57769669-DE6B-4520-ADA4-6DA59740C258}</ProjectGuid>
+    <ProjectType>Local</ProjectType>
+    <OutputType>Library</OutputType>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>MetaBuilder.DataAccessLayer.SqlClient</AssemblyName>
+    <AssemblyOriginatorKeyFile>..\MetaBuilder.snk</AssemblyOriginatorKeyFile>
+    <SignAssembly>false</SignAssembly>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <RootNamespace>MetaBuilder.DataAccessLayer.SqlClient</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>MetaBuilder.DataAccessLayer.SqlClient.xml</DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>
+    </DefineConstants>
+    <DocumentationFile>MetaBuilder.DataAccessLayer.SqlClient.xml</DocumentationFile>
+    <DebugType>pdbonly</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'GenerateDebug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>MetaBuilder.DataAccessLayer.SqlClient.xml</DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'ServicePack|AnyCPU' ">
+    <OutputPath>bin\ServicePack\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'UnitTests|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\UnitTests\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <BaseAddress>285212672</BaseAddress>
+    <DocumentationFile>MetaBuilder.DataAccessLayer.SqlClient.xml</DocumentationFile>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Install|AnyCPU' ">
+    <OutputPath>bin\Install\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ObjectBuilder, Version=1.0.51206.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\Microsoft.Practices.ObjectBuilder.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <!-- Custom code folder: C:\NetTiers\MetaBuilder\MetaBuilder.DataAccessLayer.SqlClient\App_Code -->
+  <ItemGroup>
+    <Compile Include="App_Code\**\*.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <!-- Include any user files -->
+  <ItemGroup>
+    <Compile Include="**\*.user.*" Exclude="**\*.csproj.user;**\.svn\**">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Views\SqlMETAView_Activity_ListingProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_Activity_ListingProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_Activity_ListingProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_Activity_RetrievalProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_Activity_RetrievalProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_Activity_RetrievalProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_Attribute_ListingProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_Attribute_ListingProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_Attribute_ListingProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_Attribute_RetrievalProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_Attribute_RetrievalProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_Attribute_RetrievalProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_CAD_ListingProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_CAD_ListingProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_CAD_ListingProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_CAD_RetrievalProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_CAD_RetrievalProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_CAD_RetrievalProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_CADReal_ListingProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_CADReal_ListingProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_CADReal_ListingProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_CADReal_RetrievalProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_CADReal_RetrievalProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_CADReal_RetrievalProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_CategoryFactor_ListingProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_CategoryFactor_ListingProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_CategoryFactor_ListingProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_CategoryFactor_RetrievalProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_CategoryFactor_RetrievalProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_CategoryFactor_RetrievalProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_Competency_ListingProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_Competency_ListingProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_Competency_ListingProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_Competency_RetrievalProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_Competency_RetrievalProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_Competency_RetrievalProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_Condition_ListingProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_Condition_ListingProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_Condition_ListingProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_Condition_RetrievalProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_Condition_RetrievalProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_Condition_RetrievalProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_Conditional_ListingProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_Conditional_ListingProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_Conditional_ListingProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_Conditional_RetrievalProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_Conditional_RetrievalProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_Conditional_RetrievalProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_ConditionalDescription_ListingProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_ConditionalDescription_ListingProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_ConditionalDescription_ListingProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_ConditionalDescription_RetrievalProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_ConditionalDescription_RetrievalProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_ConditionalDescription_RetrievalProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_ConnectionSpeed_ListingProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_ConnectionSpeed_ListingProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_ConnectionSpeed_ListingProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_ConnectionSpeed_RetrievalProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_ConnectionSpeed_RetrievalProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_ConnectionSpeed_RetrievalProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_ConnectionType_ListingProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_ConnectionType_ListingProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_ConnectionType_ListingProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_ConnectionType_RetrievalProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_ConnectionType_RetrievalProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_ConnectionType_RetrievalProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_CSF_ListingProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_CSF_ListingProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_CSF_ListingProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_CSF_RetrievalProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_CSF_RetrievalProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_CSF_RetrievalProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_DataColumn_ListingProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_DataColumn_ListingProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_DataColumn_ListingProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_DataColumn_RetrievalProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_DataColumn_RetrievalProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_DataColumn_RetrievalProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_DataSchema_ListingProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_DataSchema_ListingProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_DataSchema_ListingProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_DataSchema_RetrievalProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_DataSchema_RetrievalProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_DataSchema_RetrievalProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_DataTable_ListingProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_DataTable_ListingProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_DataTable_ListingProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_DataTable_RetrievalProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_DataTable_RetrievalProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_DataTable_RetrievalProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_DataView_ListingProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_DataView_ListingProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_DataView_ListingProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_DataView_RetrievalProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_DataView_RetrievalProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_DataView_RetrievalProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_DatedResponsibility_ListingProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_DatedResponsibility_ListingProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_DatedResponsibility_ListingProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_DatedResponsibility_RetrievalProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_DatedResponsibility_RetrievalProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_DatedResponsibility_RetrievalProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_Employee_ListingProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_Employee_ListingProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_Employee_ListingProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_Employee_RetrievalProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_Employee_RetrievalProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_Employee_RetrievalProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_Entity_ListingProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_Entity_ListingProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_Entity_ListingProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_Entity_RetrievalProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_Entity_RetrievalProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_Entity_RetrievalProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_Environment_ListingProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_Environment_ListingProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_Environment_ListingProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_Environment_RetrievalProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_Environment_RetrievalProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_Environment_RetrievalProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_EnvironmentCategory_ListingProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_EnvironmentCategory_ListingProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_EnvironmentCategory_ListingProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_EnvironmentCategory_RetrievalProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_EnvironmentCategory_RetrievalProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_EnvironmentCategory_RetrievalProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_Exception_ListingProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_Exception_ListingProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_Exception_ListingProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_Exception_RetrievalProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_Exception_RetrievalProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_Exception_RetrievalProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_FlowDescription_ListingProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_FlowDescription_ListingProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_FlowDescription_ListingProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_FlowDescription_RetrievalProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_FlowDescription_RetrievalProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_FlowDescription_RetrievalProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_Function_ListingProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_Function_ListingProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_Function_ListingProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_Function_RetrievalProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_Function_RetrievalProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_Function_RetrievalProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_FunctionalDependency_ListingProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_FunctionalDependency_ListingProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_FunctionalDependency_ListingProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_FunctionalDependency_RetrievalProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_FunctionalDependency_RetrievalProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_FunctionalDependency_RetrievalProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_GovernanceMechanism_ListingProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_GovernanceMechanism_ListingProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_GovernanceMechanism_ListingProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_GovernanceMechanism_RetrievalProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_GovernanceMechanism_RetrievalProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_GovernanceMechanism_RetrievalProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_Implication_ListingProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_Implication_ListingProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_Implication_ListingProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_Implication_RetrievalProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_Implication_RetrievalProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_Implication_RetrievalProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_Iteration_ListingProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_Iteration_ListingProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_Iteration_ListingProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_Iteration_RetrievalProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_Iteration_RetrievalProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_Iteration_RetrievalProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_Job_ListingProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_Job_ListingProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_Job_ListingProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_Job_RetrievalProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_Job_RetrievalProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_Job_RetrievalProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_JobPosition_ListingProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_JobPosition_ListingProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_JobPosition_ListingProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_JobPosition_RetrievalProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_JobPosition_RetrievalProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_JobPosition_RetrievalProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_Location_ListingProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_Location_ListingProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_Location_ListingProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_Location_RetrievalProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_Location_RetrievalProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_Location_RetrievalProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_LocationAssociation_ListingProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_LocationAssociation_ListingProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_LocationAssociation_ListingProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_LocationAssociation_RetrievalProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_LocationAssociation_RetrievalProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_LocationAssociation_RetrievalProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_Logic_ListingProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_Logic_ListingProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_Logic_ListingProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_Logic_RetrievalProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_Logic_RetrievalProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_Logic_RetrievalProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_MeasurementItem_ListingProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_MeasurementItem_ListingProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_MeasurementItem_ListingProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_MeasurementItem_RetrievalProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_MeasurementItem_RetrievalProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_MeasurementItem_RetrievalProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_Model_ListingProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_Model_ListingProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_Model_ListingProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_Model_RetrievalProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_Model_RetrievalProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_Model_RetrievalProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_ModelReal_ListingProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_ModelReal_ListingProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_ModelReal_ListingProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_ModelReal_RetrievalProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_ModelReal_RetrievalProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_ModelReal_RetrievalProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_MutuallyExclusiveIndicator_ListingProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_MutuallyExclusiveIndicator_ListingProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_MutuallyExclusiveIndicator_ListingProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_MutuallyExclusiveIndicator_RetrievalProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_MutuallyExclusiveIndicator_RetrievalProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_MutuallyExclusiveIndicator_RetrievalProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_NetworkComponent_ListingProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_NetworkComponent_ListingProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_NetworkComponent_ListingProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_NetworkComponent_RetrievalProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_NetworkComponent_RetrievalProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_NetworkComponent_RetrievalProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_Object_ListingProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_Object_ListingProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_Object_ListingProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_Object_RetrievalProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_Object_RetrievalProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_Object_RetrievalProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_OrganizationalUnit_ListingProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_OrganizationalUnit_ListingProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_OrganizationalUnit_ListingProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_OrganizationalUnit_RetrievalProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_OrganizationalUnit_RetrievalProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_OrganizationalUnit_RetrievalProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_Peripheral_ListingProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_Peripheral_ListingProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_Peripheral_ListingProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_Peripheral_RetrievalProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_Peripheral_RetrievalProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_Peripheral_RetrievalProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_ProbOfRealization_ListingProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_ProbOfRealization_ListingProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_ProbOfRealization_ListingProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_ProbOfRealization_RetrievalProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_ProbOfRealization_RetrievalProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_ProbOfRealization_RetrievalProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_Process_ListingProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_Process_ListingProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_Process_ListingProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_Process_RetrievalProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_Process_RetrievalProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_Process_RetrievalProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_Rationale_ListingProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_Rationale_ListingProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_Rationale_ListingProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_Rationale_RetrievalProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_Rationale_RetrievalProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_Rationale_RetrievalProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_Responsibility_ListingProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_Responsibility_ListingProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_Responsibility_ListingProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_Responsibility_RetrievalProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_Responsibility_RetrievalProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_Responsibility_RetrievalProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_Role_ListingProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_Role_ListingProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_Role_ListingProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_Role_RetrievalProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_Role_RetrievalProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_Role_RetrievalProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_Scenario_ListingProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_Scenario_ListingProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_Scenario_ListingProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_Scenario_RetrievalProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_Scenario_RetrievalProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_Scenario_RetrievalProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_SelectorAttribute_ListingProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_SelectorAttribute_ListingProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_SelectorAttribute_ListingProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_SelectorAttribute_RetrievalProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_SelectorAttribute_RetrievalProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_SelectorAttribute_RetrievalProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_Skill_ListingProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_Skill_ListingProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_Skill_ListingProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_Skill_RetrievalProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_Skill_RetrievalProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_Skill_RetrievalProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_Software_ListingProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_Software_ListingProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_Software_ListingProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_Software_RetrievalProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_Software_RetrievalProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_Software_RetrievalProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_StorageComponent_ListingProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_StorageComponent_ListingProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_StorageComponent_ListingProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_StorageComponent_RetrievalProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_StorageComponent_RetrievalProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_StorageComponent_RetrievalProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_StrategicTheme_ListingProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_StrategicTheme_ListingProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_StrategicTheme_ListingProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_StrategicTheme_RetrievalProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_StrategicTheme_RetrievalProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_StrategicTheme_RetrievalProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_SystemComponent_ListingProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_SystemComponent_ListingProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_SystemComponent_ListingProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_SystemComponent_RetrievalProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_SystemComponent_RetrievalProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_SystemComponent_RetrievalProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_TimeIndicator_ListingProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_TimeIndicator_ListingProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_TimeIndicator_ListingProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_TimeIndicator_RetrievalProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_TimeIndicator_RetrievalProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_TimeIndicator_RetrievalProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_TimeScheme_ListingProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_TimeScheme_ListingProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_TimeScheme_ListingProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_TimeScheme_RetrievalProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_TimeScheme_RetrievalProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_TimeScheme_RetrievalProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_TimeUnit_ListingProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_TimeUnit_ListingProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_TimeUnit_ListingProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_TimeUnit_RetrievalProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SqlMETAView_TimeUnit_RetrievalProviderBase.generated.cs">
+      <DependentUpon>SqlMETAView_TimeUnit_RetrievalProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\Sqlvw_FieldValueProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\Sqlvw_FieldValueProviderBase.generated.cs">
+      <DependentUpon>Sqlvw_FieldValueProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlVCStatusProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlVCStatusProviderBase.generated.cs">
+      <DependentUpon>SqlVCStatusProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlDomainDefinitionPossibleValueProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlDomainDefinitionPossibleValueProviderBase.generated.cs">
+      <DependentUpon>SqlDomainDefinitionPossibleValueProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlWorkspaceProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlWorkspaceProviderBase.generated.cs">
+      <DependentUpon>SqlWorkspaceProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlClassTypeProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlClassTypeProviderBase.generated.cs">
+      <DependentUpon>SqlClassTypeProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlWorkspaceTypeProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlWorkspaceTypeProviderBase.generated.cs">
+      <DependentUpon>SqlWorkspaceTypeProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlUserProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlUserProviderBase.generated.cs">
+      <DependentUpon>SqlUserProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlGraphFileProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlGraphFileProviderBase.generated.cs">
+      <DependentUpon>SqlGraphFileProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlClassProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlClassProviderBase.generated.cs">
+      <DependentUpon>SqlClassProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlMetaObjectProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlMetaObjectProviderBase.generated.cs">
+      <DependentUpon>SqlMetaObjectProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlUserPermissionProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlUserPermissionProviderBase.generated.cs">
+      <DependentUpon>SqlUserPermissionProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlConfigProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlConfigProviderBase.generated.cs">
+      <DependentUpon>SqlConfigProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlAssociationTypeProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlAssociationTypeProviderBase.generated.cs">
+      <DependentUpon>SqlAssociationTypeProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlClassAssociationProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlClassAssociationProviderBase.generated.cs">
+      <DependentUpon>SqlClassAssociationProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlObjectAssociationProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlObjectAssociationProviderBase.generated.cs">
+      <DependentUpon>SqlObjectAssociationProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlFileTypeProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlFileTypeProviderBase.generated.cs">
+      <DependentUpon>SqlFileTypeProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlObjectFieldValueProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlObjectFieldValueProviderBase.generated.cs">
+      <DependentUpon>SqlObjectFieldValueProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlGraphFileAssociationProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlGraphFileAssociationProviderBase.generated.cs">
+      <DependentUpon>SqlGraphFileAssociationProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlAllowedArtifactProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlAllowedArtifactProviderBase.generated.cs">
+      <DependentUpon>SqlAllowedArtifactProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlDomainDefinitionProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlDomainDefinitionProviderBase.generated.cs">
+      <DependentUpon>SqlDomainDefinitionProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlArtifactProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlArtifactProviderBase.generated.cs">
+      <DependentUpon>SqlArtifactProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlPermissionProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlPermissionProviderBase.generated.cs">
+      <DependentUpon>SqlPermissionProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlGraphFileObjectProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlGraphFileObjectProviderBase.generated.cs">
+      <DependentUpon>SqlGraphFileObjectProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlFieldProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlFieldProviderBase.generated.cs">
+      <DependentUpon>SqlFieldProvider.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlNetTiersProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <!--<Compile Include="SqlDataRepository.cs">
+			  <SubType>Code</SubType>
+			</Compile>-->
+    <EmbeddedResource Include="Procedures.xml">
+      <SubType>EmbeddedResource</SubType>
+    </EmbeddedResource>
+    <Compile Include="StoredProcedureProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MetaBuilder.BusinessLogic\MetaBuilder.BusinessLogic.csproj">
+      <Project>{B72D3674-44C0-49FE-A4F1-64910F292641}</Project>
+      <Name>MetaBuilder.BusinessLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MetaBuilder.DataAccessLayer\MetaBuilder.DataAccessLayer.csproj">
+      <Project>{02252C54-158A-4DD2-928C-75A3906CCFA9}</Project>
+      <Name>MetaBuilder.DataAccessLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Code\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSHARP.Targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

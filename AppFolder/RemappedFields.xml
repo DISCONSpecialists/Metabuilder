@@ -1,0 +1,199 @@
+<Remapped>
+	<Field Class="Software" Old="Configuration" NewClass="PhysicalSoftwareComponent" New="ConfigurationID">
+	</Field>
+	<Field Class="Software" Old="Type" NewClass="PhysicalSoftwareComponent" New="SoftwareType">
+	</Field>
+	<Field Class="Software" Old="UserInterface" NewClass="PhysicalSoftwareComponent" New="UserInterfaceType">
+	</Field>
+	<Field Class="Software" Old="ServicePack" NewClass="PhysicalSoftwareComponent" New="ServicePackID">
+	</Field>
+	<Field Class="Software" Old="Version" NewClass="PhysicalSoftwareComponent" New="VersionNumber">
+	</Field>
+	<Field Class="Software" Old="Publisher" NewClass="PhysicalSoftwareComponent" New="PublisherName">
+	</Field>
+	<Field Class="Software" Old="Copyright" NewClass="PhysicalSoftwareComponent" New="HasCopyright">
+	</Field>
+	<Field Class="Software" Old="isDNS" NewClass="PhysicalSoftwareComponent" New="IsDNS">
+	</Field>
+	<Field Class="Software" Old="isDHCP" NewClass="PhysicalSoftwareComponent" New="IsDHCP">
+	</Field>
+	<Field Class="Software" Old="isLicensed" NewClass="PhysicalSoftwareComponent" New="IsLicensed">
+	</Field>
+	<Field Class="Peripheral" Old="Type" NewClass="PeripheralComponent" New="PeripheralComponentType">
+	</Field>
+	<Field Class="NetworkComponent" Old="Type" NewClass="NetworkComponent" New="NetworkComponentType">
+	</Field>
+	<Field Class="NetworkComponent" Old="Configuration" NewClass="NetworkComponent" New="ConfigurationID">
+	</Field>
+	<Field Class="NetworkComponent" Old="MacAddress" NewClass="NetworkComponent" New="NetworkAddress1">
+	</Field>
+	<Field Class="NetworkComponent" Old="isDNS" NewClass="NetworkComponent" New="IsDNS">
+	</Field>
+	<Field Class="NetworkComponent" Old="isDHCP" NewClass="NetworkComponent" New="IsDHCP">
+	</Field>
+	<Field Class="NetworkComponent" Old="Number_of_Ports" NewClass="NetworkComponent" New="NumberofPorts">
+	</Field>
+	<Field Class="NetworkComponent" Old="Number_of_Ports_Available" NewClass="NetworkComponent" New="NumberofPortsAvailable">
+	</Field>
+	<Field Class="NetworkComponent" Old="Mem_Total" NewClass="NetworkComponent" New="MemoryTotal">
+	</Field>
+	<Field Class="StorageComponent" Old="Type" NewClass="StorageComponent" New="StorageComponentType">
+	</Field>
+	<Field Class="StorageComponent" Old="SeverityIndicator" NewClass="StorageComponent" New="SeverityRating">
+	</Field>
+	<Field Class="StorageComponent" Old="Configuration" NewClass="StorageComponent" New="ConfigurationID">
+	</Field>
+	<Field Class="StorageComponent" Old="Number_of_Disks" NewClass="StorageComponent" New="NumberofDisks">
+	</Field>
+	<Field Class="SystemComponent" Old="Type" NewClass="ComputingComponent" New="ComputingComponentType">
+	</Field>
+	<Field Class="SystemComponent" Old="Configuration" NewClass="ComputingComponent" New="ConfigurationID">
+	</Field>
+	<Field Class="SystemComponent" Old="MACAddress" NewClass="ComputingComponent" New="NetworkAddress1">
+	</Field>
+	<Field Class="SystemComponent" Old="StaticIP" NewClass="ComputingComponent" New="NetworkAddress2">
+	</Field>
+	<Field Class="SystemComponent" Old="Number_Of_Disks" NewClass="ComputingComponent" New="NumberofDisks">
+	</Field>
+	<Field Class="SystemComponent" Old="CPU_Type" NewClass="ComputingComponent" New="CPUType">
+	</Field>
+	<Field Class="SystemComponent" Old="CPU_Speed" NewClass="ComputingComponent" New="CPUSpeed">
+	</Field>
+	<Field Class="SystemComponent" Old="Video_Card" NewClass="ComputingComponent" New="VideoCard">
+	</Field>
+	<Field Class="SystemComponent" Old="Mem_Total" NewClass="ComputingComponent" New="MemoryTotal">
+	</Field>
+	<Field Class="SystemComponent" Old="isDNS" NewClass="ComputingComponent" New="IsDNS">
+	</Field>
+	<Field Class="SystemComponent" Old="isDHCP" NewClass="ComputingComponent" New="IsDHCP">
+	</Field>
+	<Field Class="ConnectionSpeed" Old="Value" NewClass="Network" New="ConnectionSpeed">
+	</Field>
+	<Field Class="ConnectionType" Old="Value" NewClass="Network" New="ConnectionType">
+	</Field>
+	<Field Class="ConnectionSize" Old="Name" NewClass="Network" New="ConnectionSize">
+	</Field>
+	<Field Class="PhysicalSoftwareComponent" Old="Type" NewClass="PhysicalSoftwareComponent" New="SoftwareType" Doppleganger="True">
+	</Field>
+	<Field Class="ComputingComponent" Old="Type" NewClass="ComputingComponent" New="ComputingComponentType" Doppleganger="True">
+	</Field>
+	<Field Class="PeripheralComponent" Old="Type" NewClass="PeripheralComponent" New="PeripheralComponentType">
+	</Field>
+	<Field Class="Network" Old="Range" NewClass="Network" New="NetworkRange" Doppleganger="True">
+	</Field>
+	<Field Class="StorageComponent" Old="IsPrimaryOrBackup" NewClass="StorageComponent" New="PrimaryOrBackupType" Doppleganger="True">
+	</Field>
+	<Field Class="DataView" Old="DataViewType" NewClass="PhysicalInformationArtefact" New="PhysicalInformationArtefactType" Doppleganger="False">
+	</Field>
+<Field
+ Class="SelectorAttribute" Old="Value" NewClass="SelectorAttribute" New="Name" Doppleganger="True" ></Field>
+<Field
+ Class="Scenario" Old="Acc_Prob_of_Real" NewClass="Scenario" New="AccumulatedProbabilityofRealization" Doppleganger="True" ></Field>
+<Field
+ Class="Scenario" Old="Start_Date" NewClass="Scenario" New="StartDate" Doppleganger="True" ></Field>
+<Field
+ Class="Scenario" Old="End_Date" NewClass="Scenario" New="EndDate" Doppleganger="True" ></Field>
+<Field
+ Class="Implication" Old="Ext_Inf_Indicator" NewClass="Implication" New="ExternalInfluenceIndicator" Doppleganger="True" ></Field>
+<Field
+ Class="Implication" Old="Int_Capability_Indicator" NewClass="Implication" New="InternalCapabilityIndicator" Doppleganger="True" ></Field>
+ <Field
+ Class="CSF" Old="Number" NewClass="StrategicStatement" New="UniqueRef" Doppleganger="True" ></Field>
+<Field
+ Class="StrategicStatement" Old="Number" NewClass="StrategicStatement" New="UniqueRef" Doppleganger="True" ></Field>
+<Field
+ Class="GovernanceMechanism" Old="GovernanceMechType" NewClass="GovernanceMechanism" New="GovernanceMechanismType" Doppleganger="True" ></Field>
+<Field
+ Class="GovernanceMechanism" Old="ValidityPeriod" NewClass="GovernanceMechanism" New="EffectiveStartDate" Doppleganger="True" ></Field>
+<Field
+ Class="Measure" Old="" NewClass="Measure" New="UnitOfMeasure" Doppleganger="True" ></Field>
+<Field
+ Class="Function" Old="Efficiency" NewClass="Function" New="OverallEfficiencyRating" Doppleganger="True" ></Field>
+<Field
+ Class="Function" Old="Effectiveness" NewClass="Function" New="OverallEffectivenessRating" Doppleganger="True" ></Field>
+ <Field
+ Class="DataSchema" Old="DataSchemaType" NewClass="DataSubjectArea" New="DataSubjectAreaType" Doppleganger="True" ></Field>
+<Field
+ Class="DataSchema" Old="ArchPriority" NewClass="DataSubjectArea" New="ArchitecturalPriority" Doppleganger="True" ></Field>
+<Field
+ Class="DataSchema" Old="DataType" NewClass="DataSubjectArea" New="ContentType" Doppleganger="True" ></Field>
+<Field
+ Class="DataSubjectArea" Old="DataSchemaType" NewClass="DataSubjectArea" New="DataSubjectAreaType" Doppleganger="True" ></Field>
+<Field
+ Class="DataSubjectArea" Old="ArchPriority" NewClass="DataSubjectArea" New="ArchitecturalPriority" Doppleganger="True" ></Field>
+<Field
+ Class="DataSubjectArea" Old="DataType" NewClass="DataSubjectArea" New="ContentType" Doppleganger="True" ></Field>
+ <Field
+ Class="Entity" Old="EntityType" NewClass="DataEntity" New="DataEntityType" Doppleganger="False" ></Field>
+<Field
+ Class="Entity" Old="DataType" NewClass="DataEntity" New="ContentType" Doppleganger="False" ></Field>
+<Field
+ Class="DataEntity" Old="EntityType" NewClass="DataEntity" New="DataEntityType" Doppleganger="True" ></Field>
+<Field
+ Class="DataEntity" Old="DataType" NewClass="DataEntity" New="ContentType" Doppleganger="True" ></Field>
+ <Field
+ Class="Attribute" Old="Length" NewClass="DataAttribute" New="DataLength" Doppleganger="True" ></Field>
+<Field
+ Class="DataAttribute" Old="Length" NewClass="DataAttribute" New="DataLength" Doppleganger="True" ></Field>
+<Field
+ Class="DataTable" Old="DataType" NewClass="DataTable" New="ContentType" Doppleganger="True" ></Field>
+ <Field
+ Class="DataColumn" Old="ColumnLength" NewClass="DataField" New="DataLength" Doppleganger="True" ></Field>
+<Field
+ Class="DataField" Old="ColumnLength" NewClass="DataField" New="DataLength" Doppleganger="True" ></Field>
+<Field
+ Class="OrganizationalUnit" Old="Type" NewClass="OrganizationalUnit" New="OrganizationalUnitType" Doppleganger="True" ></Field>
+<Field
+ Class="OrganizationalUnit" Old="Telephone" NewClass="OrganizationalUnit" New="TelephoneNumber" Doppleganger="True" ></Field>
+<Field
+ Class="OrganizationalUnit" Old="Fax" NewClass="OrganizationalUnit" New="FaxNumber" Doppleganger="True" ></Field>
+<Field
+ Class="OrganizationalUnit" Old="Email" NewClass="OrganizationalUnit" New="EmailAddress" Doppleganger="True" ></Field>
+<Field
+ Class="Job" Old="Type" NewClass="Job" New="JobType" Doppleganger="True" ></Field>
+<Field
+ Class="JobCompetency" Old="Type" NewClass="JobCompetency" New="JobCompetencyType" Doppleganger="True" ></Field>
+<Field
+ Class="JobCompetency" Old="Level" NewClass="JobCompetency" New="JobCompetencyLevel" Doppleganger="True" ></Field>
+ <Field
+ Class="Employee" Old="IDNumber" NewClass="Person" New="IDOrPassportNumber" Doppleganger="True" ></Field>
+<Field
+ Class="Employee" Old="Telephone" NewClass="Person" New="TelephoneNumber" Doppleganger="True" ></Field>
+<Field
+ Class="Employee" Old="Email" NewClass="Person" New="EmailAddress" Doppleganger="True" ></Field>
+<Field
+ Class="Person" Old="IDNumber" NewClass="Person" New="IDOrPassportNumber" Doppleganger="True" ></Field>
+<Field
+ Class="Person" Old="Telephone" NewClass="Person" New="TelephoneNumber" Doppleganger="True" ></Field>
+<Field
+ Class="Person" Old="Email" NewClass="Person" New="EmailAddress" Doppleganger="True" ></Field>
+<Field
+ Class="Location" Old="Telephone" NewClass="Location" New="TelephoneNumber" Doppleganger="True" ></Field>
+<Field
+ Class="Location" Old="Fax" NewClass="Location" New="FaxNumber" Doppleganger="True" ></Field>
+<Field
+ Class="Location" Old="Address" NewClass="Location" New="EmailAddress" Doppleganger="True" ></Field>
+<Field
+ Class="LocationAssociation" Old="Distance" NewClass="LocationAssociation" New="DistanceBetweenLocations" Doppleganger="True" ></Field>
+<Field
+ Class="LocationAssociation" Old="AssociationType" NewClass="LocationAssociation" New="TravelMethod" Doppleganger="True" ></Field>
+<Field
+ Class="LocationAssociation" Old="TimeIndicator" NewClass="LocationAssociation" New="TimetoTravel" Doppleganger="True" ></Field>
+<Field
+ Class="FlowDescription" Old="TimeIndicator" NewClass="FlowDescription" New="TimeReference" Doppleganger="True" ></Field>
+<Field
+ Class="NetworkComponent" Old="Type" NewClass="NetworkComponent" New="NetworkComponentType" Doppleganger="True" ></Field>
+ <Field
+ Class="ConditionalDescription" Old="Value" NewClass="FlowDescription" New="Description" Doppleganger="True" ></Field>
+<Field
+ Class="ConditionalDescription" Old="Sequence" NewClass="FlowDescription" New="Sequence" Doppleganger="True" ></Field>
+  <Field
+ Class="GatewayDescription" Old="GatewayValue" NewClass="FlowDescription" New="Description" Doppleganger="True" ></Field>
+<Field
+ Class="GatewayDescription" Old="Name" NewClass="FlowDescription" New="Description" Doppleganger="True" ></Field>
+<Field
+ Class="GatewayDescription" Old="GatewaySequenceNumber" NewClass="FlowDescription" New="Sequence" Doppleganger="True" ></Field>
+ <Field
+ Class="Condition" Old="Value" NewClass="FlowDescription" New="Condition" Doppleganger="False" ></Field>
+
+</Remapped>

@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <RootNamespace>OpenLicense</RootNamespace>
+    <AssemblyName>OpenLicense</AssemblyName>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{645A64F9-27CD-453C-96E0-9DF733D035B1}</ProjectGuid>
+    <SignAssembly>false</SignAssembly>
+    <AssemblyOriginatorKeyFile>OpenLicense.snk</AssemblyOriginatorKeyFile>
+    <DelaySign>False</DelaySign>
+    <AssemblyOriginatorKeyMode>File</AssemblyOriginatorKeyMode>
+    <NoStdLib>False</NoStdLib>
+    <RegisterForComInterop>False</RegisterForComInterop>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <BaseAddress>4194304</BaseAddress>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <FileAlignment>4096</FileAlignment>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <Optimize>False</Optimize>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+    <DocumentationFile>
+    </DocumentationFile>
+    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>..\bin\Release\</OutputPath>
+    <Optimize>True</Optimize>
+    <DefineConstants>
+    </DefineConstants>
+    <DebugSymbols>false</DebugSymbols>
+    <DebugType>None</DebugType>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <DocumentationFile>..\bin\OpenLicense.dll.xml</DocumentationFile>
+    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'ServicePack' ">
+    <OutputPath>bin\ServicePack\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'UnitTests' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\UnitTests\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+    <DocumentationFile>bin\OpenLicense.dll.xml</DocumentationFile>
+    <DebugType>Full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Install' ">
+    <OutputPath>bin\Install\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Logging, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="nunit.framework, Version=2.2.6.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+    <Reference Include="MbUnit.Framework" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyOpenLicenseHelperAttribute.cs" />
+    <Compile Include="AssemblyOpenLicenseKeyAttribute.cs" />
+    <Compile Include="LicenseFile\Constraints\MachineSpecConstraint.cs" />
+    <Compile Include="OpenLicenseProvider.cs" />
+    <Compile Include="SerializableDictionary.cs" />
+    <Compile Include="Utilities.cs" />
+    <Compile Include="LicenseFile\ConstraintCollection.cs" />
+    <Compile Include="LicenseFile\CustomData.cs" />
+    <Compile Include="LicenseFile\Issuer.cs" />
+    <Compile Include="LicenseFile\OpenLicenseFile.cs" />
+    <Compile Include="LicenseFile\Product.cs" />
+    <Compile Include="LicenseFile\Statistics.cs" />
+    <Compile Include="LicenseFile\User.cs" />
+    <Compile Include="LicenseFile\Constraints\AndConstraint.cs" />
+    <Compile Include="LicenseFile\Constraints\BetaConstraint.cs" />
+    <Compile Include="LicenseFile\Constraints\DayTimeConstraint.cs" />
+    <Compile Include="LicenseFile\Constraints\DemoConstraint.cs" />
+    <Compile Include="LicenseFile\Constraints\DesignTimeConstraint.cs" />
+    <Compile Include="LicenseFile\Constraints\DomainConstraint.cs" />
+    <Compile Include="LicenseFile\Constraints\OrConstraint.cs" />
+    <Compile Include="LicenseFile\Constraints\RuntimeConstraint.cs" />
+    <Compile Include="LicenseFile\Constraints\UsageConstraint.cs" />
+    <Compile Include="LicenseFile\Constraints\VersionConstraint.cs" />
+    <Compile Include="LicenseFile\AbstractConstraint.cs" />
+    <Compile Include="LicenseFile\AbstractContainerConstraint.cs" />
+    <Compile Include="LicenseFile\AbstractLicenseData.cs" />
+    <Compile Include="LicenseFile\IConstraint.cs" />
+    <Compile Include="LicenseFile\ILicenseData.cs" />
+    <Compile Include="LicenseFile\Tests\OpenLicenseFileTest.cs" />
+    <Compile Include="LicenseFile\Tests\UserTest.cs" />
+    <Compile Include="LicenseFile\Tests\StatisticsTest.cs" />
+    <Compile Include="LicenseFile\Tests\ProductTest.cs" />
+    <Compile Include="LicenseFile\Constraints\Tests\AndConstraintTest.cs" />
+    <Compile Include="LicenseFile\Constraints\Tests\BetaConstraintTest.cs" />
+    <Compile Include="LicenseFile\Constraints\Tests\DayTimeConstraintTest.cs" />
+    <Compile Include="LicenseFile\Constraints\Tests\DemoConstraintTest.cs" />
+    <Compile Include="LicenseFile\Constraints\Tests\DesignTimeConstraintTest.cs" />
+    <Compile Include="LicenseFile\Constraints\Tests\DomainConstraintTest.cs" />
+    <Compile Include="LicenseFile\Constraints\Tests\OrConstraintTest.cs" />
+    <Compile Include="LicenseFile\Constraints\Tests\RunTimeConstraintTest.cs" />
+    <Compile Include="LicenseFile\Constraints\Tests\UsageConstraintTest.cs" />
+    <Compile Include="LicenseFile\Constraints\Tests\VersionConstraintTest.cs" />
+    <Compile Include="LicenseFile\Tests\IssuerTest.cs" />
+    <Compile Include="LicenseFile\Tests\CustomDataTest.cs" />
+    <Compile Include="LicenseFile\Constraints\Tests\ProcessorConstraintTest.cs" />
+    <Compile Include="LicenseFile\Constraints\ProcessorConstraint.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Main\MetaBuilder.Core\MetaBuilder.Core.csproj">
+      <Project>{AC8718BA-4640-4CB6-8611-5D8717849DAA}</Project>
+      <Name>MetaBuilder.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.Targets" />
+</Project>

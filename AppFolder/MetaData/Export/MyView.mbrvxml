@@ -1,0 +1,19 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE RelationshipManagerSelection>
+<!--This file stores a saved selection of row and column objects for MetaBuilder-->
+<ColumnObjects>
+  <ColumnObject pkid="11041" machine="KNERSIS" class="Process" stringvalue="P1">
+    <ColumnObject pkid="160919" machine="KNERSIS" class="Condition" stringvalue="MyCondition">
+      <ColumnObject pkid="11039" machine="KNERSIS" class="Function" stringvalue="F1">
+        <ColumnObject pkid="160920" machine="KNERSIS" class="OrganizationalUnit" stringvalue="OrgUnitA" />
+        <RowObjects>
+          <RowObject pkid="160921" machine="KNERSIS" class="OrganizationalUnit" stringvalue="OrgUnitA">
+            <RowObject pkid="160922" machine="KNERSIS" class="OrganizationalUnit" stringvalue="OrgUnitB">
+              <RowObject pkid="160923" machine="KNERSIS" class="OrganizationalUnit" stringvalue="OrgUnitB" />
+            </RowObject>
+          </RowObject>
+        </RowObjects>
+      </ColumnObject>
+    </ColumnObject>
+  </ColumnObject>
+</ColumnObjects>

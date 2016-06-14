@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FA0415E3-5C92-4224-814D-E06B3EF0AC6D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MetaBuilder.Graphing.Persistence</RootNamespace>
+    <AssemblyName>MetaBuilder.Graphing.Persistence</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'ServicePack|AnyCPU' ">
+    <OutputPath>bin\ServicePack\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'UnitTests|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\UnitTests\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Install|AnyCPU' ">
+    <OutputPath>bin\Install\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Logging, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Northwoods.Go, Version=2.5.1.2, Culture=neutral, PublicKeyToken=a4e3b7b70161cfe8, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Northwoods Software\GoDiagram Win 2.5.1 for .NET 2.0\lib\Northwoods.Go.DLL</HintPath>
+    </Reference>
+    <Reference Include="Northwoods.Go.Layout, Version=2.5.1.2, Culture=neutral, PublicKeyToken=a4e3b7b70161cfe8, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Northwoods Software\GoDiagram Win 2.5.1 for .NET 2.0\lib\Northwoods.Go.Layout.dll</HintPath>
+    </Reference>
+    <Reference Include="Northwoods.Go.Xml, Version=2.5.1.2, Culture=neutral, PublicKeyToken=a4e3b7b70161cfe8, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Northwoods Software\GoDiagram Win 2.5.1 for .NET 2.0\lib\Northwoods.Go.Xml.DLL</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TraceTool, Version=9.0.0.0, Culture=neutral, PublicKeyToken=81da3f4827b33fbd, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Tracetool\VS2005\Windows\Framework 2\Vs8_Windows_F2_Lib\bin\Debug\TraceTool.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FileUtil.cs" />
+    <Compile Include="GraphFileManager.cs" />
+    <Compile Include="XMLPersistence\AutoSaver.cs" />
+    <Compile Include="XMLPersistence\BaseTransformer.cs" />
+    <Compile Include="XMLPersistence\Groups\AllocationHandleTransformer.cs" />
+    <Compile Include="XMLPersistence\Links\FishlinkTransformer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="XMLPersistence\Links\VisualLinkTransformer.cs" />
+    <Compile Include="XMLPersistence\Links\VisualPortTransformer.cs" />
+    <Compile Include="XMLPersistence\MindMap\MindMapNodeTransformer.cs" />
+    <Compile Include="XMLPersistence\MindMap\GoLinkTransformer.cs" />
+    <Compile Include="XMLPersistence\Nodes\ImageNodeTransformer.cs" />
+    <Compile Include="XMLPersistence\Nodes\LegendNodeTransformer.cs" />
+    <Compile Include="XMLPersistence\Nodes\RationaleTransformer.cs" />
+    <Compile Include="XMLPersistence\Nodes\VerticalNodeTransformer.cs" />
+    <Compile Include="XMLPersistence\Nodes\VisualNodeTransformer.cs" />
+    <Compile Include="XMLPersistence\Other\BindingInfoTransformer.cs" />
+    <Compile Include="XMLPersistence\Groups\LayerTransformer.cs" />
+    <Compile Include="XMLPersistence\Groups\ShapeCollapsibleHandleTransformer.cs" />
+    <Compile Include="XMLPersistence\Groups\ShapeGroupTransformer.cs" />
+    <Compile Include="XMLPersistence\Links\BaseLinkTransformer.cs" />
+    <Compile Include="XMLPersistence\Links\NonPrintingQuickport.cs" />
+    <Compile Include="XMLPersistence\Links\SmartRealLinkTransformer.cs" />
+    <Compile Include="XMLPersistence\MetaGraphXMLReader.cs" />
+    <Compile Include="XMLPersistence\MetaGraphXMLWriter.cs" />
+    <Compile Include="XMLPersistence\Nodes\BoundLabelTransformer.cs" />
+    <Compile Include="XMLPersistence\Groups\CollapsibleHandleTransformer.cs" />
+    <Compile Include="XMLPersistence\Nodes\MappingCellTransformer.cs" />
+    <Compile Include="XMLPersistence\Nodes\SubGraphNodeTransformer.cs" />
+    <Compile Include="XMLPersistence\Nodes\EmbeddedObjectsTransformer.cs" />
+    <Compile Include="XMLPersistence\Nodes\IndicatorLabelTransformer.cs" />
+    <Compile Include="XMLPersistence\Nodes\Repeaters\CollapsibleRecordNodeItemListTransformer.cs" />
+    <Compile Include="XMLPersistence\Nodes\Repeaters\ExpandableLabelListTransformer.cs" />
+    <Compile Include="XMLPersistence\Nodes\Repeaters\ExpandableLabelTransformer.cs" />
+    <Compile Include="XMLPersistence\Nodes\GraphNodeGridTransformer.cs" />
+    <Compile Include="XMLPersistence\Links\SmartLinkTransformer.cs" />
+    <Compile Include="XMLPersistence\Nodes\MetaBaseTransformer.cs" />
+    <Compile Include="XMLPersistence\Nodes\ValueChainSubgraphTransformer.cs" />
+    <Compile Include="XMLPersistence\Other\BalloonCommentTransformer.cs" />
+    <Compile Include="XMLPersistence\Other\CommentTransformer.cs" />
+    <Compile Include="XMLPersistence\Primitives\DiamondTransformer.cs" />
+    <Compile Include="XMLPersistence\Primitives\EllipseTransformer.cs" />
+    <Compile Include="XMLPersistence\Groups\GoGroupTransformer.cs" />
+    <Compile Include="XMLPersistence\Primitives\GoImageTransformer.cs" />
+    <Compile Include="XMLPersistence\Primitives\GoRectangleTransformer.cs" />
+    <Compile Include="XMLPersistence\Primitives\GoRoundedRectangleTransformer.cs" />
+    <Compile Include="XMLPersistence\Primitives\GoTextTransformer.cs" />
+    <Compile Include="XMLPersistence\Primitives\RectangleTransformer.cs" />
+    <Compile Include="XMLPersistence\Nodes\Repeaters\RepeaterSectionTransformer.cs" />
+    <Compile Include="XmlPersistor.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="XMLPersistence\Nodes\ArtefactTransformer.cs" />
+    <Compile Include="XMLPersistence\Nodes\Repeaters\CollapsibleNodeTransformer.cs" />
+    <Compile Include="XMLPersistence\Other\FileAttachmentTransformer.cs" />
+    <Compile Include="XMLPersistence\Other\FrameLayerTransformer.cs" />
+    <Compile Include="XMLPersistence\Primitives\GradientShapeTransformer.cs" />
+    <Compile Include="XMLPersistence\Nodes\GraphNodeTransformer.cs" />
+    <Compile Include="XMLPersistence\Other\HyperlinkTransformer.cs" />
+    <Compile Include="XMLPersistence\Other\ImageTransformer.cs" />
+    <Compile Include="XMLPersistence\BaseGoObjectTransformer.cs" />
+    <Compile Include="XMLPersistence\Primitives\ArrowTransformer.cs" />
+    <Compile Include="XMLPersistence\Primitives\BlockArrowTransformer.cs" />
+    <Compile Include="XMLPersistence\Primitives\CubeTransformer.cs" />
+    <Compile Include="XMLPersistence\Primitives\CylinderTransformer.cs" />
+    <Compile Include="XMLPersistence\Primitives\HexagonTransformer.cs" />
+    <Compile Include="XMLPersistence\Primitives\HouseShapeTransformer.cs" />
+    <Compile Include="XMLPersistence\Primitives\OctagonTransformer.cs" />
+    <Compile Include="XMLPersistence\Primitives\ParalellogramTransformer.cs" />
+    <Compile Include="XMLPersistence\Primitives\PolygonTransformer.cs" />
+    <Compile Include="XMLPersistence\Primitives\StrokeTransformer.cs" />
+    <Compile Include="XMLPersistence\Primitives\TrapezoidTransformer.cs" />
+    <Compile Include="XMLPersistence\Primitives\TriangleTransformer.cs" />
+    <Compile Include="XMLPersistence\Links\QuickPortTransformer.cs" />
+    <Compile Include="XMLPersistence\Other\RichTextTransformer.cs" />
+    <Compile Include="XMLPersistence\Groups\SubGraphTransformer.cs" />
+    <Compile Include="ZipUtil.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Misc\External\NetTiers\MetaBuilder.BusinessLogic\MetaBuilder.BusinessLogic.csproj">
+      <Project>{B72D3674-44C0-49FE-A4F1-64910F292641}</Project>
+      <Name>MetaBuilder.BusinessLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Misc\External\NetTiers\MetaBuilder.DataAccessLayer\MetaBuilder.DataAccessLayer.csproj">
+      <Project>{02252C54-158A-4DD2-928C-75A3906CCFA9}</Project>
+      <Name>MetaBuilder.DataAccessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MetaBuilder.Graphing\MetaBuilder.Graphing.csproj">
+      <Project>{71200AD5-44C5-4ABB-A8AB-014A60C923BF}</Project>
+      <Name>MetaBuilder.Graphing</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MetaBuilder.Core\MetaBuilder.Core.csproj">
+      <Project>{AC8718BA-4640-4CB6-8611-5D8717849DAA}</Project>
+      <Name>MetaBuilder.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MetaBuilder.Meta\MetaBuilder.Meta.csproj">
+      <Project>{A6A472F1-D4A5-44C4-9689-36BD0EE52036}</Project>
+      <Name>MetaBuilder.Meta</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
