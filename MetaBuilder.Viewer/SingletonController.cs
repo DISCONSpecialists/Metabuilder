@@ -51,8 +51,7 @@ namespace MetaBuilder.Viewer
                 m_UniqueIdentifier = assemblyName.Replace("\\", "_");
                 m_Mutex = new Mutex(false, m_UniqueIdentifier);
                 if (m_Mutex.WaitOne(1, true))
-                {
-                    //We locked it! We are the first instance!!!    
+                {  
                     try
                     {
                         CreateInstanceChannel();
